@@ -93,7 +93,7 @@ A proposta desta aplicação propõe-se a alcançar os seguintes objetivos:
 Esta aplicação Web será desenvolvida de acordo com os requisitos e especificações apresentados pelos docentes das UCs envolvidas neste projeto académico.
 Com isso, apresentam-se a seguir as tecnologias que darão suporte a esta solução:
 
-### O Web site (Front-End)
+>___O Web site (Front-End)___
 
 Toda a componente de visualização da Web App será desenvolvida utilizando as seguintes tecnologias:
 - **HTML 5:** Estrutura (esqueleto) das páginas Web.
@@ -102,14 +102,14 @@ Toda a componente de visualização da Web App será desenvolvida utilizando as 
 
 Serão também utilizadas Frameworks e Bibliotecas das mesmas tecnologias, como o **Bootstrap**, **JQuery**, **React**, etc. 
 
-### O servidor Web (Back-End)
+>___O servidor Web (Back-End)___
 
 O server-side será completamente desenvolvido recorrendo a lingaguem de programação **JavaScript**, no Ambiente de Execução **Node.Js**. 
 Será desenvolvida uma API RESTful para lidar com as requisições HTTP provenientes dos web clients (navegadores), e para padronizar a integração entre o Front-End e o Back-End.
 
 Igualmente, serão utilizadas Frameworks e Bibliotecas de JavaScript, como **Express.Js**, **React**, entre outras, para dar robustez e impulsionar o desenvolvimento do server-side.
 
-### Base de Dados
+>___Base de Dados___
 
 Para armazenar e garantir a persistência dos dados da nossa aplicação Web, será utilizado o **PostgreSQL** que é um sistema de gerenciamento de bases de dados relacional.
 
