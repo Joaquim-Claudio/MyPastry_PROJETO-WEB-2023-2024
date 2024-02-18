@@ -111,7 +111,7 @@ Igualmente, serão utilizadas Frameworks e Bibliotecas de JavaScript, como **Exp
 
 ### Base de Dados
 
-Para armazenar e garantir a persistência dos dados da nossa aplicação Web, será utilizado o PostgreSQL que é um sistema de gerenciamento de bases de dados relacional.
+Para armazenar e garantir a persistência dos dados da nossa aplicação Web, será utilizado o **PostgreSQL** que é um sistema de gerenciamento de bases de dados relacional.
 
 
 
