@@ -24,6 +24,10 @@ ___
 - [Objetivos](#objetivos)
   - [Geral](#geral)
   - [Específicos](#específicos)
+- [Especificações Técnicas]()
+  - [O Web site (Front-End)]()
+  - [O servidor Web (Back-End)]()
+  - [Base de dados]()
  
 ## DESCRIÇÃO
 
@@ -31,11 +35,9 @@ MyPastry App é uma proposta de uma aplicação Web, que será desenvolvida no �
 
 A ideia do projeto é desenvolver uma aplicação para uma Pastelaria, que seja capaz de criar uma melhor interação entre os clientes e a loja, o que servirá como 'hipótese' de solução para alguns problemas operacionais que identificamos durante o nosso estudo de campo, que será mais bem detalhado nas secções seguintes.
 
-**>>>> TODO: Definir os potenciais "clientes" da Web App**
+Para implementar a nossa aplicação Web escolhemos uma pastelaria situada na freguesia de Benfica - Lisboa, conhecida por Petiscos de Boteco, que comercializa tipicamente produtos originários do Brasil, de diferentes tipos e categorias, visitada maioritariamente por jovens da vizinhança. Pretendemos, com isso, diversificar a forma como aquela pastelaria atende e interage com os seus clientes.
 
-Para implementar a nossa aplicação Web escolhemos uma pastelaria situada no concelho de Benfica - Lisboa, conhecida por **Petiscos de Boteco**, que comercializa tipicamente produtos originários do Brasil, de diferentes tipos e categorias, visitada maioritariamente por jovens da vizinhança. Pretendemos, com isso, diversificar a forma como aquela pastelaria atende e interage com o seus clientes.
-
-Por serem, tipicamente, jovens os clientes que mais frequentam a pastelaria, definimos como público alvo estes clientes e, para expandir a clientela e aumentar os rendimentos daquele estabelecimento, definimos também como público alvo, maioritariamente, pessoas de origem brasileira que, embora longe de casa, desejem saborear-se dos típicos sabores brasilerios.
+Por serem, tipicamente, jovens os clientes que mais frequentam a pastelaria, definimos como público-alvo estes clientes e, para expandir a clientela e aumentar os rendimentos daquele estabelecimento, definimos também como público-alvo, maioritariamente, pessoas de origem brasileira que, embora longe de casa, desejem saborear-se dos típicos sabores brasileiros.
 
 
 ## PROBLEMÁTICA
@@ -52,7 +54,6 @@ Através de um estudo de campo, foi possível levantar os seguintes problemas op
 
 
 ## HIPÓTESE
-**>>>> TODO: Atualizar a implementação da solução**
 
 Para solucionar os diversos problemas anteriormente citados, apresentamos a aplicação Web **'MyPastry'** que servirá de ferramenta para aplicar as seguintes soluções:
 
@@ -60,9 +61,9 @@ Para solucionar os diversos problemas anteriormente citados, apresentamos a apli
    - ***Pedido Delivery:*** Poderá realizar o seu pedido na App e recebê-lo no conforto da sua residência ou nalgum outro endereço que indicar.
    - ***Pedido Mobile:*** Poderá realizar o seu pedido na App antes mesmo de chegar no restaurante, o que permite reduzir o tempo que uma mesa ou um lugar fica ocupado.
      
-2. **Atendimento ineficiente:** com a implementação da App espara-se que a pastelaria consiga incluir a sua 'lista de clientes' as pessoas que preferem comprar produtos pela internet com a segurança de usarem o seu próprio *smatphone* ou *laptop* e poder ter um melhor controlo e registo das suas compras.
+2. **Atendimento ineficiente:** com a implementação da App, espera-se que a pastelaria consiga incluir a sua 'lista de clientes' as pessoas que preferem comprar produtos pela internet com a segurança de usarem o seu próprio *smartphone* ou *laptop* e poder ter um melhor controlo e registo das suas compras.
 
-3. **Atendimento demorado:** com a possibilidade dos clientes poderem realizar os seus pedidos pela App e levantar no restaurante - ***Pedido Mobile*** - o restaurante ganha mais tempo para preparar esses pedidos enquanto o cliente não chega ao restaurante.
+3. **Atendimento demorado:** com a possibilidade de os clientes poderem realizar os seus pedidos pela App e levantar no restaurante - ***Pedido Mobile*** - o restaurante ganha mais tempo para preparar esses pedidos enquanto o cliente não chega ao restaurante.
 
 4. **Lista de produtos (cardápio):** além das funcionalidades citadas anteriormente, o cliente poderá ainda usar a App apenas para aceder a lista de produtos que aquela pastelaria comercializa.
    
@@ -71,11 +72,10 @@ Para solucionar os diversos problemas anteriormente citados, apresentamos a apli
 
 ### Geral
 
-Implementar uma aplicação Web denominada **'MyPastry'** que, dentre outras funcionalidades, permitirá aos gestores e funcionarios da loja, proporcionar aos seus clientes uma melhor experiência ao usufruir dos seus serviços.
+Implementar uma aplicação Web denominada **'MyPastry'** que, dentre outras funcionalidades, permitirá aos gestores e funcionários da loja, proporcionar aos seus clientes uma melhor experiência ao usufruir dos seus serviços.
 
 
 ### Específicos
-**>>>> TODO: Atualizar os objetivos específicos**
 
 A proposta desta aplicação propõe-se a alcançar os seguintes objetivos:
 - Melhorar a interação entre o cliente e o restaurante;
@@ -83,4 +83,35 @@ A proposta desta aplicação propõe-se a alcançar os seguintes objetivos:
 - Proporcionar uma melhor experiência de serviço ao cliente;
 - Reduzir o tempo de atendimento e, consequentemente, o tempo que o cliente passa dentro do restaurante;
 - Permitir que os clientes consigam acumular pontos sempre que realizarem pedidos pela App, servindo também como um incentivo para que os clientes utilizem a App;
-- Permitir ao administrador levantar dados estatísticos referente as preferências dos clientes que realizam pedidos pela app.
+- Permitir ao administrador levantar dados estatísticos referentes as preferências dos clientes que realizam pedidos pela app.
+  
+
+---
+
+## ESPECIFICAÇÕES TÉCNICAS
+
+Esta aplicação Web será desenvolvida de acordo com os requisitos e especificações apresentados pelos docentes das UCs envolvidas neste projeto académico.
+Com isso, apresentam-se a seguir as tecnologias que darão suporte a esta solução:
+
+### O Web site (Front-End)
+
+Toda a componente de visualização da Web App será desenvolvida utilizando as seguintes tecnologias:
+- **HTML 5:** Estrutura (esqueleto) das páginas Web.
+- **CSS 3:** Estilização e harmonização das páginas Web.
+- **JavaScript:** Recursos interativos e de ligação com o Back-End.
+
+Serão também utilizadas Frameworks e Bibliotecas das mesmas tecnologias, como o **Bootstrap**, **JQuery**, **React**, etc. 
+
+### O servidor Web (Back-End)
+
+O server-side será completamente desenvolvido recorrendo a lingaguem de programação **JavaScript**, no Ambiente de Execução **Node.Js**. 
+Será desenvolvida uma API RESTful para lidar com as requisições HTTP provenientes dos web clients (navegadores), e para padronizar a integração entre o Front-End e o Back-End.
+
+Igualmente, serão utilizadas Frameworks e Bibliotecas de JavaScript, como **Express.Js**, **React**, entre outras, para dar robustez e impulsionar o desenvolvimento do server-side.
+
+### Base de Dados
+
+Para armazenar e garantir a persistência dos dados da nossa aplicação Web, será utilizado o PostgreSQL que é um sistema de gerenciamento de bases de dados relacional.
+
+
+
