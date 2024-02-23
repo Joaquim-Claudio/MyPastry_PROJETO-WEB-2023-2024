@@ -84,7 +84,23 @@ A proposta desta aplicação propõe-se a alcançar os seguintes objetivos:
 - Reduzir o tempo de atendimento e, consequentemente, o tempo que o cliente passa dentro do restaurante;
 - Permitir que os clientes consigam acumular pontos sempre que realizarem pedidos pela App, servindo também como um incentivo para que os clientes utilizem a App;
 - Permitir ao administrador levantar dados estatísticos referentes as preferências dos clientes que realizam pedidos pela app.
-  
+
+
+## SISTEMAS DE INFORMAÇÃO GEOGRÁFICOS – Integração
+
+Além de ser obrigatório como requisito de avaliação da UC, para o bom funcionamento da Aplicação é indispensável que sejam utilizados os conceitos e aplicações dos SIG, para a implementação dos aspetos operacionais da app e da loja.
+
+Existem, inicialmente, dois cenários em que seria extremamente necessário recorrer a um mapa para garantir que os procedimentos funcionem corretamente. Estes cenários são:
+
+ - **Pedido Mobile:** quando o utilizador realiza um pedido mobile, a aplicação tem de ser capaz de “ler” a localização geográfica atual do utilizador e guiá-lo até o restaurante e, para determinar o momento mais adequado para notificar o restaurante para que o seu pedido comece a ser preparado. Ou seja, o pedido não começa a ser preparado imediatamente a seguir a confirmação do pagamento, é necessário garantir que o utilizador esteja suficientemente perto do restaurante para levantar o seu pedido imediatamente quando este estiver “pronto” para levantar.
+
+   O utilizador terá também a opção de permitir que outra pessoa ou entidade levante o seu pedido, para estes casos o pedido começa a ser preparado imediatamente a seguir a 
+   confirmação do pagamento.
+
+ - **Pedido Delivery:** para este tipo de pedido seria imprescindível recorrer a um mapa, que seja capaz de guiar o entregador (responsabilidade do restaurante) até o endereço de entrega definido pelo utilizador durante a realização de um pedido delivery.
+
+Com isso, torna-se evidente a importância de recorrermos aos SIG para
+o bom funcionamento do projeto
 
 ---
 
