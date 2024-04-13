@@ -1,10 +1,89 @@
 body {
     font-family: "Montserrat", sans-serif;
     margin: 0;
+    color: #3D3D3D;
 }
 
+.container-md {
+    padding: 0 100px;
+}
 
 .logo img{
     width: 75%;
     height: auto;
+}
+
+header .banner {
+    padding: 0;
+}
+
+.banner img {
+    height: 100vh;
+}
+
+header .intro-text {
+    margin: auto;
+}
+
+
+.btn-default {
+    color: white;
+    background-color: #DBB800;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-default:active, .btn-default:focus, .btn-default:hover {
+    color: white !important;
+    background-color: #dcbf33 !important;
+    transform: scale(0.99);
+}
+
+.icon-24 img{
+    width: 75%;
+    height: auto;
+}
+
+.ic-mouse {
+    margin-top: -60px;
+    margin-left: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+.ic-mouse:active, .ic-mouse:focus, .ic-mouse:hover {
+    cursor: pointer;
+    transform: scale(0.98);
+}
+
+.curiosity-heading {
+    font-weight: 700;
+}
+
+.text-section {
+    margin: 15% 0;
+}
+
+.text-gradient {
+    background: linear-gradient(to right,#DB2700, #DBB800);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.card-sm img {
+    width: 100%;
+    height: 90%;
+}
+
+.card-link {
+    display: flex;
+    align-items: center;
+}
+
+.card-link {
+    text-decoration: none;
+    color: #3D3D3D;
+    font-weight: 500;
+}
+
+.footer {
+    background-color: rgba(219, 39, 0, 0.79);
 }
