@@ -46,26 +46,34 @@ header .intro-text {
 .ic-mouse {
     margin-top: -60px;
     margin-left: 50%;
-    transition: all 0.3s ease-in-out;
 }
 
 .ic-mouse:active, .ic-mouse:focus, .ic-mouse:hover {
     cursor: pointer;
-    transform: scale(0.98);
 }
 
 .curiosity-heading {
     font-weight: 700;
 }
 
-.text-section {
-    margin: 15% 0;
+section {
+    margin-top: 12%;
 }
 
 .text-gradient {
     background: linear-gradient(to right,#DB2700, #DBB800);
     background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.card-sm {
+    transition: all 0.3s ease-in-out;
+}
+
+.card-sm:hover {
+    opacity: 0.85;
+    cursor: pointer;
+    transform: scale(0.99);
 }
 
 .card-sm img {
@@ -86,4 +94,87 @@ header .intro-text {
 
 .footer {
     background-color: rgba(219, 39, 0, 0.79);
+}
+
+.card-lg {
+    color: white;
+    background-image: url("../img/others/member1.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 8%;
+    padding: 6%;
+    transition: all 0.3s ease-in-out;
+}
+
+.card-lg:hover {
+    cursor: pointer;
+    transform: scale(0.99);
+    opacity: 0.85;
+}
+
+.list {
+    list-style-type: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.list-item {
+    margin-bottom: 8%;
+}
+
+.list-item a {
+    text-decoration: none;
+    color: #8e8e8e;
+    font-weight: 300;
+}
+
+.list-item a:active, .list-item a:focus, .list-item a:hover {
+    color: #c1c1c1;
+}
+
+.list-header a{
+    color: #3D3D3D;
+    font-weight: 600;
+}
+
+.py-7 {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+}
+
+
+footer {
+    background-color: #db2700c9;
+    padding: 2rem;
+}
+
+footer .copyright {
+    color: white;
+    font-weight: 500;
+    font-size: small;
+}
+
+ul.social-buttons{
+    margin-bottom: 0;
+}
+
+ul.social-buttons li a {
+    font-size: 20px;
+    line-height: 40px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    color: white;
+    border-radius: 100%;
+    outline: none;
+    background-color: #212529;
+}
+
+ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover{
+    background-color: #3677b1;
 }
