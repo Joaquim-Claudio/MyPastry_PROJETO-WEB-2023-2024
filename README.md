@@ -11,8 +11,8 @@
 > **20220672** - Mário George Morais de Oliveira Igreja
 
 
-- [x] **Volume 1 - PROPOSTA**
-- [ ] Volume 2 - PROTÓTIPO
+- [x] Volume 1 - PROPOSTA
+- [x] **Volume 2 - PROTÓTIPO**
 - [ ] Volume 3 - PRODUTO
 ___
 
