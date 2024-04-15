@@ -41,7 +41,7 @@ header .intro-text {
     transition: all 0.3s ease-in-out;
 }
 
-.btn-default:active, .btn-default:focus, .btn-default:hover {
+.btn-default:active, .btn-default:hover {
     color: white !important;
     background-color: #dcbf33 !important;
     transform: scale(0.99);
@@ -57,7 +57,7 @@ header .intro-text {
     margin-left: 50%;
 }
 
-.ic-mouse:active, .ic-mouse:focus, .ic-mouse:hover {
+.ic-mouse:active, .ic-mouse:hover {
     cursor: pointer;
 }
 
@@ -107,7 +107,7 @@ section {
 
 .card-lg {
     color: white;
-    background-image: url("../img/others/member1.png");
+    background-image: url("../img/thumbs/member1.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -139,7 +139,7 @@ section {
     font-weight: 300;
 }
 
-.list-item a:active, .list-item a:focus, .list-item a:hover {
+.list-item a:active, .list-item a:hover {
     color: #c1c1c1;
 }
 
@@ -184,7 +184,7 @@ ul.social-buttons li a {
     background-color: #212529;
 }
 
-ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover{
+ul.social-buttons li a:active, ul.social-buttons li a:hover{
     background-color: #3677b1;
 }
 
@@ -224,6 +224,6 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
     font-weight: 500;
 }
 
-.custom-menu .list-item a:active, .custom-menu .list-item a:focus, .custom-menu .list-item a:hover {
+.custom-menu .list-item a:active, .custom-menu .list-item a:hover {
     color: #c1c1c1 !important;
 }
