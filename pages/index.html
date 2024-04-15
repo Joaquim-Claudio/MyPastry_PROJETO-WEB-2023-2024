@@ -18,6 +18,27 @@
 </head>
 <body>
 
+    <!-- Hidden Menu set up #################################################################################################-->
+    <div class="custom-menu" id="menu">
+        <nav class="navbar navbar-primary navbar-expand-lg">
+            <div class="container justify-content-between">
+                <a class="navbar-brand logo" href="index.html"><img src="img/logo-mark.svg" alt=""></a>
+                <button id="close-menu" type="button" class="btn-close fs-2 text-reset"></button>
+            </div>
+            
+        </nav>
+        <div class="position-absolute top-50 start-50 translate-middle">
+            <ul class="list">
+                <li class="list-item"><a href="#">Novidades e Promoções</a></li>
+                <li class="list-item"><a href="#">Lista de produtos</a></li>
+                <li class="list-item"><a href="#">Iguarias brasileiras</a></li>
+                <li class="list-item"><a href="#">App MyPastry</a></li>
+                <li class="list-item"><a href="#">Reservas e Marcações</a></li>
+            </ul>
+            
+        </div>
+    </div>
+
     <!-- Nav bar set up #################################################################################################-->
     <nav class="navbar navbar-primary navbar-expand-lg fixed-top">
         <div class="container">
@@ -32,15 +53,15 @@
 
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="#" class="nav-link"><i class="bi bi-person-circle text-success me-2"></i>Conta <span class="text-gradient">MyPastry</span></a>
+                        <a href="#" class="nav-link"><i class="bi bi-person-circle me-2"></i>Conta <span class="text-gradient">MyPastry</span></a>
                     </li>
     
                     <li class="nav-item">
-                        <a href="" class="nav-link"><i class="bi bi-handbag-fill text-success"></i></a>
+                        <a href="#" class="nav-link"><i class="bi bi-handbag-fill"></i></a>
                     </li>
     
-                    <li class="nav-item">
-                        <a href="" class="nav-link"><i class="bi bi-list text-success"></i></a>
+                    <li id="ic-menu" class="nav-item">
+                        <a href="#" class="nav-link"><i class="bi bi-list"></i></a>
                     </li>
                 </ul>
             </div>
@@ -48,6 +69,7 @@
 
         </div>
     </nav>
+
 
     <!-- Header set up #################################################################################################-->
     <header class="masthead">

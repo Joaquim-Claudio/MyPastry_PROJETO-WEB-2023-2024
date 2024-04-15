@@ -13,6 +13,15 @@ body {
     height: auto;
 }
 
+.nav-item:not(:last-child) {
+    margin-right: 2rem;
+}
+
+.nav-item i {
+    font-size: xx-large;
+    color: #003A04;
+}
+
 header .banner {
     padding: 0;
 }
@@ -177,4 +186,44 @@ ul.social-buttons li a {
 
 ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover{
     background-color: #3677b1;
+}
+
+.custom-menu {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    background-color: white;
+    position: absolute;
+    z-index: 1100;
+
+    animation-duration: 0.5s;
+    animation-name: fadeInd;
+}
+
+@keyframes fadeInd {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.custom-menu .list-item {
+    margin-bottom: 2rem;
+}
+
+.custom-menu .list-item:last-child {
+    margin-bottom: 0;
+}
+
+.custom-menu .list-item a {
+    color: #3D3D3D;
+    font-size: 34pt;
+    font-weight: 500;
+}
+
+.custom-menu .list-item a:active, .custom-menu .list-item a:focus, .custom-menu .list-item a:hover {
+    color: #c1c1c1 !important;
 }
