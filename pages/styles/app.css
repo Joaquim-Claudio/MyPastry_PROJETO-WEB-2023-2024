@@ -12,7 +12,7 @@ header.masthead .intro-text {
     margin-top: 1rem;
 }
 
-header.masthead .back-link a {
+.back-link a {
     margin-top: 7rem;
     display: inline-flex;
     text-decoration: none;
@@ -21,7 +21,7 @@ header.masthead .back-link a {
     transition: all0.3s ease-in-out;
 }
 
-header.masthead .back-link a:hover {
+.back-link a:hover {
     transform: scale(0.99);
     opacity: 0.5;
 }

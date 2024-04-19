@@ -53,6 +53,7 @@ header .intro-text {
 }
 
 .ic-mouse {
+    width: fit-content;
     margin-top: -60px;
     margin-left: 50%;
 }

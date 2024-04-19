@@ -1,0 +1,59 @@
+.back-link a {
+    margin-top: 7rem;
+    display: inline-flex;
+    text-decoration: none;
+    color: #3d3d3d;
+    align-items: center;
+    transition: all0.3s ease-in-out;
+}
+
+.back-link a:hover {
+    transform: scale(0.99);
+    opacity: 0.5;
+}
+
+section{
+    margin-top: 8%;
+}
+
+.prod-img {
+    width: 200%;
+    height: 100%;
+    border-radius: 16px;
+    margin: 0 auto;
+}
+
+.price-status {
+    display: flex;
+    align-items: center;
+}
+
+.price-status .status {
+    padding: 0.2rem 1rem;
+    background-color: #003A04;
+    color: white;
+}
+
+.quantity-switch {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+.btn {
+    width: 100%;
+}
+
+.action {
+    width: 30%;
+}
+
+.ingredient {
+    margin: 0 1rem;
+}
+
+.ingredient img{
+    width: 100%;
+    height: 75%;
+}
