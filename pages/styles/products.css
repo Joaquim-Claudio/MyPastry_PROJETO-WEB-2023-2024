@@ -1,0 +1,29 @@
+header.masthead {
+    color: white;
+    height: 50vh;
+    text-align: center;
+    font-size: 32pt;
+    background-image: url("../img/thumbs/meal.png");
+    background-position: center center;
+    background-size: cover;
+}
+
+header.masthead .intro-text {
+    padding-top: 10rem;
+}
+
+
+header.masthead1 {
+    color: white;
+    height: 50vh;
+    text-align: center;
+    font-size: 32pt;
+    background-image: url("../img/thumbs/Apresentação1.png");
+    background-position: center center;
+    background-size: cover;
+}
+
+header.masthead1 .intro-text {
+    padding-top: 10rem;
+}
+
