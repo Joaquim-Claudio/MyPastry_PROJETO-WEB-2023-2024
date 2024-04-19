@@ -6,6 +6,7 @@ body {
 
 .container-md {
     padding: 0 100px;
+
 }
 
 .logo img{
@@ -17,9 +18,17 @@ body {
     margin-right: 2rem;
 }
 
+.nav-item {
+    background-color: white;
+    align-items: center;
+    border-radius: var(--bs-border-radius-xxl) !important;
+    padding: 0 0.5rem;
+}
+
 .nav-item i {
     font-size: xx-large;
     color: #003A04;
+    vertical-align: middle;
 }
 
 header .banner {
@@ -32,6 +41,7 @@ header .banner {
 
 header .intro-text {
     margin: auto;
+
 }
 
 
@@ -75,6 +85,7 @@ section {
     -webkit-text-fill-color: transparent;
 }
 
+
 .card-sm {
     transition: all 0.3s ease-in-out;
 }
@@ -90,6 +101,23 @@ section {
     height: 90%;
 }
 
+.card-md img{
+    width: 100%;
+    height: 90%;
+}
+
+.card-md {
+    border-radius: 32px;
+    align-items: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.card-md .card-img-top {
+    width: 90%;
+    height: 90%;
+    margin: 1rem 0;;
+}
+
 .card-link {
     display: flex;
     align-items: center;
@@ -101,13 +129,21 @@ section {
     font-weight: 500;
 }
 
+.card-title {
+    text-align: center;
+}
+
+.card-text {
+    text-align: center;
+}
+
 .footer {
     background-color: rgba(219, 39, 0, 0.79);
 }
 
 .card-lg {
     color: white;
-    background-image: url("../img/others/member1.png");
+    background-image: url("../img/thumbs/member1.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -117,6 +153,30 @@ section {
 }
 
 .card-lg:hover {
+    cursor: pointer;
+    transform: scale(0.99);
+    opacity: 0.85;
+}
+
+.card-lg-1 {
+    color: white;
+    background-image: url("../img/thumbs/renda-extra-CRED-iStock_Ridofranz.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 8%;
+    padding: 6%;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-lg-1 .btn {
+    height: fit-content;
+}
+
+.card-lg-1:hover {
     cursor: pointer;
     transform: scale(0.99);
     opacity: 0.85;
@@ -226,4 +286,18 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
 .custom-menu .list-item a:active, .custom-menu .list-item a:focus, .custom-menu .list-item a:hover {
     color: #c1c1c1 !important;
+}
+
+.back-link a {
+    margin-top: 7rem;
+    display: inline-flex;
+    text-decoration: none;
+    color: white;
+    align-items: center;
+    transition: all0.3s ease-in-out;
+}
+
+.back-link a:hover {
+    transform: scale(0.99);
+    opacity: 0.5;
 }
