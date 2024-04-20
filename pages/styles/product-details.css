@@ -50,10 +50,34 @@ section{
 }
 
 .ingredient {
-    margin: 0 1rem;
+    margin: 0 2rem;
 }
 
 .ingredient img{
     width: 100%;
     height: 75%;
+}
+
+.inner-img-container {
+    display: flex;
+    width: 80%;
+}
+
+.my-7 {
+    margin: 15% 0;
+}
+
+.ingredients-container {
+    align-items: center;
+}
+
+.indicator {
+    width: fit-content;
+    transition: all 0.3s ease-in-out;
+}
+
+.indicator:hover {
+    cursor: pointer;
+    opacity: 0.6;
+    transform: scale(0.95);
 }

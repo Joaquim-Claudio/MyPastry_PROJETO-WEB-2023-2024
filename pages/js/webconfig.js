@@ -33,5 +33,30 @@ window.onload = function() {
     }
 
 
+    const left_indicator = document.getElementById("left-indicator");
+    const right_indicator = document.getElementById("right-indicator");
+    const img_wrapper = document.getElementById("img-wrapper");
+
+    if (left_indicator !== null && right_indicator !== null) {
+        if (img_wrapper !== null) {
+
+            left_indicator.addEventListener('click', () => {
+                let scrollX = img_wrapper.scrollLeft - 280;
+                img_wrapper.scroll({
+                    left: scrollX,
+                    behavior: 'smooth'
+                })
+            });
+
+            right_indicator.addEventListener('click', () => {
+                let scrollX = img_wrapper.scrollLeft + 280;
+                img_wrapper.scroll({
+                    left: scrollX,
+                    behavior: 'smooth'
+                })
+            });
+        }
+    }
+
 
 }

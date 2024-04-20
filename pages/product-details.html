@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
 
     <link rel="stylesheet" href="styles/general.css">
-    <link rel="stylesheet" href="styles/pd.css">
+    <link rel="stylesheet" href="styles/product-details.css">
 
     <title>Detalhes do produto</title>
 </head>
@@ -120,7 +120,7 @@
 
     <!-- Section 2 - Ingredients set up #################################################################################################-->
 
-    <section>
+    <section class="my-7">
         <div class="container-md">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -128,22 +128,48 @@
                 </div>
             </div>
 
-            <div class="row justify-content-center gx-3">
-                <div class="col-md-3 ingredient text-center">
-                    <img src="img/ingredients/massa-pastel.png" alt="">
-                    <p>Massa de pastel</p>
+            <div class="row ingredients-container d-flex justify-content-between">
+
+                <div id="left-indicator" class="indicator text-gradient"><i class="bi bi-arrow-left display-6"></i></div>
+                
+                <div id="img-wrapper" class="inner-img-container overflow-x-hidden">
+                    <div class="col-md-3 ingredient text-center">
+                        <img src="img/ingredients/massa-pastel.png" alt="">
+                        <p>Massa de pastel</p>
+                    </div>
+                    
+                    <div class="col-md-3 ingredient text-center">
+                        <img src="img/ingredients/queijo.jpg" alt="">
+                        <p>Queijo mozzarella</p>
+                    </div>
+                    
+                    <div class="col-md-3 ingredient text-center">
+                        <img src="img/ingredients/requeijao.png" alt="">
+                        <p>Requeijão</p>
+                    </div>
+
+                    <div class="col-md-3 ingredient text-center">
+                        <img src="img/ingredients/massa-pastel.png" alt="">
+                        <p>Massa de pastel</p>
+                    </div>
+                    
+                    <div class="col-md-3 ingredient text-center">
+                        <img src="img/ingredients/queijo.jpg" alt="">
+                        <p>Queijo mozzarella</p>
+                    </div>
+                    
+                    <div class="col-md-3 ingredient text-center">
+                        <img src="img/ingredients/requeijao.png" alt="">
+                        <p>Requeijão</p>
+                    </div>
+
+                    
+                    
                 </div>
 
-                <div class="col-md-3 ingredient text-center">
-                    <img src="img/ingredients/queijo.jpg" alt="">
-                    <p>Queijo mozzarella</p>
-                </div>
-
-                <div class="col-md-3 ingredient text-center">
-                    <img src="img/ingredients/requeijao.png" alt="">
-                    <p>Requeijão</p>
-                </div>
+                <div id="right-indicator" class="indicator text-gradient"><i class="bi bi-arrow-right display-6"></i></div>
             </div>
+            
         </div>
     </section>
 
