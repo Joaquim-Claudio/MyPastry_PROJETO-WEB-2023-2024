@@ -47,6 +47,13 @@ section{
 
 .action {
     width: 30%;
+    transition: all 0.2s ease-in-out;
+}
+
+.action:hover {
+    transform: scale(0.98);
+    cursor: pointer;
+    opacity: 0.7;
 }
 
 .ingredient {
@@ -80,4 +87,12 @@ section{
     cursor: pointer;
     opacity: 0.6;
     transform: scale(0.95);
+}
+
+.swal2-popup {
+    border-radius: 32px;
+}
+
+.swal-footer {
+    text-align: center;
 }
