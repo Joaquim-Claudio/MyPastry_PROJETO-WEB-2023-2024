@@ -1,0 +1,13 @@
+header.masthead {
+    color: white;
+    height: 50vh;
+    background-image: url();
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header.masthead .intro-text {
+    text-align: center;
+    margin-top: 1rem;
+}

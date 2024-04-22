@@ -13,33 +13,34 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
 
     <link rel="stylesheet" href="styles/general.css">
-    <link rel="stylesheet" href="styles/order.css">
+    <link rel="stylesheet" href="styles/center-masthead.css">
+    <link rel="stylesheet" href="styles/collections.css">
 
-    <title>Pedido</title>
+    <title>Produtos</title>
 </head>
 <body>
 
-    <!-- Hidden Menu set up #################################################################################################-->
-    <div class="custom-menu" id="menu">
-        <nav class="navbar navbar-primary navbar-expand-lg">
-            <div class="container justify-content-between">
-                <a class="navbar-brand logo" href="index.html"><img src="img/logo-mark.svg" alt=""></a>
-                <button id="close-menu" type="button" class="btn-close fs-2 text-reset"></button>
+        <!-- Hidden Menu set up #################################################################################################-->
+        <div class="custom-menu" id="menu">
+            <nav class="navbar navbar-primary navbar-expand-lg">
+                <div class="container justify-content-between">
+                    <a class="navbar-brand logo" href="index.html"><img src="img/logo-mark.svg" alt=""></a>
+                    <button id="close-menu" type="button" class="btn-close fs-2 text-reset"></button>
+                </div>
+                
+            </nav>
+            <div class="position-absolute top-50 start-50 translate-middle">
+                <ul class="list">
+                    <li class="list-item"><a href="#">Novidades e Promoções</a></li>
+                    <li class="list-item"><a href="collections.html">Lista de produtos</a></li>
+                    <li class="list-item"><a href="#">Iguarias brasileiras</a></li>
+                    <li class="list-item"><a href="app.html">App MyPastry</a></li>
+                    <li class="list-item"><a href="#">Reservas e Marcações</a></li>
+                </ul>
+                
             </div>
-            
-        </nav>
-        <div class="position-absolute top-50 start-50 translate-middle">
-            <ul class="list">
-                <li class="list-item"><a href="#">Novidades e Promoções</a></li>
-                <li class="list-item"><a href="collections.html">Lista de produtos</a></li>
-                <li class="list-item"><a href="#">Iguarias brasileiras</a></li>
-                <li class="list-item"><a href="app.html">App MyPastry</a></li>
-                <li class="list-item"><a href="#">Reservas e Marcações</a></li>
-            </ul>
-            
         </div>
-    </div>
-
+   
     <!-- Nav bar set up #################################################################################################-->
     <nav class="navbar navbar-primary navbar-expand-lg fixed-top">
         <div class="container">
@@ -73,7 +74,7 @@
 
 
     <!-- Header set up #################################################################################################-->
-    <header>
+    <header class="masthead">
         <div class="container-md">
             <div class="back-link">
                 <a href="index.html">
@@ -81,106 +82,79 @@
                     <div class="fs-6 ms-2">Voltar</div>
                 </a>
             </div>
+            <div class="intro-text">
+                <div class="intro-lead-in display-6 fw-bold">Produtos</div>
+            </div>
         </div>
     </header>
+                
 
-    <!-- Section 1 - Product info set up #################################################################################################-->
-        
-    <section class="mt-4">
+
+
+    <!-- Cards #################################################################################################-->
+    <section>
         <div class="container-md">
-            <div class="row">
-                <div class="col-lg-12 text-start">
-                    <div class="fw-light fs-2 mb-4">O meu pedido</div>
+            <div class="row justify-content-around gy-5">
+    
+                <div class="card card-md col-md-3 text-center" style="width: 18rem;">
+                    <img class="card-img-top img-fluid rounded-4 mb-2" src="img/products/collections/pastel.png"  alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Pastéis</h5>
+                        <p class="card-text">Deliciosos pastéis de vento, iguarias brasileiras.</p>
+                        <a class="btn btn-default fw-bold py-3 px-5 rounded-5" href="products.html">Saber mais</a>
+                    </div>
                 </div>
+              
+                  <div class="card card-md col-md-3 text-center" style="width: 18rem;">
+                    <img class="card-img-top img-fluid rounded-4 mb-2" src="img/products/collections/ham2.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Hambúrgueres</h5>
+                      <p class="card-text">Deliciosos hambúrgueres com sabor à Brasil.</p>
+                      <a class="btn btn-default fw-bold py-3 px-5 rounded-5" href="#">Saber mais</a>
+                    </div>
+                  </div>
+    
+                  <div class="card card-md col-md-3 text-center" style="width: 18rem;">
+                    <img class="card-img-top img-fluid rounded-4 mb-2" src="img/products/collections/fries2.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Acompanhamentos</h5>
+                      <p class="card-text">Batatas fritas chouriço na brasa e muito mais.</p>
+                      <a class="btn btn-default fw-bold py-3 px-5 rounded-5" href="#">Saber mais</a>
+                    </div>
+                  </div>
+
+                  <div class="card card-md col-md-3 text-center" style="width: 18rem;">
+                    <img class="card-img-top img-fluid rounded-4 mb-2" src="img/products/collections/drink.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Bebidas</h5>
+                      <p class="card-text">Bebidas geladas e quentes.</p>
+                      <a class="btn btn-default fw-bold py-3 px-5 rounded-5" href="#">Saber mais</a>
+                    </div>
+                  </div>
+
+                  <div class="card card-md col-md-3 text-center" style="width: 18rem;">
+                    <img class="card-img-top img-fluid rounded-4 mb-2" src="img/products/desserts.png"  alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Sobremesas</h5>
+                      <p class="card-text">Mousses, bolos, brigadeiros e muito mais.</p>
+                      <a class="btn btn-default fw-bold py-3 px-5 rounded-5" href="#">Saber mais</a>
+                    </div>
+                  </div>
+
+                  <div class="card card-md col-md-3 text-center" style="width: 18rem;">
+                    <img class="card-img-top img-fluid rounded-4 mb-2" src="img/products/desserts.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Iguarias</h5>
+                      <p class="card-text">Açaí, caldo de cana, sabores que lembram o Brasil.</p>
+                      <a class="btn btn-default fw-bold py-3 px-5 rounded-5" href="#">Saber mais</a>
+                    </div>
+                  </div>
+
             </div>
-
-            <div class="row">
-                <table class="table order-products">
-                    <thead>
-                        <tr class="row">
-                            <th class="col-md-6">Produto</th>
-                            <th class="col-md-3 text-center">Quantidade</th>
-                            <th class="col-md-3 text-end">Subtotal</th>
-                            
-                        </tr>
-                    </thead>
-
-                    <tbody>
-
-                        <tr class="row">
-                            <td class="col-md-6">
-                                <div class="td-wrapper">
-                                    <div class="prod-info">
-                                        <img src="img/products/pastel-queijo.jpg" alt="">
-    
-                                        <div class="details">
-                                            <div class="name">Pastel de Queijo</div>
-                                            <div class="description">Categoria: <em>Pasteis</em></div>
-                                            <div class="price">€5,00</div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </td>
-
-                            <td class="col-md-3">
-                                <div class="td-wrapper">
-                                    <span class="quantity-switch mx-auto border border-2 border-secondary rounded-2 fs-5">
-                                        <div class="action"><i class="bi bi-dash-lg float-start"></i></div>
-                                        <div class="value">2</div>
-                                        <div class="action"><i class="bi bi-plus-lg float-end"></i></div>
-                                    </span>
-
-                                </div>
-                            </td>
-                            <td class="col-md-3">
-                                <div class="td-wrapper">
-                                    <div class="prod-subtotal">€10,00</div> 
-
-                                </div>
-                            </td>
-                        </tr>
-    
-                        <tr class="row">
-                            <td class="col-md-6">
-                                <div class="td-wrapper last-item">
-                                    <div class="prod-info">
-                                        <img src="img/products/coca.jpg" alt="">
-    
-                                        <div class="details">
-                                            <div class="name">Coca-Cola</div>
-                                            <div class="description">330ml &bull; Categoria: <em>Bebidas</em></div>
-                                            <div class="price">€2,75</div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </td>
-
-                            <td class="col-md-3">
-                                <div class="td-wrapper">
-                                    <span class="quantity-switch mx-auto border border-2 border-secondary rounded-2 fs-5">
-                                        <div class="action"><i class="bi bi-dash-lg float-start"></i></div>
-                                        <div class="value">4</div>
-                                        <div class="action"><i class="bi bi-plus-lg float-end"></i></div>
-                                    </span>
-
-                                </div>
-                            </td>
-                            <td class="col-md-3">
-                                <div class="td-wrapper">
-                                    <div class="prod-subtotal">€11,00</div> 
-
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+        </div>      
+        
     </section>
 
-    <!-- Section 2 - Ingredients set up #################################################################################################-->
 
      <!-- Section 4 - Costumer care set up #################################################################################################-->
 
@@ -226,6 +200,7 @@
      </section>
 
 
+    
     <!-- Footer set up #################################################################################################-->
     <footer>
         <div class="container-md">
