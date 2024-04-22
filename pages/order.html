@@ -13,9 +13,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
 
     <link rel="stylesheet" href="styles/general.css">
-    <link rel="stylesheet" href="styles/app.css">
+    <link rel="stylesheet" href="styles/order.css">
 
-    <title>Sobre a App</title>
+    <title>Pedido</title>
 </head>
 <body>
 
@@ -58,7 +58,7 @@
                     </li>
     
                     <li class="nav-item">
-                        <a href="order.html" class="nav-link"><i class="bi bi-handbag-fill"></i></a>
+                        <a href="#" class="nav-link"><i class="bi bi-handbag-fill"></i></a>
                     </li>
     
                     <li id="ic-menu" class="nav-item">
@@ -73,7 +73,7 @@
 
 
     <!-- Header set up #################################################################################################-->
-    <header class="masthead">
+    <header>
         <div class="container-md">
             <div class="back-link">
                 <a href="index.html">
@@ -81,71 +81,106 @@
                     <div class="fs-6 ms-2">Voltar</div>
                 </a>
             </div>
-            <div class="intro-text">
-                <div class="intro-lead-in display-6 fw-bold">Descubra ainda mais ofertas na tua <br> App MyPastry</div>
-            </div>
         </div>
     </header>
+
+    <!-- Section 1 - Product info set up #################################################################################################-->
         
-
-    <!-- Section 2 - Product Collections set up #################################################################################################-->
-
-    <section>
-        <div class="container-md mb-5">
-
-            <div class="row justify-content-around">
-
-                <div class="card card-md col-md-3 text-center">
-                    <img class="card-img-top img-fluid rounded-4 mb-2" src="img/app/new-parcel.png" alt="">
-
-                    <div class="card-body">
-                        <h5 class="card-title">Junte e troque pontos</h5>
-                        <p class="card-text">Ganhe pontos que valem produtos.</p>
-                        <a class="btn btn-default fw-bold py-3 px-5 rounded-5" href="#">Saber mais</a>
-                    </div>
+    <section class="mt-4">
+        <div class="container-md">
+            <div class="row">
+                <div class="col-lg-12 text-start">
+                    <div class="fw-light fs-2 mb-4">O meu pedido</div>
                 </div>
+            </div>
 
-                <div class="card card-md col-md-3 text-center">
-                    <img class="card-img-top img-fluid rounded-4 mb-2" src="img/app/localizing.png" alt="">
+            <div class="row">
+                <table class="table order-products">
+                    <thead>
+                        <tr class="row">
+                            <th class="col-md-6">Produto</th>
+                            <th class="col-md-3 text-center">Quantidade</th>
+                            <th class="col-md-3 text-end">Subtotal</th>
+                            
+                        </tr>
+                    </thead>
 
-                    <div class="card-body">
-                        <h5 class="card-title">Pedidos Mobile</h5>
-                        <p class="card-text">Realize pedidos, pague na App e levante no balcão.</p>
-                        <a class="btn btn-default fw-bold py-3 px-5 rounded-5" href="#">Saber mais</a>
-                    </div>
-                </div>
+                    <tbody>
 
-                <div class="card card-md col-md-3 text-center">
-                    <img class="card-img-top img-fluid rounded-4 mb-2" src="img/app/shopping.png" alt="">
+                        <tr class="row">
+                            <td class="col-md-6">
+                                <div class="td-wrapper">
+                                    <div class="prod-info">
+                                        <img src="img/products/pastel-queijo.jpg" alt="">
+    
+                                        <div class="details">
+                                            <div class="name">Pastel de Queijo</div>
+                                            <div class="description">Categoria: <em>Pasteis</em></div>
+                                            <div class="price">€5,00</div>
+                                        </div>
+                                    </div>
 
-                    <div class="card-body">
-                        <h5 class="card-title">Ofertas exclusivas</h5>
-                        <p class="card-text">Ofertas exclusivas para clientes MyPastry.</p>
-                        <a class="btn btn-default fw-bold py-3 px-5 rounded-5" href="#">Saber mais</a>
-                    </div>
-                </div>
+                                </div>
+                            </td>
 
+                            <td class="col-md-3">
+                                <div class="td-wrapper">
+                                    <span class="quantity-switch mx-auto border border-2 border-secondary rounded-2 fs-5">
+                                        <div class="action"><i class="bi bi-dash-lg float-start"></i></div>
+                                        <div class="value">2</div>
+                                        <div class="action"><i class="bi bi-plus-lg float-end"></i></div>
+                                    </span>
+
+                                </div>
+                            </td>
+                            <td class="col-md-3">
+                                <div class="td-wrapper">
+                                    <div class="prod-subtotal">€10,00</div> 
+
+                                </div>
+                            </td>
+                        </tr>
+    
+                        <tr class="row">
+                            <td class="col-md-6">
+                                <div class="td-wrapper last-item">
+                                    <div class="prod-info">
+                                        <img src="img/products/coca.jpg" alt="">
+    
+                                        <div class="details">
+                                            <div class="name">Coca-Cola</div>
+                                            <div class="description">330ml &bull; Categoria: <em>Bebidas</em></div>
+                                            <div class="price">€2,75</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </td>
+
+                            <td class="col-md-3">
+                                <div class="td-wrapper">
+                                    <span class="quantity-switch mx-auto border border-2 border-secondary rounded-2 fs-5">
+                                        <div class="action"><i class="bi bi-dash-lg float-start"></i></div>
+                                        <div class="value">4</div>
+                                        <div class="action"><i class="bi bi-plus-lg float-end"></i></div>
+                                    </span>
+
+                                </div>
+                            </td>
+                            <td class="col-md-3">
+                                <div class="td-wrapper">
+                                    <div class="prod-subtotal">€11,00</div> 
+
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
 
-     <!-- Section 3 - About the app set up #################################################################################################-->
-
-     <section>
-        <div class="container-md">
-                <div class="row justify-content-start">
-                    <div class="card-lg rounded-4">
-                        <div class="col-8">
-                            <div class="fs-3 fw-bold mb-2">Já tem uma conta <span class="text-gradient">MyPastry</span>?</div>
-                            <div class="card-text">Registe-se agora e habilite-se a ganhar ofertas exclusivas. <br>
-                                Acumule pontos que se convertem em produtos e realize os seus pedidos pela App com os Pedidos Mobile. </div>
-                        </div>
-                    </div>
-                </div>
-
-            
-        </div>
-     </section>
+    <!-- Section 2 - Ingredients set up #################################################################################################-->
 
      <!-- Section 4 - Costumer care set up #################################################################################################-->
 

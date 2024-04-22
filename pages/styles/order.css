@@ -1,0 +1,85 @@
+.back-link a {
+    margin-top: 7rem;
+    display: inline-flex;
+    text-decoration: none;
+    color: #3d3d3d;
+    align-items: center;
+    transition: all0.3s ease-in-out;
+}
+
+.back-link a:hover {
+    transform: scale(0.99);
+    opacity: 0.5;
+}
+
+.table {
+    border-bottom: 0.3px solid var(--bs-table-border-color);
+}
+
+.table td {
+    border-style: none;
+}
+
+.table th {
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.table th:last-child, .table td:last-child {
+    text-align: end;
+}
+
+.table .row {
+    display: table-row;
+}
+
+.prod-info {
+    width: 100%;
+    display: flex;
+}
+
+.prod-info img {
+    width: 120px;
+    height: 90px;
+    border-radius: 8px;
+}
+
+.prod-info .details {
+    margin-left: 2rem;
+    color: #4D4D4D;
+}
+
+.prod-info .details>:not(:last-child) {
+    margin-bottom: 5%;
+}
+
+.prod-info .details .name {
+    font-size: large;
+    font-weight: 600;
+}
+
+.prod-info .details>:not(:first-child) {
+    font-weight: 300;
+}
+
+.quantity-switch {
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    padding: 0.5rem;
+    margin-top: 0.4rem;
+}
+
+.prod-subtotal {
+    font-size: large;
+    font-weight: 300;
+    padding-top: 0.6rem;
+}
+
+.td-wrapper {
+    margin-top: 2rem;
+}
+
+ .last-item {
+    margin-bottom: 2rem;
+}
