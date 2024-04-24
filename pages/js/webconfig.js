@@ -94,4 +94,15 @@ window.onload = function() {
         })
     }
 
+    const finishBtn = document.getElementById("finish");
+
+    if (finishBtn !== null) {
+        finishBtn.addEventListener('click', () => {
+            Swal.fire({
+                icon: "warning",
+                title: "Página em manutenção"
+            });
+        })
+    }
+
 }
