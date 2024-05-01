@@ -132,30 +132,6 @@ section {
     opacity: 0.85;
 }
 
-.card-lg-1 {
-    color: white;
-    background-image: url("../img/thumbs/renda-extra-CRED-iStock_Ridofranz.jpg");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-top: 8%;
-    padding: 6%;
-    transition: all 0.3s ease-in-out;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.card-lg-1 .btn {
-    height: fit-content;
-}
-
-.card-lg-1:hover {
-    cursor: pointer;
-    transform: scale(0.99);
-    opacity: 0.85;
-}
-
 .card-link {
     display: flex;
     align-items: center;
@@ -284,20 +260,6 @@ ul.social-buttons li a:active, ul.social-buttons li a:hover{
 
 .custom-menu .list-item a:active, .custom-menu .list-item a:hover {
     color: #c1c1c1 !important;
-}
-
-.back-link a {
-    margin-top: 7rem;
-    display: inline-flex;
-    text-decoration: none;
-    color: white;
-    align-items: center;
-    transition: all0.3s ease-in-out;
-}
-
-.back-link a:hover {
-    transform: scale(0.99);
-    opacity: 0.5;
 }
 
 .back-link a {
