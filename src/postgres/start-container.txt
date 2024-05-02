@@ -1,0 +1,1 @@
+docker run --rm --name database -e POSTGRES_USER=mypastry -e POSTGRES_PASSWORD=server2024 --mount type=bind,source="$(pwd)"/bin/src/postgres/data,target=/var/lib/postgresql/data -p 5432:5432 -d postgres:alpine3.19

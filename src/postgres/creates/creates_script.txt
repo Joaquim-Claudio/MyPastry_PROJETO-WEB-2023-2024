@@ -1,0 +1,70 @@
+create type emp_type as enum('admin', 'kitchen');
+create type pro_type as enum('primary', 'beverage', 'dessert');
+create type ord_status as enum('pending', 'preparing', 'delivering', 'completed');
+
+create table "user"(
+id serial primary key,
+name text not null,
+email text not null,
+passhash text not null,
+gender char,
+b_date date,
+admin boolean);
+
+create table address(
+id serial primary key not null,
+street text,
+build_num text,
+door text,
+cep text,
+municipality text);
+
+create table client(
+points int not null,
+add_id int references address(id))
+inherits("user");
+
+create table employee(
+type emp_type not null)
+inherits("user");
+
+create table "order"(
+id serial primary key not null,
+cli_id int references "user"(id) not null,
+status ord_status not null,
+total real);
+
+create table delivery_order(
+deliv_cost real,
+add_id int references address(id) not null)
+inherits("order");
+
+create table mobile_order(
+display_id text not null)
+inherits("order");
+
+create table product(
+id serial primary key not null,
+name text not null,
+type pro_type not null,
+delicacy boolean,
+available boolean not null,
+price real not null,
+price_in_points int);
+
+create table order_product(
+pro_id int references product(id) not null,
+ord_id int references "order"(id) not null,
+quantity int not null,
+subtotal real);
+
+create table ingredient(
+id serial primary key not null,
+name text not null,
+available boolean not null);
+
+create table prod_ing(
+pro_id int references product(id) not null,
+ing_id int references ingredient(id) not null);
+
+
