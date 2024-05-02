@@ -53,8 +53,8 @@ price real not null,
 price_in_points int);
 
 create table order_product(
-pro_id int references product(id) not null on delete cascade,
-ord_id int references "order"(id) not null on delete cascade,
+pro_id int references product(id) on delete cascade not null,
+ord_id int references "order"(id) on delete cascade not null,
 quantity int not null,
 subtotal real);
 
@@ -64,7 +64,7 @@ name text not null,
 available boolean not null);
 
 create table prod_ing(
-pro_id int references product(id) not null on delete cascade,
-ing_id int references ingredient(id) not null on delete cascade);
+pro_id int references product(id) on delete cascade not null,
+ing_id int references ingredient(id) on delete cascade not null);
 
 
