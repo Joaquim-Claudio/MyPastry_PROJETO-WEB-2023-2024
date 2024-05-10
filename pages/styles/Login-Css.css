@@ -1,0 +1,236 @@
+.body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: white; /* Adicionando o background branco */
+}
+
+/* Adiciona a fonte Montserrat a todos os elementos */
+body, h1, h2, h3, h4, h5, h6, p, a, ul, li, input, button {
+    font-family: 'Montserrat', sans-serif;
+}
+    
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(100vh - 50px); /* Altura da viewport menos 50 pixels */
+  margin-bottom: 50px; /* Distância do final da página */
+  
+}
+
+.left {
+  padding: 20px;
+  text-align:right; /* Alinhamento dos elementos à direita */
+  max-width: calc(50% - 46px); /* Largura máxima igual à metade do espaço disponível menos o espaçamento */
+}
+
+.left img {
+  width: 100%; /* Define a largura da imagem como 100% */
+  max-height: 18%;
+  height: auto;
+  object-fit: cover; /* Mantém a proporção e corta a imagem para preencher a área */
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  width: calc(50% - 46px);
+  justify-content: flex-end; /* Ajusta para alinhar os itens no final do contêiner */
+}
+
+/* Estilos para a mensagem no canto superior direito */
+.register-message {
+  float: right;
+  margin-top: 50px;
+  margin-right: 70px;
+  color: rgb(0, 0, 0);
+}
+
+.form {
+  width: 80%; /* Garantir que o formulário ocupe toda a largura disponível */
+  margin-top: 100px; /* Distância do final da página */
+  margin-right: 200px;
+}
+
+.login-box {
+  margin-top: 26px; /* Espaçamento entre o campo de senha e o botão Entrar */
+}
+
+.btn-default {
+  margin-top: 26px; /* Espaçamento entre o botão Entrar e o botão "Entrar com uma conta Google" */  
+}
+
+.divider-box {
+  margin-top: 26px; /* Espaçamento entre o botão "Entrar com uma conta Google" e a divisória "ou" */
+}
+
+.divider-text {
+  margin: 0 26px; /* Espaçamento à esquerda e à direita do "ou" */
+}
+
+.input-box {
+  margin-top: 26px; /* Espaçamento entre o campo de senha e o campo de usuário */
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.gradient-text {
+  background: linear-gradient(to right,#DB2700, #DBB800);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.login-box {
+  background-color: #fff;
+  padding: 0px;
+  border-radius: 8px;
+}
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 13px; /* Adicionando borda arredondada */
+  background: transparent;
+  box-shadow: none; /* Removendo o efeito de sombra */
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+  font-size: 15px; /* Reduzindo o tamanho da fonte do link */
+}
+
+.forgot-password {
+  float: right;
+}
+
+.btn-default {
+  color: white;
+  background-color: #DBB800;
+  transition: all 0.3s ease-in-out;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  width: auto; /* Largura automática por padrão */
+}
+
+.btn-default:active,
+.btn-default:hover {
+  color: white !important;
+  background-color: #dcbf33 !important;
+  transform: scale(0.99);
+}
+
+.google-login {
+    width: 100%; /* Definindo a largura do botão como 100% do contêiner pai */
+    max-width: none; /* Garantindo que a largura máxima não seja limitada */
+  }
+
+.divider-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-divider, .right-divider {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right,#DB2700, #DBB800);
+}
+
+.divider-text {
+  padding: 0 10px;
+  font-size: 24px; /* Tamanho da fonte da palavra 'ou' */
+}
+
+.banner {
+  text-align: left; /* Centralizar a imagem na coluna */
+  position: relative; /* Tornar o posicionamento dos elementos filhos relativo a este */
+  overflow: hidden; /* Garantir que o filtro não ultrapasse os limites da imagem */
+}
+
+.form {
+  padding: 50px;
+}
+
+header .banner {
+  padding: 0;
+}
+
+.banner img {
+    width: 92.63vh;
+    height: 97.63vh;
+  }
+
+.overlay-img {
+    position: absolute; /* Posicionamento absoluto */
+    top: 0; /* Alinha a parte superior da imagem adicional ao topo da div pai */
+    right: 0; /* Alinha a parte direita da imagem adicional à direita da div pai */
+    z-index: 1; /* Garante que a imagem adicional esteja acima da imagem principal */
+  }
+  
+.overlay {
+  position: absolute;
+  top: 50%; /* Centralizar verticalmente */
+  left: 47%; /* Centralizar horizontalmente */
+  transform: translate(-50%, -50%); /* Centralizar completamente */
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 200%; /* Definir uma largura para o contêiner de mensagem */
+  
+}
+
+.first-message {
+  font-size: 58px; /* Aumentar o tamanho da fonte da primeira mensagem */
+  font-weight: bold;
+  
+}
+
+.second-message {
+  font-size: 34px; /* Ajustar o tamanho da fonte da segunda mensagem */
+  font-weight: lighter;
+  color: white; /* Definir a cor do texto como branca */
+}
+.svg-logo {
+    position: absolute;
+    top: 20px; /* Adjust this value as needed */
+    right: 20px; /* Adjust this value as needed */
+}
+
+.copyright-message {
+  font-size: 16px;
+  color: white;
+  position: absolute;
+  bottom: 50px; /* Distância do fundo */
+  left: 20px; /* Distância da esquerda */
+}
+
+.gradient-text {
+    background: linear-gradient(to right, #DB2700, #DBB800);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+
+
+
+
+
+
