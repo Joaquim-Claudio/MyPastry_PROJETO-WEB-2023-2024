@@ -59,4 +59,50 @@ window.onload = function() {
     }
 
 
+    const valueLabel = document.getElementById("value");
+    const minus = document.getElementById("minus");
+    const plus = document.getElementById("plus");
+
+    if (valueLabel !== null && minus !== null && plus !== null) {
+
+        let value = 1;
+    
+        minus.addEventListener('click', () => {
+            if(value > 1) {
+                value -= 1;
+                valueLabel.innerText = value;
+            }
+        })
+    
+        plus.addEventListener('click', () => {
+            value += 1;
+            valueLabel.innerText = value;
+        })
+    }
+
+
+    const addToOrder = document.getElementById("addToOrder");
+
+    if (addToOrder !== null) {
+        addToOrder.addEventListener('click', () => {
+            Swal.fire({
+                title: "Produto adicionado ao pedido", 
+                showConfirmButton: false,
+                timer: 2000,
+                icon: "success"
+            });
+        })
+    }
+
+    const finishBtn = document.getElementById("finish");
+
+    if (finishBtn !== null) {
+        finishBtn.addEventListener('click', () => {
+            Swal.fire({
+                icon: "warning",
+                title: "Página em manutenção"
+            });
+        })
+    }
+
 }

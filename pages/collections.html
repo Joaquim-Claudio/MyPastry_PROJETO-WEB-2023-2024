@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,37 +13,39 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
 
     <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/center-masthead.css">
+    <link rel="stylesheet" href="styles/collections.css">
 
-    <title>MyPastry</title>
+    <title>Produtos</title>
 </head>
 <body>
 
-    <!-- Hidden Menu set up #################################################################################################-->
-    <div class="custom-menu" id="menu">
-        <nav class="navbar navbar-primary navbar-expand-lg">
-            <div class="container justify-content-between">
-                <a class="navbar-brand logo" href="index.html"><img src="img/logo-mark.svg" alt=""></a>
-                <button id="close-menu" type="button" class="btn-close fs-2 text-reset"></button>
+        <!-- Hidden Menu set up #################################################################################################-->
+        <div class="custom-menu" id="menu">
+            <nav class="navbar navbar-primary navbar-expand-lg">
+                <div class="container justify-content-between">
+                    <a class="navbar-brand logo" href="index.html"><img src="img/logo-mark.svg" alt=""></a>
+                    <button id="close-menu" type="button" class="btn-close fs-2 text-reset"></button>
+                </div>
+                
+            </nav>
+            <div class="position-absolute top-50 start-50 translate-middle">
+                <ul class="list">
+                    <li class="list-item"><a href="#">Novidades e Promoções</a></li>
+                    <li class="list-item"><a href="collections.html">Lista de produtos</a></li>
+                    <li class="list-item"><a href="#">Iguarias brasileiras</a></li>
+                    <li class="list-item"><a href="app.html">App MyPastry</a></li>
+                    <li class="list-item"><a href="#">Reservas e Marcações</a></li>
+                </ul>
+                
             </div>
-            
-        </nav>
-        <div class="position-absolute top-50 start-50 translate-middle">
-            <ul class="list">
-                <li class="list-item"><a href="#">Novidades e Promoções</a></li>
-                <li class="list-item"><a href="collections.html">Lista de produtos</a></li>
-                <li class="list-item"><a href="#">Iguarias brasileiras</a></li>
-                <li class="list-item"><a href="app.html">App MyPastry</a></li>
-                <li class="list-item"><a href="#">Reservas e Marcações</a></li>
-            </ul>
-            
         </div>
-    </div>
-
+   
     <!-- Nav bar set up #################################################################################################-->
     <nav class="navbar navbar-primary navbar-expand-lg fixed-top">
         <div class="container">
 
-            <a class="navbar-brand logo" href="#"><img src="img/logo-mark.svg" alt=""></a>
+            <a class="navbar-brand logo" href="index.html"><img src="img/logo-mark.svg" alt=""></a>
 
             <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu-links">
                 <span class="navbar-toggler-icon"></span>
@@ -73,101 +75,86 @@
 
     <!-- Header set up #################################################################################################-->
     <header class="masthead">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-8 align-self-center">
-                    <div class="intro-text w-50">
-                        <div class="intro-lead-in display-5 fw-bold mb-4">Chegou o tempo dos pasteis!</div>
-                        <div class="intro-heading fs-6 mb-4">Ofertas especiais para membros MyPastry. Registe-se agora e desfrute dos nossos deliciosos pasteis.</div>
-                        <a class="btn btn-default fw-bold py-3 px-5 rounded-5" href="app.html">Saber mais</a>
-                    </div>
-
-                </div>
-                
-                
-                <div class="col-lg-4 banner">
-                    <img class="img-fluid" src="img/banner/carne.png" alt="">
-                </div>
-                
+        <div class="container-md">
+            <div class="back-link">
+                <a href="index.html">
+                    <i class="bi bi-arrow-left fs-1 mt-1 text-gradient"></i>
+                    <div class="fs-6 ms-2">Voltar</div>
+                </a>
             </div>
-            
+            <div class="intro-text">
+                <div class="intro-lead-in display-6 fw-bold">Produtos</div>
+            </div>
         </div>
-        
-        <div id="ic-mouse" class="icon-24 ic-mouse position-absolute translate-middle "><img src="img/icons/mouse.svg" alt=""></div>
     </header>
+                
 
-    <!-- Section 1 - Curiosity set up #################################################################################################-->
+
+
+    <!-- Cards #################################################################################################-->
     <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="curiosity-heading fs-2">Sabia que nós fomos os <span class="text-gradient">primeiros</span> a chegar?</div>
-                    <div class="section-body-text fs-5 mx-auto mt-3 w-50">Em Agosto de 2001, na freguesia de Benfica, foi inaugurada a nossa primeira pastelaria. 
-                        Nós trouxemos os sabores brasileiros à Portugal.</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 2 - Product Collections set up #################################################################################################-->
-
-    <section>
-        <div class="container-md mb-5">
-            <div class="row">
-                <div class="col-lg-12 text-start">
-                    <div class="fw-light fs-2 mb-4">Menus</div>
-                </div>
-            </div>
-            <div class="row justify-content-between">
-                <div class="col-md-3 card-sm">
-                    <img class="img-fluid rounded-4 mb-2" src="img/products/collections/pastel.png" alt="">
-
-                    <a class="card-link text-gradient" href="products.html">
-                            <div class="fs-5 me-2">Pasteis</div>
-                            <i class="bi bi-arrow-right fs-4 fw-bold mt-1"></i>
-                    </a>
-                </div>
-
-                <div class="col-md-3 card-sm">
-                    <img class="img-fluid rounded-4 mb-2" src="img/products/collections/ham2.png" alt="">
-
-                    <a class="card-link" href="#">
-                        <div class="fs-5 me-2">Hambúrgueres</div>
-                        <i class="bi bi-arrow-right fs-4 fw-bold mt-1"></i>
-                    </a>
-                </div>
-
-                <div class="col-md-3 card-sm">
-                    <img class="img-fluid rounded-4 mb-2" src="img/products/collections/fries2.png" alt="">
-
-                    <a class="card-link" href="#">
-                        <div class="fs-5 me-2">Acompanhamentos</div>
-                        <i class="bi bi-arrow-right fs-4 fw-bold mt-1"></i>
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-     <!-- Section 3 - About the app set up #################################################################################################-->
-
-     <section>
-        <a class="text-decoration-none" href="app.html">
-
-            <div class="container-md">
-                <div class="row justify-content-start">
-                    <div class="card-lg rounded-4">
-                        <div class="col-8">
-                            <div class="fs-3 fw-bold mb-2">Já tem uma conta <span class="text-gradient">MyPastry</span>?</div>
-                            <div class="card-text">Registe-se agora e habilite-se a ganhar ofertas exclusivas. <br>
-                                Acumule pontos que se convertem em produtos e realize os seus pedidos pela App com os Pedidos Mobile. </div>
-                        </div>
+        <div class="container-md">
+            <div class="row justify-content-around gy-5">
+    
+                <div class="card card-md col-md-3 text-center" style="width: 18rem;">
+                    <img class="card-img-top img-fluid rounded-4 mb-2" src="img/products/collections/pastel.png"  alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Pastéis</h5>
+                        <p class="card-text">Deliciosos pastéis de vento, iguarias brasileiras.</p>
+                        <a class="btn btn-default fw-bold py-3 px-5 rounded-5" href="products.html">Saber mais</a>
                     </div>
                 </div>
+              
+                  <div class="card card-md col-md-3 text-center" style="width: 18rem;">
+                    <img class="card-img-top img-fluid rounded-4 mb-2" src="img/products/collections/ham2.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Hambúrgueres</h5>
+                      <p class="card-text">Deliciosos hambúrgueres com sabor à Brasil.</p>
+                      <a class="btn btn-default fw-bold py-3 px-5 rounded-5" href="#">Saber mais</a>
+                    </div>
+                  </div>
+    
+                  <div class="card card-md col-md-3 text-center" style="width: 18rem;">
+                    <img class="card-img-top img-fluid rounded-4 mb-2" src="img/products/collections/fries2.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Acompanhamentos</h5>
+                      <p class="card-text">Batatas fritas chouriço na brasa e muito mais.</p>
+                      <a class="btn btn-default fw-bold py-3 px-5 rounded-5" href="#">Saber mais</a>
+                    </div>
+                  </div>
+
+                  <div class="card card-md col-md-3 text-center" style="width: 18rem;">
+                    <img class="card-img-top img-fluid rounded-4 mb-2" src="img/products/collections/drink.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Bebidas</h5>
+                      <p class="card-text">Bebidas geladas e quentes.</p>
+                      <a class="btn btn-default fw-bold py-3 px-5 rounded-5" href="#">Saber mais</a>
+                    </div>
+                  </div>
+
+                  <div class="card card-md col-md-3 text-center" style="width: 18rem;">
+                    <img class="card-img-top img-fluid rounded-4 mb-2" src="img/products/desserts.png"  alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Sobremesas</h5>
+                      <p class="card-text">Mousses, bolos, brigadeiros e muito mais.</p>
+                      <a class="btn btn-default fw-bold py-3 px-5 rounded-5" href="#">Saber mais</a>
+                    </div>
+                  </div>
+
+                  <div class="card card-md col-md-3 text-center" style="width: 18rem;">
+                    <img class="card-img-top img-fluid rounded-4 mb-2" src="img/products/desserts.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Iguarias</h5>
+                      <p class="card-text">Açaí, caldo de cana, sabores que lembram o Brasil.</p>
+                      <a class="btn btn-default fw-bold py-3 px-5 rounded-5" href="#">Saber mais</a>
+                    </div>
+                  </div>
+
             </div>
-        </a>
-     </section>
+        </div>      
+        
+    </section>
+
 
      <!-- Section 4 - Costumer care set up #################################################################################################-->
 
@@ -213,6 +200,7 @@
      </section>
 
 
+    
     <!-- Footer set up #################################################################################################-->
     <footer>
         <div class="container-md">
