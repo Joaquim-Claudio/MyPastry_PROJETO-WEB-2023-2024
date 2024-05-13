@@ -30,7 +30,7 @@ inherits("user");
 
 create table "order"(
 id serial primary key not null,
-cli_id int references "user"(id) on delete set null,
+c1
 status ord_status not null,
 total real);
 
