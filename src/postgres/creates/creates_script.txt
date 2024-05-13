@@ -1,5 +1,5 @@
 create type emp_type as enum('admin', 'kitchen');
-create type pro_type as enum('primary', 'beverage', 'dessert');
+create type pro_category as enum('pastel', 'hamburger', 'complement', 'beverage', 'dessert');
 create type ord_status as enum('pending', 'preparing', 'delivering', 'completed');
 
 create table "user"(
@@ -30,9 +30,10 @@ inherits("user");
 
 create table "order"(
 id serial primary key not null,
-c1
 status ord_status not null,
-total real);
+total real,
+created_at timestamp default current_timestamp,
+finished_at timestamp);
 
 create table delivery_order(
 deliv_cost real,
@@ -46,7 +47,7 @@ inherits("order");
 create table product(
 id serial primary key not null,
 name text not null,
-type pro_type not null,
+category pro_category not null,
 delicacy boolean,
 available boolean not null,
 price real not null,
