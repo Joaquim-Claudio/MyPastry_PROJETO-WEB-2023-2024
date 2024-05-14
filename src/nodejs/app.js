@@ -8,6 +8,15 @@ import usersRouter from './routes/users.js';
 
 const app = express();
 
+import database from './config/db_connect.js';
+
+main().catch((error) => console.log(error));
+async function main() {
+  console.log('Starting database connection.');
+  await database.authenticate();
+  console.log('Connection has been stablished successfully.');
+}
+
 // view engine setup
 app.set('views', './views');
 app.set('view engine', 'hbs');
