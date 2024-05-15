@@ -4,10 +4,14 @@ import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 
 import ClientModel from './models/client.js';
+import ProductModel from './models/product.js';
 
 import indexRouter from './routes/index.js';
 import usersRouter from './routes/users.js';
 import clientsRouter from './routes/clients.js';
+import appRouter from './routes/app.js';
+import collectionsRouter from './routes/collections.js';
+import productsRouter from './routes/products.js';
 
 const app = express();
 
@@ -19,6 +23,7 @@ async function main() {
   await database.authenticate();
 
   ClientModel.sync();
+  ProductModel.sync();
 
   console.log('Connection has been stablished successfully.');
 }
@@ -36,6 +41,9 @@ app.use(express.static('public'));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/clients', clientsRouter);
+app.use('/app', appRouter);
+app.use('/collections', collectionsRouter);
+app.use('/products', productsRouter);
 
 
 // catch 404 and forward to error handler

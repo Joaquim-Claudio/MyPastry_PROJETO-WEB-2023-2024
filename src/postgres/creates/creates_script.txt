@@ -46,7 +46,9 @@ inherits("order");
 
 create table product(
 id serial primary key not null,
+img_url text,
 name text not null,
+description text,
 category pro_category not null,
 delicacy boolean,
 available boolean not null,
