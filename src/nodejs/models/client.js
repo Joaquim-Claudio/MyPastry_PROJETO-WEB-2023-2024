@@ -1,0 +1,19 @@
+import sequelize from '../config/db_connect.js';
+import {DataTypes} from 'sequelize';
+
+const ClientModel = sequelize.define('Client', {
+        id: {type: DataTypes.INTEGER, primaryKey:true, autoIncrement:true},
+        name: {type: DataTypes.TEXT, allowNull:false},
+        email: {type: DataTypes.TEXT},
+        passhash: {type: DataTypes.TEXT},
+        gender: {type: DataTypes.CHAR},
+        b_date: {type: DataTypes.DATEONLY},
+        admin: {type:DataTypes.BOOLEAN, defaultValue:false},
+    },
+    {
+        tableName:'client',
+        timestamps:false
+    }
+)
+
+export default ClientModel;

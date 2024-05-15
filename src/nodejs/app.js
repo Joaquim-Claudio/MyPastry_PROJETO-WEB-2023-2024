@@ -3,8 +3,11 @@ import express, { json, urlencoded} from 'express';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 
+import ClientModel from './models/client.js';
+
 import indexRouter from './routes/index.js';
 import usersRouter from './routes/users.js';
+import clientsRouter from './routes/clients.js';
 
 const app = express();
 
@@ -14,6 +17,9 @@ main().catch((error) => console.log(error));
 async function main() {
   console.log('Starting database connection.');
   await database.authenticate();
+
+  ClientModel.sync();
+
   console.log('Connection has been stablished successfully.');
 }
 
@@ -29,6 +35,8 @@ app.use(express.static('public'));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/clients', clientsRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

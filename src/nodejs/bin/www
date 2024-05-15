@@ -7,6 +7,8 @@
 import app from '../app.js';
 import debug from 'debug';
 import { createServer } from 'http';
+import dotenv from 'dotenv';
+dotenv.config();
 
 /**
  * Get port from environment and store in Express.
@@ -86,5 +88,5 @@ function onListening() {
   const bind = typeof addr === 'string'
     ? 'pipe ' + addr
     : 'port ' + addr.port;
-  debug('Listening on ' + bind);
+  console.log('Listening on ' + bind);
 }
