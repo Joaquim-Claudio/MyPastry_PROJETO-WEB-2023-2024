@@ -1,0 +1,45 @@
+{
+  "name": "mypastry",
+  "version": "1.0.0",
+  "description": "A web application for a brazilian pastry in Lisbon.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "devstart": "nodemon ./bin/www",
+    "start": "node ./bin/www",
+    "debug": "DEBUG=nodejs:* npm run devstart"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Joaquim-Claudio/MyPastry_PROJETO-WEB-2023-2024.git"
+  },
+  "keywords": [
+    "Web",
+    "NodeJs",
+    "Express",
+    "RESTful",
+    "API",
+    "WebServices"
+  ],
+  "author": "Joaquim Cláudio, Laís Ferreira e Mário Igreja",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Joaquim-Claudio/MyPastry_PROJETO-WEB-2023-2024"
+  },
+  "homepage": "https://github.com/Joaquim-Claudio/MyPastry_PROJETO-WEB-2023-2024#readme",
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^16.4.5",
+    "express": "~4.16.1",
+    "hbs": "~4.0.4",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "pg": "^8.11.5",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
