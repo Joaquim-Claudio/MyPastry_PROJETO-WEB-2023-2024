@@ -471,3 +471,8 @@ header.masthead .intro-text {
 .float-frame >:not(:last-child) {
     margin-bottom: 1.5rem;
 }
+
+.card-img-lg {
+    width: 90% !important;
+    height: 70% !important;
+}
