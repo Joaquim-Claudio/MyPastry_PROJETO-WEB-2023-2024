@@ -3,7 +3,7 @@ const router = Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Mypastry | Início' });
+  res.render('index', { title: 'MyPastry' });
 });
 
 export default router;
