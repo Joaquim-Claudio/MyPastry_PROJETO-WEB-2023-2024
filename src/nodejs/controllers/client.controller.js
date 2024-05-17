@@ -1,8 +1,8 @@
-import ClientModel from "../models/client.js";
+import Client from "../models/client.model.js";
 
 const getByName = async(req, res) => {
      const name = req.query.name;
-     ClientModel.findOne({where: {name}})
+     Client.findOne({where: {name}})
         .then((client) => {
             res.send(client);
         })

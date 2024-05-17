@@ -10,7 +10,7 @@ body {
 }
 
 .logo img{
-    width: 75%;
+    width: 10rem;
     height: auto;
 }
 
@@ -28,6 +28,7 @@ body {
 .nav-item i {
     font-size: xx-large;
     color: #003A04;
+    font-weight: 800;
     vertical-align: middle;
 }
 

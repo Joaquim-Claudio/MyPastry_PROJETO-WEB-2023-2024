@@ -10,7 +10,7 @@ body {
 }
 
 .logo img{
-    width: 75%;
+    width: 10rem;
     height: auto;
 }
 
@@ -475,4 +475,12 @@ header.masthead .intro-text {
 .card-img-lg {
     width: 90% !important;
     height: 70% !important;
+}
+
+.bg-red {
+    background-color: #DB2700 !important;
+}
+
+.red {
+    color: #DB2700 !important ;
 }

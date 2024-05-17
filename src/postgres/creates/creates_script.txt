@@ -63,6 +63,7 @@ subtotal real);
 
 create table ingredient(
 id serial primary key not null,
+img_url text,
 name text not null,
 available boolean not null);
 
