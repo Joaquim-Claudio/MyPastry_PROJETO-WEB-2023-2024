@@ -228,7 +228,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:hover{
     display: none;
     background-color: white;
     position: absolute;
-    z-index: 1100;
+    z-index: 2000;
 
     animation-duration: 0.5s;
     animation-name: fadeInd;
