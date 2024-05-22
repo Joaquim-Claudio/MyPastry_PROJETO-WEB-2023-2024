@@ -1,6 +1,7 @@
 import createError from 'http-errors';
 import express, { json, urlencoded} from 'express';
 import cookieParser from 'cookie-parser';
+import session from 'express-session';
 import logger from 'morgan';
 
 const app = express();
@@ -27,11 +28,18 @@ async function main() {
 // view engine setup
 app.set('views', './views');
 app.set('view engine', 'hbs');
+app.set('view options', {layout: 'layouts/main'});
 
 app.use(logger('dev'));
 app.use(json());
 app.use(urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(session({
+    secret: process.env.SS_SECRETS,
+    resave: true,
+    saveUninitialized: true,
+  }
+))
 app.use(express.static('public'));
 
 import indexRouter from './routes/index.route.js';
@@ -41,12 +49,16 @@ import appRouter from './routes/app.route.js';
 import collectionsRouter from './routes/collections.route.js';
 import productsRouter from './routes/products.route.js';
 
+import adminRouter from './routes/admin/dashboard.route.js'
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/clients', clientsRouter);
 app.use('/app', appRouter);
 app.use('/collections', collectionsRouter);
 app.use('/products', productsRouter);
+
+app.use('/admin', adminRouter);
 
 
 // catch 404 and forward to error handler
