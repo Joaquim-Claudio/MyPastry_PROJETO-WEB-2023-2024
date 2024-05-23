@@ -7,7 +7,7 @@ id serial primary key,
 name text not null,
 email text not null,
 passhash text not null,
-gender char,
+gender text,
 b_date date,
 admin boolean);
 

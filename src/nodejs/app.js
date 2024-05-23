@@ -50,6 +50,7 @@ import collectionsRouter from './routes/collections.route.js';
 import productsRouter from './routes/products.route.js';
 
 import adminRouter from './routes/admin/dashboard.route.js'
+import statisticsRouter from './routes/admin/statistics.route.js';
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -59,6 +60,7 @@ app.use('/collections', collectionsRouter);
 app.use('/products', productsRouter);
 
 app.use('/admin', adminRouter);
+app.use('/data/statistics', statisticsRouter);
 
 
 // catch 404 and forward to error handler
