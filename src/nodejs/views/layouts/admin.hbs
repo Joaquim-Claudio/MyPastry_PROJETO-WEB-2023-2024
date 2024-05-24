@@ -22,7 +22,7 @@
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand logo ps-3" href="#"><img src="/images/logo-mark-sm-dark.svg" alt=""></a>
+            <a class="navbar-brand logo ps-3" href="http://localhost:5300/admin"><img src="/images/logo-mark-sm-dark.svg" alt=""></a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
@@ -40,7 +40,7 @@
                         <li><a class="dropdown-item" href="#!">Definições</a></li>
                         <li><a class="dropdown-item" href="#!">Histórico de atividades</a></li>
                         <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#!">Terminar sessão</a></li>
+                        <li><a class="dropdown-item" href="http://localhost:5300/">Terminar sessão</a></li>
                     </ul>
                 </li>
             </ul>
@@ -51,13 +51,13 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Principal</div>
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="http://localhost:5300/admin">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
                             
                             <div class="sb-sidenav-menu-heading">Estatísticas</div>
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="http://localhost:5300/admin/charts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Gráficos
                             </a>
@@ -101,7 +101,5 @@
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
 
         <script src="/javascripts/admin.config.js"></script>
-        <script type="module" src="/javascripts/charts/histogram-ages.js"></script>
-        <script type="module" src="/javascripts/charts/chart-line-sales.js"></script>
     </body>
 </html>

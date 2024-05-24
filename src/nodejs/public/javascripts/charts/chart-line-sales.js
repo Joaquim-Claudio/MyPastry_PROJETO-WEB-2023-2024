@@ -15,24 +15,8 @@ window.addEventListener('DOMContentLoaded', async(event) => {
     throw new Error(response.status);
   }
 
-  /*
-  [
-    { "date": "2024-05-11", "sum": 15.23 },
-    { "date": "2024-05-12", "sum": 55.75 },
-    { "date": "2024-05-14", "sum": 100.9 },
-    { "date": "2024-05-15", "sum": 88.23 },
-    { "date": "2024-05-19", "sum": 66.56 },
-  ]
-  */
-
-
  
- const months = ['Jan', 'Fev', 'Mar', 'Abr', 'Maio', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
- 
- console.log( months[ ( new Date(data[0].date) ).getMonth() ]);
-
-  const dataLabels = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22];
-
+ const months = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
 
   // Area Chart Example
   var ctx = document.getElementById("salesLineChart");
@@ -40,7 +24,7 @@ window.addEventListener('DOMContentLoaded', async(event) => {
     type: 'line',
     data: {
       //labels: `${months[ ( new Date(data.map(row => row.date)) ).getMonth() ]} ${( new Date(data.map(row => row.date)) ).getDay()}`,
-      labels: ( new Date( data.map(row => row.date) ) ).getMonth(),
+      labels: data.map(row => row.date),
       datasets: [{
         label: "Total de vendas (EUR)",
         lineTension: 0.3,
@@ -67,16 +51,29 @@ window.addEventListener('DOMContentLoaded', async(event) => {
             display: true
           },
           ticks: {
-            maxTicksLimit: 7
+            min: 15,
+            maxTicksLimit: 7,
+            callback: function(value, index, values) {
+              const date = new Date(value)
+              return `${months[date.getMonth()]} ${date.getDate()}`
+            }
+          },
+          scaleLabel:{
+            display: true,
+            labelString: 'Últimos 15 dias'
           }
         }],
         yAxes: [{
+          beginAtZero: true,
           ticks: {
             min: 0,
-            max: 100,
           },
           gridLines: {
             color: "rgba(0, 0, 0, .125)",
+          },
+          scaleLabel:{
+            display: true,
+            labelString: 'Total (EUR)'
           }
         }],
       },
