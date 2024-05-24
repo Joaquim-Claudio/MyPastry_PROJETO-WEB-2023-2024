@@ -1,7 +1,7 @@
 import sequelize from '../config/db_connect.js';
 import {DataTypes} from 'sequelize';
 
-const ClientModel = sequelize.define('Client', {
+const Client = sequelize.define('client', {
         id: {type: DataTypes.INTEGER, primaryKey:true, autoIncrement:true},
         name: {type: DataTypes.TEXT, allowNull:false},
         email: {type: DataTypes.TEXT},
@@ -16,4 +16,4 @@ const ClientModel = sequelize.define('Client', {
     }
 )
 
-export default ClientModel;
+export default Client;

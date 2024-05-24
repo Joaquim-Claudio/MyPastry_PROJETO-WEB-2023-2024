@@ -7,7 +7,7 @@ id serial primary key,
 name text not null,
 email text not null,
 passhash text not null,
-gender char,
+gender text,
 b_date date,
 admin boolean);
 
@@ -63,6 +63,7 @@ subtotal real);
 
 create table ingredient(
 id serial primary key not null,
+img_url text,
 name text not null,
 available boolean not null);
 

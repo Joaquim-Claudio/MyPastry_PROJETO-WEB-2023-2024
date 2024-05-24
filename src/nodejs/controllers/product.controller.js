@@ -1,8 +1,10 @@
-import ProductModel from "../models/product.js";
+import Product from "../models/product.model.js";
+import Prod_Ing from "../models/prod_ing.model.js";
+import Ingredient from "../models/ingredient.model.js";
 import { translateCategory, PriceFormat } from "../utils/norm.js";
 
 const getAll = async(req, res) => {
-    ProductModel.findAll()
+    Product.findAll()
         .then((result) => {
             res.send(result);
         })
@@ -19,7 +21,7 @@ const getAllByCategory = async(req, res) => {
 
     if(category == 'delicacy') clause = {where: {delicacy:true}};
     
-    ProductModel.findAll(clause || {where: {category}})
+    Product.findAll(clause || {where: {category}})
         .then((result) => {
             if(category == 'pastel') showCard=true;
 
@@ -44,11 +46,11 @@ const getAllByCategory = async(req, res) => {
 
 const getById = async(req, res) => {
     const id = req.params.id;
-    ProductModel.findOne({where: {id}})
+    Product.findOne({where: {id}, include: Ingredient})
         .then((product) => {
             // Format the price to portuguese float format
             product.price = PriceFormat.format(product.price);
-
+            
             res.render('product-details', {
                 title: product.name + ' | MyPastry',
                 product: product,

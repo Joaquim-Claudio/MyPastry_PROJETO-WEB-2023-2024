@@ -1,6 +1,29 @@
-<section>
-    <div class="container-md text-center">
-        <h1>{{message}}</h1>
-        <h2>{{error.status}}</h2>
+<header>
+    <div class="container-md">
+        <div class="back-link">
+            <a href="http://localhost:5300/collections">
+                <i class="bi bi-arrow-left fs-1 mt-1 text-gradient"></i>
+                <div class="fs-6 ms-2" style="color: #3D3D3D;">Voltar</div>
+            </a>
+        </div>
+    </div>
+</header>
+
+
+<section class="mt-4">
+    <div class="container-md">
+        <div class="row justify-content-center">
+
+            <div class="col text-center">
+                <div class="float-frame p-7">
+                    <h1>{{message}}</h1>
+                    <p class="fs-2">{{error.status}}</p>
+                    <a class="btn btn-default fw-bold py-3 px-5  rounded-5" href="http://localhost:5300/">
+                        Voltar à página inicial
+                    </a>
+                </div>
+            </div>
+            
+        </div>
     </div>
 </section>

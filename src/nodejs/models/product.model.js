@@ -1,7 +1,7 @@
 import sequelize from '../config/db_connect.js';
 import {DataTypes} from 'sequelize';
 
-const ProductModel = sequelize.define('Product', {
+const Product = sequelize.define('product', {
         id: {type: DataTypes.INTEGER, primaryKey:true, autoIncrement:true},
         img_url: {type: DataTypes.TEXT},
         name: {type: DataTypes.TEXT, allowNull:false},
@@ -18,4 +18,4 @@ const ProductModel = sequelize.define('Product', {
     }
 )
 
-export default ProductModel;
+export default Product;

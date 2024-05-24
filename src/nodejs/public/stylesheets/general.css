@@ -10,7 +10,7 @@ body {
 }
 
 .logo img{
-    width: 75%;
+    width: 10rem;
     height: auto;
 }
 
@@ -228,7 +228,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:hover{
     display: none;
     background-color: white;
     position: absolute;
-    z-index: 1100;
+    z-index: 2000;
 
     animation-duration: 0.5s;
     animation-name: fadeInd;
@@ -470,4 +470,17 @@ header.masthead .intro-text {
 
 .float-frame >:not(:last-child) {
     margin-bottom: 1.5rem;
+}
+
+.card-img-lg {
+    width: 90% !important;
+    height: 70% !important;
+}
+
+.bg-red {
+    background-color: #DB2700 !important;
+}
+
+.red {
+    color: #DB2700 !important ;
 }

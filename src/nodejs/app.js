@@ -1,42 +1,56 @@
 import createError from 'http-errors';
 import express, { json, urlencoded} from 'express';
 import cookieParser from 'cookie-parser';
+import session from 'express-session';
 import logger from 'morgan';
-
-import ClientModel from './models/client.js';
-import ProductModel from './models/product.js';
-
-import indexRouter from './routes/index.js';
-import usersRouter from './routes/users.js';
-import clientsRouter from './routes/clients.js';
-import appRouter from './routes/app.js';
-import collectionsRouter from './routes/collections.js';
-import productsRouter from './routes/products.js';
 
 const app = express();
 
 import database from './config/db_connect.js';
 
+// import ClientModel from './models/client.model.js';
+// import ProductModel from './models/product.model.js';
+// import IngredientModel from './models/ingredient.model.js';
+
+
 main().catch((error) => console.log(error));
 async function main() {
   console.log('Starting database connection.');
   await database.authenticate();
-
-  ClientModel.sync();
-  ProductModel.sync();
-
+  
+  // ClientModel.sync();
+  // ProductModel.sync();
+  // IngredientModel.sync();
+  
   console.log('Connection has been stablished successfully.');
 }
 
 // view engine setup
 app.set('views', './views');
 app.set('view engine', 'hbs');
+app.set('view options', {layout: 'layouts/main'});
 
 app.use(logger('dev'));
 app.use(json());
 app.use(urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(session({
+    secret: process.env.SS_SECRETS,
+    resave: true,
+    saveUninitialized: true,
+  }
+))
 app.use(express.static('public'));
+
+import indexRouter from './routes/index.route.js';
+import usersRouter from './routes/users.route.js';
+import clientsRouter from './routes/clients.route.js';
+import appRouter from './routes/app.route.js';
+import collectionsRouter from './routes/collections.route.js';
+import productsRouter from './routes/products.route.js';
+
+import adminRouter from './routes/admin/dashboard.route.js'
+import statisticsRouter from './routes/admin/statistics.route.js';
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -44,6 +58,9 @@ app.use('/clients', clientsRouter);
 app.use('/app', appRouter);
 app.use('/collections', collectionsRouter);
 app.use('/products', productsRouter);
+
+app.use('/admin', adminRouter);
+app.use('/data/statistics', statisticsRouter);
 
 
 // catch 404 and forward to error handler
@@ -59,7 +76,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render('error', {title: `Erro ${err.status}`});
 });
 
 export default app;
