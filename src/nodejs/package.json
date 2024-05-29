@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/Joaquim-Claudio/MyPastry_PROJETO-WEB-2023-2024#readme",
   "dependencies": {
+    "connect-session-sequelize": "^7.1.7",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "dotenv": "^16.4.5",
