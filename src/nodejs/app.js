@@ -2,26 +2,18 @@ import createError from 'http-errors';
 import express, { json, urlencoded} from 'express';
 import cookieParser from 'cookie-parser';
 import session from 'express-session';
+import session_store from 'connect-session-sequelize';
 import logger from 'morgan';
 
 const app = express();
 
 import database from './config/db_connect.js';
 
-// import ClientModel from './models/client.model.js';
-// import ProductModel from './models/product.model.js';
-// import IngredientModel from './models/ingredient.model.js';
-
-
 main().catch((error) => console.log(error));
 async function main() {
   console.log('Starting database connection.');
   await database.authenticate();
-  
-  // ClientModel.sync();
-  // ProductModel.sync();
-  // IngredientModel.sync();
-  
+
   console.log('Connection has been stablished successfully.');
 }
 
@@ -34,13 +26,22 @@ app.use(logger('dev'));
 app.use(json());
 app.use(urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(express.static('public'));
+
+const SessionStore = session_store(session.Store);
+
 app.use(session({
     secret: process.env.SS_SECRETS,
-    resave: true,
-    saveUninitialized: true,
+    cookie: {httpOnly:true},
+    resave: false,
+    saveUninitialized: false,
+    store: new SessionStore({
+      db: database,
+      tableName: 'session',
+    })
   }
 ))
-app.use(express.static('public'));
+
 
 import indexRouter from './routes/index.route.js';
 import usersRouter from './routes/users.route.js';
@@ -48,6 +49,7 @@ import clientsRouter from './routes/clients.route.js';
 import appRouter from './routes/app.route.js';
 import collectionsRouter from './routes/collections.route.js';
 import productsRouter from './routes/products.route.js';
+import cartRouter from './routes/cart.route.js'
 
 import adminRouter from './routes/admin/dashboard.route.js'
 import statisticsRouter from './routes/admin/statistics.route.js';
@@ -58,6 +60,7 @@ app.use('/clients', clientsRouter);
 app.use('/app', appRouter);
 app.use('/collections', collectionsRouter);
 app.use('/products', productsRouter);
+app.use('/cart', cartRouter);
 
 app.use('/admin', adminRouter);
 app.use('/data/statistics', statisticsRouter);

@@ -1,0 +1,94 @@
+<!-- Header set up #################################################################################################-->
+<header>
+    <div class="container-md">
+        <div class="back-link">
+            <a href="http://localhost:5300/">
+                <i class="bi bi-arrow-left fs-1 mt-1 text-gradient"></i>
+                <div class="fs-6 ms-2" style="color: #3D3D3D;">Voltar</div>
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- Section 1 - Product info set up #################################################################################################-->
+    
+<section class="mt-4">
+    <div class="container-md">
+        <div class="row">
+            <div class="col-lg-12 text-start">
+                <div class="fw-light fs-2 mb-4">O meu pedido</div>
+            </div>
+        </div>
+
+        {{#if cart}}
+        <div class="row">
+            <table class="table order-products">
+                <thead>
+                    <tr class="row">
+                        <th class="col-md-6">Produto</th>
+                        <th class="col-md-3 text-center">Quantidade</th>
+                        <th class="col-md-3 text-end">Subtotal</th>
+                        
+                    </tr>
+                </thead>
+
+                <tbody id="cart-tbody">
+
+                    {{#each cart.items}}
+
+                    <tr class="row">
+                        <td class="col-md-6">
+                            <div class="td-wrapper last-item">
+                                <div class="prod-info">
+                                    <img src="{{this.ordProd.prod.img_url}}" alt="">
+
+                                    <div class="details">
+                                        <div class="name">{{this.ordProd.prod.name}}</div>
+                                        <div class="description">Categoria: <em>{{this.ordProd.prod.category}}</em></div>
+                                        <div class="price">€{{this.ordProd.prod.price}}</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </td>
+
+                        <td class="col-md-3">
+                            <div class="td-wrapper">
+                                <span class=" quantity-switch quantity-switch-lg mx-auto border border-2 border-secondary rounded-2 fs-5">
+                                    <div class="action"><i class="bi bi-dash-lg float-start"></i></div>
+                                    <div class="value">{{this.ordProd.quant}}</div>
+                                    <div class="action"><i class="bi bi-plus-lg float-end"></i></div>
+                                </span>
+
+                            </div>
+                        </td>
+                        <td class="col-md-3">
+                            <div class="td-wrapper">
+                                <div class="prod-subtotal">€{{this.ordProd.subTotal}}</div> 
+
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    {{/each}}
+                
+                </tbody>
+            </table>
+        </div>
+
+        <div class="row justify-content-end">
+            <button id="finish" class="btn-sm btn-default fw-bold py-3 px-5 rounded-4" type="button">Finalizar</button>
+        </div>
+        {{else}}
+        <div class="row mt-3">
+            <div class="col">
+                <div class="div-wrapper">
+                    <p class="text-center font-weight-light">Nenhum produto adicionado!</p>
+                </div>
+            </div>
+        </div>
+        {{/if}}
+
+        
+    </div>
+</section>

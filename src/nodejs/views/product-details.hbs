@@ -17,10 +17,11 @@
 <section class="mt-4">
     <div class="container-md">
         <div class="row justify-content-around">
-            <div class="col-lg-5">
+
+            <div  class="col-lg-5">
                 <img class="prod-img img-fluid" src="{{product.img_url}}" alt="">
             </div>
-            <div class="col-lg-5">
+            <div id="prod-data" pid="{{product.id}}" price="{{product.price}}" class="col-lg-5">
                 <h1 class="mb-2">{{product.name}}</h1>
                 <p class="mb-5">{{product.description}}</p>
 
@@ -37,12 +38,12 @@
                     <div class="fw-light small">Quantidade</div>
                     <span class="quantity-switch border border-2 border-secondary rounded-2 fs-5">
                         <div id="minus" class="action"><i class="bi bi-dash-lg float-start"></i></div>
-                        <div id="value" class="value">1</div>
+                        <div id="quant" class="value">1</div>
                         <div id="plus" class="action"><i class="bi bi-plus-lg float-end"></i></div>
                     </span>
                 </div>
 
-                <button id="addToOrder" class="btn-xl btn-default fw-bold py-3 px-5 rounded-4 fs-5" type="button">Adicionar ao pedido</button>
+                <button id="addToCart" class="btn-xl btn-default fw-bold py-3 px-5 rounded-4 fs-5" type="button">Adicionar ao pedido</button>
             </div>
         </div>
     </div>
