@@ -36,6 +36,7 @@ const getCart = async (req, res) => {
         })
     }
     else {
+        console.log(req.session.cart)
         res.render('cart', {
             layout: 'layouts/main',
             title: 'O Meu Pedido | MyPastry',

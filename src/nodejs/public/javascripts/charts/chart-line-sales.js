@@ -16,14 +16,12 @@ window.addEventListener('DOMContentLoaded', async(event) => {
   }
 
  
- const months = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
+  const months = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
 
-  // Area Chart Example
   var ctx = document.getElementById("salesLineChart");
-  var myLineChart = new Chart(ctx, {
+  var lineChart = new Chart(ctx, {
     type: 'line',
     data: {
-      //labels: `${months[ ( new Date(data.map(row => row.date)) ).getMonth() ]} ${( new Date(data.map(row => row.date)) ).getDay()}`,
       labels: data.map(row => row.date),
       datasets: [{
         label: "Total de vendas (EUR)",
@@ -38,7 +36,6 @@ window.addEventListener('DOMContentLoaded', async(event) => {
         pointHitRadius: 50,
         pointBorderWidth: 2,
         data: data.map(row => row.sum),
-        // data: [10000, 30162, 26263, 18394, 18287, 28682, 31274, 33259, 25849, 24159, 32651, 31984, 38451, 22554, 22514],
       }],
     },
     options: {

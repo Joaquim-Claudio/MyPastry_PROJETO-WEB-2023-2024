@@ -28,17 +28,21 @@ app.use(urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static('public'));
 
-const SessionStore = session_store(session.Store);
+const sessionStore = new (session_store(session.Store))({
+  db: database,
+  tableName: 'session',
+})
 
 app.use(session({
     secret: process.env.SS_SECRETS,
-    cookie: {httpOnly:true},
+    cookie: {
+      httpOnly:true,
+      maxAge: 604800000
+    },
     resave: false,
     saveUninitialized: false,
-    store: new SessionStore({
-      db: database,
-      tableName: 'session',
-    })
+    store: sessionStore,
+    
   }
 ))
 
