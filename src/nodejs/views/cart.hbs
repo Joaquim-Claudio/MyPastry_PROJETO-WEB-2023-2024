@@ -1,8 +1,8 @@
 <!-- Header set up #################################################################################################-->
 <header>
     <div class="container-md">
-        <div class="back-link">
-            <a href="http://localhost:5300/">
+        <div id="backLink" class="back-link">
+            <a href="#">
                 <i class="bi bi-arrow-left fs-1 mt-1 text-gradient"></i>
                 <div class="fs-6 ms-2" style="color: #3D3D3D;">Voltar</div>
             </a>
@@ -20,7 +20,7 @@
             </div>
         </div>
 
-        {{#if cart}}
+        {{#if cart.items.length}}
         <div class="row">
             <table class="table order-products">
                 <thead>
@@ -55,9 +55,9 @@
                         <td class="col-md-3">
                             <div class="td-wrapper">
                                 <span class=" quantity-switch quantity-switch-lg mx-auto border border-2 border-secondary rounded-2 fs-5">
-                                    <div class="action"><i class="bi bi-dash-lg float-start"></i></div>
+                                    <div class="action minus" pid="{{this.ordProd.prod.id}}"><i class="bi bi-dash-lg float-start"></i></div>
                                     <div class="value">{{this.ordProd.quant}}</div>
-                                    <div class="action"><i class="bi bi-plus-lg float-end"></i></div>
+                                    <div class="action plus" pid="{{this.ordProd.prod.id}}"><i class="bi bi-plus-lg float-end"></i></div>
                                 </span>
 
                             </div>
@@ -65,7 +65,7 @@
                         <td class="col-md-3">
                             <div class="td-wrapper">
                                 <div class="prod-subtotal">€{{this.ordProd.subTotal}}</div> 
-
+                                <div class="mt-4"><i class="bi bi-trash3 trash red" pid="{{this.ordProd.prod.id}}"></i></div>
                             </div>
                         </td>
                     </tr>
@@ -77,6 +77,7 @@
         </div>
 
         <div class="row justify-content-end">
+            <p class="text-end mb-4 fs-3">Total: {{cart.total}}</p>
             <button id="finish" class="btn-sm btn-default fw-bold py-3 px-5 rounded-4" type="button">Finalizar</button>
         </div>
         {{else}}

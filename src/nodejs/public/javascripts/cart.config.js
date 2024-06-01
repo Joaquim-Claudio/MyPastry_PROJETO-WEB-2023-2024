@@ -30,6 +30,22 @@ window.addEventListener('DOMContentLoaded', event => {
                         icon: "success"
                     });
 
+                    try {
+                        const response = await fetch(`${base_url}/cart/get-num-items`, {
+                            headers: {"Content-Type": "application/json"},
+                            method: 'GET'
+                        })
+            
+                        if(response.ok) {
+                            const numItems = await response.json();
+                            console.log(numItems);
+                            document.getElementById('cartQuant').innerText = numItems.quant;
+                        }
+            
+                    } catch (err) {
+                        throw new Error(err);
+                    }
+
                 } else {
                     Swal.fire({
                         title: "Erro ao adicionar produto", 
@@ -46,4 +62,85 @@ window.addEventListener('DOMContentLoaded', event => {
         })
     }
 
-})
+    const minusBtnList = document.getElementsByClassName('minus');
+    if(minusBtnList.length) {
+        for(let minusBtn of minusBtnList) {
+            minusBtn.addEventListener('click', async() => {
+                const pack = {
+                    pid: minusBtn.getAttribute('pid'),
+                    action: 'decrease'
+                }
+
+                try {
+                    const response = await fetch(`${base_url}/cart/update-cart-item`, {
+                        headers: {"Content-Type": "application/json"},
+                        method: 'POST',
+                        body: JSON.stringify(pack)
+                    })
+
+                    if(response.ok) {
+                        location.reload();
+                    }
+
+                } catch (err) {
+                    throw new Error(err);
+                }
+            })
+        }
+    }
+
+    const plusBtnList = document.getElementsByClassName('plus');
+    if(plusBtnList.length) {
+        for(let plusBtn of plusBtnList) {
+            plusBtn.addEventListener('click', async() => {
+                const pack = {
+                    pid: plusBtn.getAttribute('pid'),
+                    action: 'increase'
+                }
+
+                try {
+                    const response = await fetch(`${base_url}/cart/update-cart-item`, {
+                        headers: {"Content-Type": "application/json"},
+                        method: 'POST',
+                        body: JSON.stringify(pack)
+                    })
+
+                    if(response.ok) {
+                        location.reload();
+                    }
+
+                } catch (err) {
+                    throw new Error(err);
+                }
+            })
+        }
+    }
+
+    const trashBtnList = document.getElementsByClassName('trash');
+    if(trashBtnList.length) {
+        for(let trashBtn of trashBtnList) {
+            trashBtn.addEventListener('click', async() => {
+                const pack ={
+                    pid: trashBtn.getAttribute('pid')
+                }
+
+                try {
+                    const response = await fetch(`${base_url}/cart/delete-cart-item`, {
+                        headers: {"Content-Type": "application/json"},
+                        method: 'POST',
+                        body: JSON.stringify(pack)
+                    })
+
+                    if(response.ok) {
+                        location.reload();
+                    }
+
+                } catch (err) {
+                    throw new Error(err);
+                }
+
+            })
+        }
+    }
+
+});
