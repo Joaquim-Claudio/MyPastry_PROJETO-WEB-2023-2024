@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Loja com Radar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 600px; /* Tamanho do mapa */
+        }
+    </style>
+</head>
+<body>
+    <h1>Monitoramento</h1>
+    <nav>
+        <a href="index.html">Menu Principal</a>
+    </nav>
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([38.75057189013522, -9.197041203021454], 13);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var targetPoint = L.latLng(38.75057189013522, -9.197041203021454); // Ponto principal
+        var targetMarker = L.marker(targetPoint).addTo(map)
+            .bindPopup('Ponto Alvo: Avenida do Uruguai, Benfica, Lisboa, Portugal')
+            .openPopup();
+
+        var radarCircle100m = L.circle(targetPoint, {
+            color: 'red',
+            fillColor: '#f03',
+            fillOpacity: 0.2,
+            radius: 100  // Raio de 100mmetros
+        }).addTo(map);
+
+        var radarCircle500m = L.circle(targetPoint, {
+            color: 'yellow',
+            fillColor: '#ff3',
+            fillOpacity: 0.2,
+            radius: 500  // Raio de 500 metros
+        }).addTo(map);
+
+        var radarCircle1km = L.circle(targetPoint, {
+            color: 'green',
+            fillColor: '#3f3',
+            fillOpacity: 0.2,
+            radius: 1000  // Raio de 1 km
+        }).addTo(map);
+
+        var clientMarkers = {};
+
+        function startAccelerometer() {
+            if (window.DeviceMotionEvent) {
+                window.addEventListener('devicemotion', function(event) {
+                    var acceleration = event.acceleration;
+                    if (acceleration.x !== null) {
+                        console.log('Acelerômetro: X=' + acceleration.x + ', Y=' + acceleration.y + ', Z=' + acceleration.z);
+                    }
+                });
+            } else {
+                alert('Acelerômetro não é suportado pelo seu dispositivo');
+            }
+
+            // Detectar clientes dentro dos limites
+            setInterval(checkRadar, 1000); // Verifica a cada segundo
+        }
+
+        function checkRadar() {
+            var clientLog = JSON.parse(localStorage.getItem('cliente-log')) || [];
+            clientLog.forEach(function(client) {
+                if (client.coords) {
+                    var clientLocation = L.latLng(client.coords.lat, client.coords.lng);
+                    var distance = map.distance(clientLocation, targetPoint);
+
+                    if (clientMarkers[client.id]) {
+                        map.removeLayer(clientMarkers[client.id]);
+                    }
+
+                    var markerMessage = '';
+
+                    if (distance <= radarCircle100m.getRadius()) {
+                        markerMessage = 'Cliente detectado! ID: ' + client.id + ' - Ele já chegou';
+                        logAction(client.id, 'Entrou na área de 100m da loja');
+                    } else if (distance <= radarCircle500m.getRadius()) {
+                        markerMessage = 'Cliente detectado! ID: ' + client.id + ' - Atenção está a chegar';
+                        logAction(client.id, 'Entrou na área de 500m da loja');
+                    } else if (distance <= radarCircle1km.getRadius()) {
+                        markerMessage = 'Cliente detectado! ID: ' + client.id + ' - Ele está próximo';
+                        logAction(client.id, 'Entrou na área de 1km da loja');
+                    }
+
+                    if (markerMessage) {
+                        clientMarkers[client.id] = L.marker(clientLocation).addTo(map).bindPopup(markerMessage).openPopup();
+                    }
+                }
+            });
+        }
+
+        function logAction(clientId, action) {
+            var logs = localStorage.getItem('store-log');
+            logs = logs ? JSON.parse(logs) : [];
+            logs.push({ id: clientId, date: new Date().toISOString(), action: action });
+            localStorage.setItem('store-log', JSON.stringify(logs));
+        }
+
+        startAccelerometer();
+    </script>
+</body>
+</html>

@@ -168,25 +168,26 @@
     padding: 0;
   }
   .banner img {
-    width: 92.63vh;
+    width: 100.63vh;
     height: 97.63vh;
     
   }
   .overlay {
       position: absolute;
-      top: 50%;
-      left: 50%;
+      top: 50%; /* Centralizar verticalmente */
+      left: 47%; /* Centralizar horizontalmente */
       transform: translate(-50%, -50%);
       padding: 20px;
       border-radius: 8px;
       text-align: center;
+     
      
     }
     
     .first-message {
       font-size: 58px;
       font-weight: 700;
-      width: 163%; /* Largura de 100% para a primeira mensagem */
+      width: 160%; /* Largura de 100% para a primeira mensagem */
     }
     
     .second-message {
@@ -233,3 +234,27 @@
     left: 20px; /* Distância da esquerda */
   }
   
+  /* Adicionando animações */
+@keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .first-message,.second-message{
+    opacity: 0; /* Começa invisível */
+    animation: fade-in 1s ease forwards; /* Aplica a animação */
+  }
+  
+  /* Adicionando atraso para a segunda mensagem */
+  .second-message {
+    animation-delay: 0.5s; /* Atraso de 0.5s */
+  }
+
+ 
+ 

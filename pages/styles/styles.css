@@ -1,0 +1,118 @@
+.body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: white; /* Adicionando o background branco */
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .left {
+    padding: 20px;
+    text-align: right; /* Alinhamento dos elementos à direita */
+    flex: 1; /* Para ocupar todo o espaço disponível */
+    max-width: calc(50% - 40px); /* Largura máxima igual à metade do espaço disponível menos o padding */
+  }
+  
+  .left img {
+    width: 100%; /* Define a largura da imagem como 100% */
+    max-height: 18%;
+    height: auto;
+    object-fit: cover; /* Mantém a proporção e corta a imagem para preencher a área */
+    
+  }
+  
+  .right {
+    padding: 20px;
+    max-width: 4000px; /* Definindo uma largura fixa para a parte direita */
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .gradient-text {
+    background: linear-gradient(to right,#DB2700, #DBB800);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .login-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 13px; /* Adicionando borda arredondada */
+    background: transparent;
+    box-shadow: none; /* Removendo o efeito de sombra */
+  }
+  
+  a {
+    text-decoration: none;
+    color: blue;
+    font-size: 12px; /* Reduzindo o tamanho da fonte do link */
+  }
+  
+  .forgot-password {
+    float: right;
+  }
+  
+  .btn-default {
+      color: white;
+      background-color: #DBB800;
+      transition: all 0.3s ease-in-out;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+  
+  .btn-default:active, .btn-default:hover {
+      color: white !important;
+      background-color: #dcbf33 !important;
+      transform: scale(0.99);
+  }
+  
+  .divider-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .left-divider, .right-divider {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right,#DB2700, #DBB800);
+  }
+  
+  .divider-text {
+    padding: 0 10px;
+    font-size: 14px; /* Tamanho da fonte da palavra 'ou' */
+  }
+  
+ 
+header .banner {
+    padding: 0;
+}
+
+.banner img {
+    width: auto;
+    height: 97.63vh;
+}
