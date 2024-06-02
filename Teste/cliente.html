@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Cliente com Rota</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+    <style>
+        #map {
+            height: 600px; /* Altura do mapa */
+        }
+    </style>
+</head>
+<body>
+    <h1>Cliente com Rota</h1>
+    <nav>
+        <a href="index.html">Menu Principal</a>
+    </nav>
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+    <script>
+        // Gera um ID específico para a máquina do cliente
+        var clientId = localStorage.getItem('client-id');
+        if (!clientId) {
+            clientId = 'ID-' + Math.floor(Math.random() * 1000000);
+            localStorage.setItem('client-id', clientId);
+        }
+        console.log("Client ID: " + clientId);
+
+        var map = L.map('map').setView([38.75057189013522, -9.197041203021454], 13);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var targetPoint = L.latLng(38.75057189013522, -9.197041203021454); // Ponto alvo
+        var targetMarker = L.marker(targetPoint).addTo(map)
+            .bindPopup('Ponto Alvo: Avenida do Uruguai, Benfica, Lisboa, Portugal')
+            .openPopup();
+
+        var routingControl;
+        var currentLocationMarker;
+        var watchId;
+
+        function clearMap() {
+            if (currentLocationMarker) {
+                map.removeLayer(currentLocationMarker);
+            }
+            if (routingControl) {
+                map.removeControl(routingControl);
+            }
+            if (watchId) {
+                navigator.geolocation.clearWatch(watchId);
+            }
+        }
+
+        function addRoute(startPoint, endPoint) {
+            if (routingControl) {
+                routingControl.setWaypoints([startPoint, endPoint]);
+            } else {
+                routingControl = L.Routing.control({
+                    waypoints: [
+                        startPoint, // Ponto inicial
+                        endPoint // Ponto final
+                    ],
+                    router: L.Routing.osrmv1({
+                        serviceUrl: 'https://router.project-osrm.org/route/v1',
+                        profile: 'foot', //Perfil definido para caminhada
+                        options: {
+                            continue_straight: false,
+                            alternatives: false, // Desativa alternativas
+                            steps: true,
+                            annotations: true
+                        }
+                    }),
+                    routeWhileDragging: true,
+                    showAlternatives: false // Desativa a exibição de rotas alternativas
+                }).addTo(map);
+            }
+
+            routingControl.on('routesfound', function(e) {
+                var routes = e.routes;
+                var summary = routes[0].summary;
+                var distance = summary.totalDistance / 1000; //Km
+                var popupContent = 'Distância: ' + distance.toFixed(2) + ' km';
+
+                L.popup()
+                    .setLatLng(endPoint)
+                    .setContent(popupContent)
+                    .openOn(map);
+
+                logAction(clientId, 'Solicitou rota de ' + startPoint.toString() + ' para ' + endPoint.toString());
+            });
+        }
+
+        function startGeolocation() {
+            if (navigator.geolocation) {
+                watchId = navigator.geolocation.watchPosition(function(position) {
+                    var currentLocation = L.latLng(position.coords.latitude, position.coords.longitude);
+
+                    if (currentLocationMarker) {
+                        map.removeLayer(currentLocationMarker);
+                    }
+                    currentLocationMarker = L.marker(currentLocation).addTo(map)
+                        .bindPopup('Você está aqui')
+                        .openPopup();
+                    addRoute(currentLocation, targetPoint);
+
+                    // Atualizar: localização no localStorage
+                    updateClientLocation(clientId, position.coords.latitude, position.coords.longitude);
+                }, function(error) {
+                    console.error('Erro ao obter localização', error);
+                    alert('Erro ao obter localização');
+                }, {
+                    enableHighAccuracy: true,
+                    timeout: 5000,
+                    maximumAge: 0
+                });
+            } else {
+                alert('Geolocalização não é suportada pelo seu navegador');
+            }
+        }
+
+        function logAction(clientId, action) {
+            var logs = localStorage.getItem('client-log');
+            logs = logs ? JSON.parse(logs) : [];
+            logs.push({ id: clientId, date: new Date().toISOString(), action: action });
+            localStorage.setItem('client-log', JSON.stringify(logs));
+        }
+
+        function updateClientLocation(clientId, lat, lng) {
+            var logs = localStorage.getItem('cliente-log');
+            logs = logs ? JSON.parse(logs) : [];
+            var updated = false;
+
+            // Atualiza a localização existente 
+            logs.forEach(function(log) {
+                if (log.id === clientId) {
+                    log.coords = { lat: lat, lng: lng };
+                    updated = true;
+                }
+            });
+
+            if (!updated) {
+                logs.push({ id: clientId, coords: { lat: lat, lng: lng }, date: new Date().toISOString(), action: 'Atualizou localização' });
+            }
+
+            localStorage.setItem('cliente-log', JSON.stringify(logs));
+        }
+
+        startGeolocation();
+    </script>
+</body>
+</html>

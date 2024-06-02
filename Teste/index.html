@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>MyPastry - Menu Principal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bem-vindo ao MyPastry</h1>
+    <button class="button" onclick="window.location.href='cliente.html'">Pedido Mobile</button>
+    <button class="button" onclick="window.location.href='entrega.html'">Pedido Delivery</button>
+    <button class="button" onclick="showPasswordPrompt1()">Monitoramento</button>
+    <button class="button" onclick="showPasswordPrompt2()">Histórico</button>
+
+    <script>
+        function showPasswordPrompt1() {
+            var password = prompt("Insira a senha de administrador:");
+            if (password === "admin123") { // Substitua por sua senha real
+                window.location.href = 'loja.html';
+            } else {
+                alert("Senha incorreta. Tente novamente.");
+            }
+        }
+        function showPasswordPrompt2() {
+            var password = prompt("Por favor, insira a senha de administrador:");
+            if (password === "admin1234") { // Substitua por sua senha real
+                window.location.href = 'administrador.html';
+            } else {
+                alert("Senha incorreta. Tente novamente.");
+            }
+        }
+    </script>
+</body>
+</html>

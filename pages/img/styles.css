@@ -5,19 +5,16 @@
   background-color: white; /* Adicionando o background branco */
 }
 
-/* Adiciona a fonte Montserrat a todos os elementos */
-body, h1, h2, h3, h4, h5, h6, p, a, ul, li, input, button {
-    font-family: 'Montserrat', sans-serif;
-}
-    
+
+
 .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: calc(100vh - 50px); /* Altura da viewport menos 50 pixels */
   margin-bottom: 50px; /* Distância do final da página */
-  
 }
+
 
 .left {
   padding: 20px;
@@ -45,14 +42,15 @@ body, h1, h2, h3, h4, h5, h6, p, a, ul, li, input, button {
 .register-message {
   float: right;
   margin-top: 50px;
-  margin-right: 70px;
+  margin-right: 20px;
   color: rgb(0, 0, 0);
 }
 
+
+
 .form {
-  width: 80%; /* Garantir que o formulário ocupe toda a largura disponível */
+  width: 90%; /* Garantir que o formulário ocupe toda a largura disponível */
   margin-top: 100px; /* Distância do final da página */
-  margin-right: 200px;
 }
 
 .login-box {
@@ -60,27 +58,23 @@ body, h1, h2, h3, h4, h5, h6, p, a, ul, li, input, button {
 }
 
 .btn-default {
-  margin-top: 26px; /* Espaçamento entre o botão Entrar e o botão "Entrar com uma conta Google" */  
+  margin-top: 26px; /* Espaçamento entre o botão Entrar e o botão "Entrar com uma conta Google" */
+  
 }
-
 .divider-box {
   margin-top: 26px; /* Espaçamento entre o botão "Entrar com uma conta Google" e a divisória "ou" */
 }
-
 .divider-text {
   margin: 0 26px; /* Espaçamento à esquerda e à direita do "ou" */
 }
-
 .input-box {
   margin-top: 26px; /* Espaçamento entre o campo de senha e o campo de usuário */
 }
 
 h2 {
   font-size: 24px;
-  font-weight: bold;
   margin-bottom: 20px;
 }
-
 .gradient-text {
   background: linear-gradient(to right,#DB2700, #DBB800);
   -webkit-background-clip: text;
@@ -112,7 +106,7 @@ input[type="password"] {
 a {
   text-decoration: none;
   color: blue;
-  font-size: 15px; /* Reduzindo o tamanho da fonte do link */
+  font-size: 12px; /* Reduzindo o tamanho da fonte do link */
 }
 
 .forgot-password {
@@ -137,10 +131,6 @@ a {
   transform: scale(0.99);
 }
 
-.google-login {
-    width: 100%; /* Definindo a largura do botão como 100% do contêiner pai */
-    max-width: none; /* Garantindo que a largura máxima não seja limitada */
-  }
 
 .divider-box {
   display: flex;
@@ -164,27 +154,19 @@ a {
   position: relative; /* Tornar o posicionamento dos elementos filhos relativo a este */
   overflow: hidden; /* Garantir que o filtro não ultrapasse os limites da imagem */
 }
-
 .form {
   padding: 50px;
 }
-
 header .banner {
   padding: 0;
 }
 
 .banner img {
-    width: 92.63vh;
-    height: 97.63vh;
-  }
-
-.overlay-img {
-    position: absolute; /* Posicionamento absoluto */
-    top: 0; /* Alinha a parte superior da imagem adicional ao topo da div pai */
-    right: 0; /* Alinha a parte direita da imagem adicional à direita da div pai */
-    z-index: 1; /* Garante que a imagem adicional esteja acima da imagem principal */
-  }
+  width: 92.63vh;
+  height: 97.63vh;
   
+}
+
 .overlay {
   position: absolute;
   top: 50%; /* Centralizar verticalmente */
@@ -208,12 +190,6 @@ header .banner {
   font-weight: lighter;
   color: white; /* Definir a cor do texto como branca */
 }
-.svg-logo {
-    position: absolute;
-    top: 20px; /* Adjust this value as needed */
-    right: 20px; /* Adjust this value as needed */
-}
-
 .copyright-message {
   font-size: 16px;
   color: white;
@@ -223,38 +199,14 @@ header .banner {
 }
 
 .gradient-text {
-    background: linear-gradient(to right, #DB2700, #DBB800);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+  background: linear-gradient(to right, #DB2700, #DBB800);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-  /* Adicionando animações */
-@keyframes fade-in {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .first-message,
-  .second-message {
-    opacity: 0; /* Começa invisível */
-    animation: fade-in 1s ease forwards; /* Aplica a animação */
-  }
-  
-  /* Adicionando atraso para a segunda mensagem */
-  .second-message {
-    animation-delay: 0.5s; /* Atraso de 0.5s */
-  }
-  
-
-
-
-
-
+/* Adiciona a fonte Montserrat a todos os elementos */
+body, h1, h2, h3, h4, h5, h6, p, a, ul, li, input, button {
+  font-family: 'Montserrat', sans-serif;
+}
 
 

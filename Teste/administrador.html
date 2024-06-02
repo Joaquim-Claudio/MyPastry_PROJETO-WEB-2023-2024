@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Administrador - Histórico de Atividades</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        #reset-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Histórico de Atividades</h1>
+    <h2>Mobile</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Data</th>
+                <th>Ação</th>
+                <th>Localização</th>
+            </tr>
+        </thead>
+        <tbody id="client-log"></tbody>
+    </table>
+    <h2>Delivery</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Data</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody id="deliverer-log"></tbody>
+    </table>
+    <button id="reset-button" onclick="resetLogs()">Reset</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Função: recuperar logs do LocalStorage
+            function getLogs(key) {
+                var logs = localStorage.getItem(key);
+                return logs ? JSON.parse(logs) : [];
+            }
+
+            // Função: preencher a tabela de logs
+            function populateLog(log, elementId, includeLocation = false) {
+                var tbody = document.getElementById(elementId);
+                log.forEach(function(entry) {
+                    var tr = document.createElement('tr');
+                    var location = includeLocation && entry.coords ? 'Lat: ' + entry.coords.lat + ', Lng: ' + entry.coords.lng : 'N/A';
+                    tr.innerHTML = '<td>' + entry.id + '</td><td>' + entry.date + '</td><td>' + entry.action + '</td>' + (includeLocation ? '<td>' + location + '</td>' : '');
+                    tbody.appendChild(tr);
+                });
+            }
+
+            // Recuperação e exibição dos logs
+            var clientLog = getLogs('cliente-log');
+            var delivererLog = getLogs('entregador-log');
+
+            populateLog(clientLog, 'client-log', true);
+            populateLog(delivererLog, 'deliverer-log');
+
+            // Função: resetar os logs
+            window.resetLogs = function() {
+                localStorage.removeItem('cliente-log');
+                localStorage.removeItem('entregador-log');
+                localStorage.removeItem('store-log');
+                alert('Logs resetados com sucesso!');
+                location.reload(); // Limpar a tabela
+            }
+        });
+    </script>
+</body>
+</html>

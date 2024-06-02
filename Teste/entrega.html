@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Entrega com Sistema de Rota por Morada</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+    <style>
+        #map {
+            height: 600px; /* Altura do mapa */
+        }
+        #controls {
+            margin: 10px;
+        }
+        #address-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        #finalize-button {
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Entrega com Sistema de Rota por Morada</h1>
+    <nav>
+        <a href="loja.html">Loja</a> | 
+        <a href="cliente.html">Cliente</a>
+    </nav>
+    <div id="controls">
+        <label for="address">Insira a morada:</label>
+        <input type="text" id="address" name="address">
+        <button onclick="addAddress()">Adicionar Morada</button>
+        <ul id="address-list"></ul>
+        <button onclick="startDelivery()">Iniciar Entregas</button>
+        <button id="finalize-button" onclick="finalizeDelivery()">Finalizar Entrega</button>
+    </div>
+    <div id="map"></div>
+
+    <!-- Link para o JavaScript do Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+    <script>
+        var map = L.map('map').setView([38.75057189013522, -9.197041203021454], 13);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var mainLocation = L.latLng(38.75057189013522, -9.197041203021454); // Localização principal
+        var deliveryAddresses = [];
+        var currentRoute;
+        var routingControl;
+
+        function addAddress() {
+            var address = document.getElementById('address').value;
+            if (address) {
+                deliveryAddresses.push(address);
+                var li = document.createElement('li');
+                li.textContent = address;
+                document.getElementById('address-list').appendChild(li);
+                document.getElementById('address').value = '';
+            }
+        }
+
+        function startDelivery() {
+            if (deliveryAddresses.length > 0) {
+                getCoordinates(deliveryAddresses[0], function(coords) {
+                    plotRoute(mainLocation, coords);
+                    document.getElementById('finalize-button').style.display = 'block';
+                });
+            } else {
+                alert('Por favor, adicione pelo menos uma morada.');
+            }
+        }
+
+        function plotRoute(startPoint, endPointCoords) {
+            if (currentRoute) {
+                map.removeControl(currentRoute);
+            }
+
+            var endPoint = L.latLng(endPointCoords.lat, endPointCoords.lon);
+
+            routingControl = L.Routing.control({
+                waypoints: [
+                    startPoint, 
+                    endPoint
+                ],
+                router: L.Routing.osrmv1({
+                    serviceUrl: 'https://router.project-osrm.org/route/v1',
+                    profile: 'foot',
+                    options: {
+                        continue_straight: false,
+                        alternatives: false,
+                        steps: true,
+                        annotations: true
+                    }
+                }),
+                routeWhileDragging: true,
+                showAlternatives: false
+            }).addTo(map);
+
+            currentRoute = routingControl;
+
+            routingControl.on('routesfound', function(e) {
+                var routes = e.routes;
+                var summary = routes[0].summary;
+                var distance = summary.totalDistance / 1000;
+                var popupContent = 'Distância: ' + distance.toFixed(2) + ' km<br>Tempo estimado de viagem: ' + (summary.totalTime / 60).toFixed(2) + ' minutos';
+                L.popup()
+                    .setLatLng(endPoint)
+                    .setContent(popupContent)
+                    .openOn(map);
+            });
+        }
+
+        function getCoordinates(address, callback) {
+            var url = 'https://nominatim.openstreetmap.org/search?format=json&limit=1&q=' + encodeURIComponent(address);
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    if (data && data.length > 0) {
+                        callback(data[0]);
+                    } else {
+                        alert('Não foi possível encontrar a morada: ' + address);
+                    }
+                })
+                .catch(error => {
+                    console.error('Erro na geocodificação: ', error);
+                    alert('Erro ao obter coordenadas para a morada: ' + address);
+                });
+        }
+
+        function finalizeDelivery() {
+            if (deliveryAddresses.length > 0) {
+                deliveryAddresses.shift();
+                document.getElementById('address-list').removeChild(document.getElementById('address-list').firstChild);
+                if (deliveryAddresses.length > 0) {
+                    alert('Entrega finalizada. Por favor, clique em "Iniciar Entregas" para a próxima entrega.');
+                    document.getElementById('finalize-button').style.display = 'none';
+                } else {
+                    alert('Todas as entregas foram concluídas.');
+                    document.getElementById('finalize-button').style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
