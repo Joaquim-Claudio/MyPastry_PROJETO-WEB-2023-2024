@@ -1,3 +1,7 @@
+create extension postgis;
+
+create database mypastry with template template_postgis;
+
 create type emp_type as enum('admin', 'kitchen');
 create type pro_category as enum('pastel', 'hamburger', 'complement', 'beverage', 'dessert');
 create type ord_status as enum('pending', 'preparing', 'delivering', 'completed');
