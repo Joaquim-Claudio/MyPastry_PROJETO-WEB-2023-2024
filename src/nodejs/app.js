@@ -46,6 +46,7 @@ app.use(session({
   }
 ))
 
+sessionStore.sync();
 
 import indexRouter from './routes/index.route.js';
 import usersRouter from './routes/users.route.js';
