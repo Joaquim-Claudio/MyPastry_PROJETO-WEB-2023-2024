@@ -137,8 +137,8 @@ const deleteCartItem = (req, res) => {
 
 const getNumItems = (req, res) => {
     let numItems = 0;
-    const cartItems = req.session.cart.items;
     console.log(JSON.stringify(req.session.cart, null, 2));
+    const cartItems = req.session.cart.items;
 
     /*
     if(cartItems) {
