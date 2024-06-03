@@ -75,4 +75,11 @@ create table prod_ing(
 pro_id int references product(id) on delete cascade not null,
 ing_id int references ingredient(id) on delete cascade not null);
 
+create table location(
+id serial primary key,
+geom geometry(Point, 4326));
 
+create table active_client(
+cli_id int,
+ord_id int,
+loc_id int references location(id));
