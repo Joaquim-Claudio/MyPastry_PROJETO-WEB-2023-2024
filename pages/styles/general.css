@@ -446,3 +446,17 @@ header.masthead .intro-text {
     width: 20%;
     border-style: none;
 }
+
+.trash {
+    font-size: 20px;
+}
+
+.counter-item {
+    position: absolute;
+    padding: 0 5px;
+    border-radius: 50%;
+    background-color: #212529;
+    color: rgba(255, 255, 255, 0.862);
+    font-size: 12px;
+    
+}

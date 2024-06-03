@@ -430,7 +430,6 @@ header.masthead .intro-text {
 .prod-subtotal {
     font-size: large;
     font-weight: 300;
-    padding-top: 0.6rem;
 }
 
 .td-wrapper {
@@ -483,4 +482,24 @@ header.masthead .intro-text {
 
 .red {
     color: #DB2700 !important ;
+}
+
+.trash {
+    font-size: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.trash:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.counter-item {
+    position: absolute;
+    padding: 0 5px;
+    border-radius: 50%;
+    background-color: #212529;
+    color: rgba(255, 255, 255, 0.862);
+    font-size: 12px;
+    
 }

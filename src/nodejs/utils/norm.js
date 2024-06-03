@@ -17,6 +17,7 @@ function translateCategory(category) {
     }
 }
 
-const PriceFormat = new Intl.NumberFormat('pt', {minimumFractionDigits:2});
+const PriceFormat = new Intl.NumberFormat('pt', { minimumFractionDigits:2, maximumFractionDigits:2 });
+const TimeFormat = new Intl.NumberFormat('pt', { minimumIntegerDigits:2 , maximumFractionDigits:0 });
 
-export {translateCategory, PriceFormat};
+export {translateCategory, PriceFormat, TimeFormat};

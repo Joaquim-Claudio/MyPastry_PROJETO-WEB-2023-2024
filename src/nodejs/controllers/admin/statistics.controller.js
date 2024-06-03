@@ -25,4 +25,16 @@ const getDailySales = async (req, res) => {
     res.send(result);
 }
 
-export { countByAge, getDailySales };
+const countByGender = async (req, res) => {
+    const result = await sequelize.query(
+    `
+    select gender, count(*)
+    from client
+    group by gender
+    order by gender;
+    `,
+    { type: sequelize.QueryTypes.SELECT });
+    res.send(result);
+}
+
+export { countByAge, getDailySales, countByGender };

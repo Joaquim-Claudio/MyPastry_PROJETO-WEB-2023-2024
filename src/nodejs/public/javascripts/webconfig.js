@@ -69,13 +69,13 @@ window.addEventListener('DOMContentLoaded', event => {
     
         minus.addEventListener('click', () => {
             if(quant > 1) {
-                quant -= 1;
+                quant--;
                 quantLabel.innerText = quant;
             }
         })
     
         plus.addEventListener('click', () => {
-            quant += 1;
+            quant++;
             quantLabel.innerText = quant;
         })
     }
@@ -91,6 +91,35 @@ window.addEventListener('DOMContentLoaded', event => {
         })
     }
 
+    const backLink = document.getElementById("backLink")
+    if(backLink !== null) {
+        backLink.addEventListener('click', event => {
+            event.preventDefault();
+            history.back();
+        })
+
+    }
+
+    
+    (async function() {
+
+        try {
+            const response = await fetch(`${base_url}/cart/get-num-items`, {
+                headers: {"Content-Type": "application/json"},
+                method: 'GET'
+            })
+
+            if(response.ok) {
+                const numItems = await response.json();
+                console.log(numItems);
+                document.getElementById('cartQuant').innerText = numItems.quant;
+            }
+
+        } catch (err) {
+            throw new Error(err);
+        }
+
+    })();
 });
 
 
