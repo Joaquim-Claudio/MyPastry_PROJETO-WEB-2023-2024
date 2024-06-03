@@ -5,7 +5,12 @@ dotenv.config();
 const db = new Sequelize(process.env.DB_CONNECT, {
     dialect: 'postgres',
     protocol: 'postgres',
-    dialectOptions: {}
+    dialectOptions: {
+        ssl: {
+            require: true,
+            rejectUnauthorized: false
+        }
+    }
 })
 
 export default db;
