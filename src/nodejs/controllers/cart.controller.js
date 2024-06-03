@@ -137,16 +137,16 @@ const deleteCartItem = (req, res) => {
 
 const getNumItems = (req, res) => {
     let numItems = 0;
+    
     console.log(JSON.stringify(req.session.cart, null, 2));
-    const cartItems = req.session.cart.items;
-
-    /*
-    if(cartItems) {
+    
+    if(req.session.cart) {
+        const cartItems = req.session.cart.items;
         for(let item of cartItems) {
             numItems += item.quant;
         }
     }
-    */
+    
 
     return res.send({quant: numItems});
 }
