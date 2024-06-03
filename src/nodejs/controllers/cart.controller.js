@@ -140,11 +140,13 @@ const getNumItems = (req, res) => {
     const cartItems = req.session.cart.items;
     console.log(JSON.stringify(req.session.cart, null, 2));
 
+    /*
     if(cartItems) {
         for(let item of cartItems) {
             numItems += item.quant;
         }
     }
+    */
 
     return res.send({quant: numItems});
 }
