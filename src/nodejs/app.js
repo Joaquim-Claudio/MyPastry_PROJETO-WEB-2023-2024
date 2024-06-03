@@ -58,6 +58,8 @@ import cartRouter from './routes/cart.route.js'
 import adminRouter from './routes/admin/dashboard.route.js'
 import statisticsRouter from './routes/admin/statistics.route.js';
 
+import mapRouter from './routes/admin/map.route.js'
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/clients', clientsRouter);
@@ -68,6 +70,8 @@ app.use('/cart', cartRouter);
 
 app.use('/admin', adminRouter);
 app.use('/data/statistics', statisticsRouter);
+
+app.use('/admin/map', mapRouter);
 
 
 // catch 404 and forward to error handler

@@ -11250,3 +11250,46 @@ body {
 .mt-7 {
   margin-top: 4rem !important;
 }
+
+.map {
+  height: 70vh;
+  border: 0.2px solid rgba(10, 10, 10, 0.5);
+  border-radius: 8px;
+}
+
+.leaflet-popup-content {
+  text-align: start;
+  display: inline-block;
+}
+
+.list {
+  padding: 0;
+}
+
+.list .list-item {
+  list-style: none;
+}
+
+.list .list-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.list .list-item img {
+  width: 16px;
+  height: auto;
+}
+
+.box-card {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.notecard {
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 8px;
+  background-color: rgb(243, 243, 243);
+}
+
+.notecard-content{
+  padding: 6px 8px;
+  font-size: 10pt;
+}

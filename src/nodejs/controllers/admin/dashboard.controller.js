@@ -95,7 +95,7 @@ const getMediumOrderVolume = async (req, res) => {
 const getOrdersTable = (req, res) => {
     res.render('admin/all-orders', {
         layout:'layouts/admin',
-
+        title: 'Tabelas | MyPastry'
     })
 }
 
@@ -107,4 +107,11 @@ const getCharts = (req, res) => {
     });
 }
 
-export { getPage, getTodaySales, getMediumPrice, getMediumOrderVolume, getOrdersTable, getCharts };
+const getMap = (req, res) => {
+    res.render('admin/map', {
+        layout: 'layouts/admin',
+        title: 'Mapa | MyPastry'
+    })
+}
+
+export { getPage, getTodaySales, getMediumPrice, getMediumOrderVolume, getOrdersTable, getCharts, getMap };

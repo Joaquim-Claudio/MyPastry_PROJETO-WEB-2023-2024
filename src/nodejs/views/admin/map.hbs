@@ -1,0 +1,31 @@
+<main class="mt-5">
+    <div class="container-fluid px-4">
+
+        <div class="container-fluid px-4 mb-2">
+            <div class="row justify-content-between">
+                <div class="col-8">
+                    <h3 class="mb-4 text-center">Localização em tempo real - Pedidos Mobile</h3>
+                    <div id="map" class="map"></div>
+                </div>
+
+                <div class="col-3 card box-card">
+                    <div class="card-body">
+                        <h5 class="mb-4 text-center">Legenda</h5>
+                        <p>Este mapa apresenta, em tempo real, a localização dos clientes que têm pelo menos um pedido <em>Mobile</em> em aberto.</p>
+                        <div class="notecard mb-4">
+                            <p class="small notecard-content m-0"><b>Nota:</b> Clique sobre as camadas para visualizar os valores.</p>
+                        </div>
+                        <p>Descrição das camadas presentes no mapa:</p>
+                        <ul class="list">
+                            <li class="list-item"><img src="/images/others/green-marker.svg"> &bsim; 200 metros de distância da loja.</li>
+                            <li class="list-item"><img src="/images/others/orange-marker.svg"> &bsim; 500 metros de distância da loja.</li>
+                            <li class="list-item"><img src="/images/others/red-marker.svg"> &bsim; 1 Km de distância da loja.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/gh/Falke-Design/L.Donut@latest/src/L.Donut.js"></script>
