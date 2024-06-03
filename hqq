@@ -1,0 +1,616 @@
+[33mcommit 99dcebc60938efa932a981f186106b28686693be[m[33m ([m[1;36mHEAD -> [m[1;32m_production[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/joaquim-claudio-20220631[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m, [m[1;32mjoaquim-claudio-20220631[m[33m)[m
+Author: joaquim <joaquim.claudio2003@gmail.com>
+Date:   Mon Jun 3 05:04:55 2024 +0100
+
+    Updated creates and inserts scripts.
+
+[33mcommit f40d005f570ce33d6c644c15b5648b3db59a37e7[m[33m ([m[1;31morigin/_production[m[33m)[m
+Author: joaquim <joaquim.claudio2003@gmail.com>
+Date:   Mon Jun 3 04:13:33 2024 +0100
+
+    Updated the database connection settings.
+
+[33mcommit 0d0d96e954c0df93142fe027c89bb763fc1271bb[m
+Author: joaquim <joaquim.claudio2003@gmail.com>
+Date:   Mon Jun 3 03:08:57 2024 +0100
+
+    Updated the database connection settings.
+
+[33mcommit 0a4d7bed038619cd998f59a87ee9977eb73d425b[m
+Author: joaquim <joaquim.claudio2003@gmail.com>
+Date:   Mon Jun 3 03:06:16 2024 +0100
+
+    Updated the database connection settings.
+
+[33mcommit b0d5989610091b95edbda04d6716400752bacd93[m
+Author: joaquim <joaquim.claudio2003@gmail.com>
+Date:   Mon Jun 3 02:58:34 2024 +0100
+
+    Updated the database connection to the hosted database.
+
+[33mcommit ec8e363ebe7c85fb22ecaeaa3cf9559c64a61541[m
+Author: joaquim <joaquim.claudio2003@gmail.com>
+Date:   Mon Jun 3 02:28:15 2024 +0100
+
+    Added a Health Check endpoint.
+
+[33mcommit 3982efa08bd04aa7224b0417cf4747484b25e6b4[m[33m ([m[1;31morigin/mario-igreja-20220672[m[33m, [m[1;31morigin/lais-ferreira-20220481[m[33m, [m[1;32mmario-igreja-20220672[m[33m, [m[1;32mlais-ferreira-20220481[m[33m)[m
+Author: joaquim <joaquim.claudio2003@gmail.com>
+Date:   Mon Jun 3 02:04:29 2024 +0100
+
+    Finished the Map implamentation.
+
+[33mcommit 5d9f228301e8192b4a51e7d819637501d9089181[m
+Merge: 900ef27 340ffcf
+Author: joaquim <joaquim.claudio2003@gmail.com>
+Date:   Mon Jun 3 01:27:58 2024 +0100
+
+    Merge branch 'joaquim-claudio-20220631' into main
+
+[33mcommit 900ef275d0cc39e809c8d4f436e5117d15ded494[m
+Merge: 9f5f0a9 66f0e93
+Author: Mario-Igreja <123427601+Mario-Igreja@users.noreply.github.com>
+Date:   Sun Jun 2 03:20:31 2024 +0100
+
+    Merge branch 'mario-igreja-20220672'
+
+[33mcommit 66f0e931ed55d3ea01d069337e207e4d3f9dfa81[m
+Author: Mario-Igreja <123427601+Mario-Igreja@users.noreply.github.com>
+Date:   Sun Jun 2 03:17:14 2024 +0100
+
+    Mapa disponível
+
+[33mcommit 340ffcfa54205755e6a42302fbdec0171a79134d[m
+Author: joaquim <joaquim.claudio2003@gmail.com>
+Date:   Sat Jun 1 01:00:00 2024 +0100
+
+    Updated the dashboard and Finished the Cart.
+
+[33mcommit 4f757a0f01789cfb575bfb1e0a50dea0f6bc9b69[m
+Author: joaquim <joaquim.claudio2003@gmail.com>
+Date:   Thu May 30 02:45:57 2024 +0100
+
+    Updated the charts view. Created the Pie chart for users gender.
+
+[33mcommit ab0094d8cf98a506b71fe6743d0458d96787edc7[m
+Merge: 9f5f0a9 7721bbc
+Author: joaquim <joaquim.claudio2003@gmail.com>
+Date:   Wed May 29 04:44:06 2024 +0100
+
+    Merge branch 'joaquim-claudio-20220631' of github.com:Joaquim-Claudio/MyPastry_PROJETO-WEB-2023-2024 into joaquim-claudio-20220631
+
+[33mcommit 9f5f0a9e823aede575b59a1cdde9dc3bfb54e279[m
+Author: joaquim <joaquim.claudio2003@gmail.com>
+Date:   Wed May 29 04:42:24 2024 +0100
+
+    Started the Cart implementation.
+
+[33mcommit 7721bbc6848afb7338a5f16ad87fe1644a0717df[m
+Author: joaquim <joaquim.claudio2003@gmail.com>
+Date:   Wed May 29 04:42:24 2024 +0100
+
+    Started the Cart implementation.
+
+[33mcommit 172947781460c968678c20d6675e3cb8524bc1aa[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Tue May 28 17:57:49 2024 +0100
+
+    Update README.md
+
+[33mcommit a7766fb817fe6b29087a242fea4e0daac79c4c98[m
+Merge: ba5eca9 0e652de
+Author: joaquim <joaquim.claudio2003@gmail.com>
+Date:   Fri May 24 03:56:07 2024 +0100
+
+    Merge branch 'joaquim-claudio-20220631' into main
+
+[33mcommit 0e652de84f3f88e7506d3beb83a6be83a7a5078c[m
+Author: joaquim <joaquim.claudio2003@gmail.com>
+Date:   Fri May 24 03:54:14 2024 +0100
+
+    Updated the Dashboard features.
+
+[33mcommit 2019428e30c3bd137b66260e0193f6acb7db6a0e[m
+Author: joaquim <joaquim.claudio2003@gmail.com>
+Date:   Fri May 24 00:52:25 2024 +0100
+
+    Finished the ages Histogram.
+
+[33mcommit c9d426647c38112b52d23ac0aa749c4cd578a21f[m
+Author: joaquim <joaquim.claudio2003@gmail.com>
+Date:   Wed May 22 16:48:46 2024 +0100
+
+    Started the Dashboard implementation.
+
+[33mcommit 653f909a3c02f4e6d83215294da56cedc8c2f39e[m
+Author: joaquim <joaquim.claudio2003@gmail.com>
+Date:   Sun May 19 00:03:34 2024 +0100
+
+    Fixed the Error view.
+
+[33mcommit 83425f5cac81c0115afbdb162c97478aa49e4002[m
+Author: joaquim <joaquim.claudio2003@gmail.com>
+Date:   Fri May 17 13:12:14 2024 +0100
+
+    Finised the Product Details view.
+
+[33mcommit e7a2733d3dfb7114c92e4cefb3405ea3f9614391[m
+Author: joaquim <joaquim.claudio2003@gmail.com>
+Date:   Thu May 16 03:26:24 2024 +0100
+
+    Fixed sizing issues on App view.
+
+[33mcommit ba5eca92bcafcb9e9a25d19e2223a4408b9bdb0c[m
+Merge: ac7eca5 511ae53
+Author: joaquim <joaquim.claudio2003@gmail.com>
+Date:   Thu May 16 03:17:17 2024 +0100
+
+    Merge branch 'joaquim-claudio-20220631' into main
+
+[33mcommit 511ae53bb5b33c9688b386e9116bacd2c1c79267[m
+Author: joaquim <joaquim.claudio2003@gmail.com>
+Date:   Thu May 16 03:16:01 2024 +0100
+
+    Updated Collections, Products and Products-Details views.
+
+[33mcommit 57b00ebc0585dbdcb8d6b11bdba327d09b17bb34[m
+Author: joaquim <joaquim.claudio2003@gmail.com>
+Date:   Wed May 15 04:14:53 2024 +0100
+
+    Created the Product model and fixed some html pages.
+
+[33mcommit ebbe78befcebfacfc1bc32609245547b3fb570ed[m
+Author: joaquim <joaquim.claudio2003@gmail.com>
+Date:   Wed May 15 01:56:41 2024 +0100
+
+    Created the Client Model.
+
+[33mcommit d9637a8869296d42e5988b027494a62a2d13170f[m
+Author: joaquim <joaquim.claudio2003@gmail.com>
+Date:   Wed May 15 00:48:38 2024 +0100
+
+    Stablished database connection from node.
+
+[33mcommit 8778cabd5a3bcf20f1cb72b81fe7712d1842aa80[m
+Author: joaquim <joaquim.claudio2003@gmail.com>
+Date:   Mon May 13 03:02:57 2024 +0100
+
+    Started the server-side application with express-generator.
+
+[33mcommit d00fad71e71c84e0629fc7590eebdf651105ce30[m
+Author: joaquim <joaquim.claudio2003@gmail.com>
+Date:   Mon May 13 02:23:18 2024 +0100
+
+    Synced the database create-scripts to the model updating.
+
+[33mcommit ac7eca50309d43ced3f0f445a178ce69d890b957[m
+Merge: 97d99f7 089ccb6
+Author: joaquim <joaquim.claudio2003@gmail.com>
+Date:   Mon May 13 02:02:22 2024 +0100
+
+    Merge branch 'joaquim-claudio-20220631' into main
+
+[33mcommit 089ccb6726b6cfccd71120c0d7f57ce48f4b152f[m
+Author: joaquim <joaquim.claudio2003@gmail.com>
+Date:   Mon May 13 02:00:34 2024 +0100
+
+    Fixed some css bugs.
+
+[33mcommit fc9286d5fa79e9edeb40bbb88aa4f2b9659df038[m
+Author: joaquim <joaquim.claudio2003@gmail.com>
+Date:   Mon May 13 02:00:06 2024 +0100
+
+    Fixed some css bugs.
+
+[33mcommit db7107d3a659c9554c1712d3bd8c6c329d4f5492[m
+Author: joaquim <joaquim.claudio2003@gmail.com>
+Date:   Mon May 13 01:07:32 2024 +0100
+
+    Updated the Models.
+
+[33mcommit 97d99f7382817278fd0e80f9e18678b992b828b0[m
+Merge: 96da4cd ff734a7
+Author: Mario-Igreja <123427601+Mario-Igreja@users.noreply.github.com>
+Date:   Fri May 10 18:34:15 2024 +0100
+
+    Merge branch 'mario-igreja-20220672' of github.com:Joaquim-Claudio/MyPastry_PROJETO-WEB-2023-2024 into mario-igreja-20220672
+
+[33mcommit 96da4cd792d44c7fd88e1743b68bd872713d537a[m
+Author: Mario-Igreja <123427601+Mario-Igreja@users.noreply.github.com>
+Date:   Fri May 10 18:27:53 2024 +0100
+
+    Páginas Iniciais
+
+[33mcommit 5b016fbb9bca279e51a652bd8c3f645522087cbc[m
+Author: laisferreirinha <117844377+laisferreirinha@users.noreply.github.com>
+Date:   Thu May 9 13:51:26 2024 +0100
+
+    Actualizar data-models-mypastry-P.D.W.drawio
+
+[33mcommit c4855478a4583277401a41e263b5379687c32e7f[m
+Author: laisferreirinha <117844377+laisferreirinha@users.noreply.github.com>
+Date:   Thu May 9 12:56:42 2024 +0100
+
+    Actualizar data-models-mypastry-P.D.W.drawio
+
+[33mcommit 333d472bbc5773656087a6d4ff833dd0280085a8[m
+Author: laisferreirinha <117844377+laisferreirinha@users.noreply.github.com>
+Date:   Thu May 9 12:34:35 2024 +0100
+
+    Actualizar data-models-mypastry-P.D.W.drawio
+
+[33mcommit a16e0f91bc54427c423602a441a65d276ceea0e8[m
+Author: joaquim <joaquim.claudio2003@gmail.com>
+Date:   Thu May 2 04:01:48 2024 +0100
+
+    Updated the creats-scripts.
+
+[33mcommit b3614a424595dd110f0983c01810f403edea97e0[m
+Author: joaquim <joaquim.claudio2003@gmail.com>
+Date:   Thu May 2 03:40:05 2024 +0100
+
+    Updated the creats_script for database set up.
+
+[33mcommit 983dd25ac9c48f8b931e60a8ecde858c370f9b89[m
+Author: joaquim <joaquim.claudio2003@gmail.com>
+Date:   Thu May 2 03:18:44 2024 +0100
+
+    Updated the data models and created the Entity-Relation diagram.
+
+[33mcommit 437b2a604b4e9abc35959ea590c437f190beb4bc[m
+Author: joaquim <joaquim.claudio2003@gmail.com>
+Date:   Wed May 1 19:32:41 2024 +0100
+
+    Updated css.
+
+[33mcommit ff734a773bec98a4334ad9c77f4286046c1fd917[m
+Author: joaquim <joaquim.claudio2003@gmail.com>
+Date:   Wed Apr 24 14:29:16 2024 +0100
+
+    Updated all the pages.
+
+[33mcommit 1fbda072cbb65af7a368833dd3a2b989bf664a0b[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Mon Apr 22 05:41:54 2024 +0100
+
+    Updated the Product Details page (JS).
+
+[33mcommit 1f03049e05e590535d4987c0ff07742f1f5e2800[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Mon Apr 22 04:06:12 2024 +0100
+
+    Fixed the differences between branches.
+
+[33mcommit 689e50bbe00ff18477c3777f44f820ca48e1f6ba[m
+Merge: a016341 bf0d350
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Mon Apr 22 03:31:19 2024 +0100
+
+    Merge branch 'lais-ferreira-20220481' of github.com:Joaquim-Claudio/MyPastry_PROJETO-WEB-2023-2024 into lais-ferreira-20220481
+
+[33mcommit a0163411744aaf928c9c188fed28eaa95a6d1661[m
+Author: Lais Ferreira <laissferreira@icloud.com>
+Date:   Fri Apr 19 15:14:23 2024 +0100
+
+    Created product and pastellist
+
+[33mcommit bf0d35043075162478aabef09605d8e17c0b95d6[m
+Merge: e6cd801 4a1cce7
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Mon Apr 22 03:26:01 2024 +0100
+
+    Merge branch 'lais-ferreira-20220481' of github.com:Joaquim-Claudio/MyPastry_PROJETO-WEB-2023-2024 into lais-ferreira-20220481
+
+[33mcommit e6cd80175598b93b4dd16dea48ab43f37f87c15c[m
+Author: Lais Ferreira <laissferreira@icloud.com>
+Date:   Fri Apr 19 15:14:23 2024 +0100
+
+    Created product and pastellist
+
+[33mcommit 2142b520e12994e57935efc67d06113779ef7567[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Mon Apr 22 03:24:42 2024 +0100
+
+    Updated the Order page.
+
+[33mcommit cb341b8f8c4fcb74c3fd5f8b653ffaa9394a8137[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Sat Apr 20 01:31:09 2024 +0100
+
+    Finished the Product Details page layout.
+
+[33mcommit de95a4aa7292ee14829b5fed1f7606e4cd2cfe8e[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Fri Apr 19 15:41:52 2024 +0100
+
+    Started the Product Details page layout.
+
+[33mcommit 4a1cce7e31b7299d546d6c41f274a54d9a2419d3[m
+Author: Lais Ferreira <laissferreira@icloud.com>
+Date:   Fri Apr 19 15:14:23 2024 +0100
+
+    Created product and pastellist
+
+[33mcommit 3890eb3beed2f79c1ae8394d0a262362024898a4[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Mon Apr 15 19:37:00 2024 +0100
+
+    Finished About-The-App page.
+
+[33mcommit c2106d4902b0a8eb01a1d801aee3e2437bdcc079[m
+Merge: 94b51ed 6d9f2b6
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Mon Apr 15 14:41:06 2024 +0100
+
+    Merge branch 'joaquim-claudio-20220631' of github.com:Joaquim-Claudio/MyPastry_PROJETO-WEB-2023-2024 into joaquim-claudio-20220631
+
+[33mcommit 94b51ed1d6c45fe51ddc6726f8e7ee7b1e207faa[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Mon Apr 15 14:34:45 2024 +0100
+
+    Added some pictures.
+
+[33mcommit 6d9f2b6dbe38aa8834faa47a51138e29c2c66c33[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Mon Apr 15 14:34:45 2024 +0100
+
+    Added some pictures.
+
+[33mcommit 3cb6afd58a5ec183d17cbef64feb6c17fa0fe59a[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Mon Apr 15 02:48:24 2024 +0100
+
+    Update README.md
+
+[33mcommit de996e6d13b15a127384853d33250f2ecc4efa44[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Mon Apr 15 02:45:29 2024 +0100
+
+    Started the Menu frame implementation.
+
+[33mcommit 33007be80a2d6010f3fb615129f5925ba56f82fe[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Sun Apr 14 05:27:24 2024 +0100
+
+    Finished the Home page.
+
+[33mcommit b395c22442eb52c8377034fd19c3e22e02ae8486[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Sat Apr 13 01:25:55 2024 +0100
+
+    Updated the Home Page.
+
+[33mcommit c2953e29a4e60198e29d1ec2c83367e11dd3ee38[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Thu Apr 11 01:10:43 2024 +0100
+
+    Updated Front-End files.
+
+[33mcommit 244f1d5994e5944e21021fb415a2b1bab9aa4855[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Wed Apr 10 14:28:18 2024 +0100
+
+    Started the Front-End development.
+
+[33mcommit 35cdd712b678291272c6ab0ad473dfa9a7d0e879[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Mon Mar 25 19:06:58 2024 +0000
+
+    Added a .pdf version of the Data Model.
+
+[33mcommit 07de2c3b7e0dfd6d330694b462455600e4bc1050[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Mon Mar 25 19:04:33 2024 +0000
+
+    Updated the Data Model and added .gitignore
+
+[33mcommit cb571f20cf2f67cd54a3c13352934dcbf3c0f2e3[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Tue Mar 12 01:26:44 2024 +0000
+
+    Adicionado data-models-mypastry-P.D.W.drawio.pdf
+
+[33mcommit d42a6d1cea5603a3acb8a2a75c027c3892226ef2[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Tue Mar 12 01:26:24 2024 +0000
+
+    Actualizar data-models-mypastry-P.D.W.drawio
+
+[33mcommit 15fdd6ebad9894c9f9dac8162aadeb27fe0a1cdd[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Tue Mar 12 01:21:02 2024 +0000
+
+    Updated data-models-mypastry-P.D.W.pdf
+
+[33mcommit f7b0d4480fc36333971b6b9deeadb31d4d8a0c36[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Tue Mar 12 01:19:35 2024 +0000
+
+    Updated data-models-mypastry-P.D.W.drawio
+
+[33mcommit 4aeba6311fe99609f1aa5b02ad6db2458367c2b6[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Tue Mar 12 01:11:05 2024 +0000
+
+    Deleted temporary file.
+
+[33mcommit 5efa42ae00378beca6532aae3db4a52a68118526[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Tue Mar 12 01:05:56 2024 +0000
+
+    Added data-models-mypastry-P.D.W.pdf
+
+[33mcommit a6be2dab398ccac8c9645f29e69aa9a5df4e16a7[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Tue Mar 12 01:04:11 2024 +0000
+
+    Updated data-models-mypastry-P.D.W.drawio
+
+[33mcommit 7f0cff23f9f9e311babc18c0c7820d212ba87f8e[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Tue Mar 12 00:58:44 2024 +0000
+
+    Actualizar data-models-mypastry-P.D.W.drawio
+
+[33mcommit b0f58243435bff6642a81df42f51c8c0df7db21b[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Tue Mar 12 00:51:19 2024 +0000
+
+    Actualizar data-models-mypastry-P.D.W.drawio
+
+[33mcommit 914ee4ebd971ca152da9d4eb6254211daa984031[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Mon Mar 11 22:37:47 2024 +0000
+
+    Actualizar data-models-mypastry-P.D.W.drawio
+
+[33mcommit a4ac2cb863c2a563e484ca7faf295b9b40580e80[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Mon Mar 11 22:36:06 2024 +0000
+
+    Actualizar data-models-mypastry-P.D.W.drawio
+
+[33mcommit 6f00b166394dba00be24ef7e232197c4685b8e0a[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Mon Mar 11 22:34:34 2024 +0000
+
+    Actualizar data-models-mypastry-P.D.W.drawio
+
+[33mcommit a587d5df6b52406e02592f5cdbea7404613f54df[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Mon Mar 11 22:14:39 2024 +0000
+
+    Actualizar data-models-mypastry-P.D.W.drawio
+
+[33mcommit 2382bc525f78ae63f064ecc994a67ce2089f42ba[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Mon Mar 11 18:52:14 2024 +0000
+
+    Actualizar data-models-mypastry-P.D.W.drawio
+
+[33mcommit a0e739939e49a7bcc12f2f71da2295a248a3a484[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Mon Mar 11 18:49:03 2024 +0000
+
+    Actualizar data-models-mypastry-P.D.W.drawio
+
+[33mcommit 7412bbb99cf99fda217b93449b179b12feb218c2[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Mon Mar 11 17:22:27 2024 +0000
+
+    Actualizar data-models-mypastry-P.D.W.drawio
+
+[33mcommit cf3397b5ba25610d564874ba3c578e3e9550c1d4[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Mon Mar 11 17:18:55 2024 +0000
+
+    Added Data Models.
+
+[33mcommit 5e2ba54677b9e2e0212fd1ffaf82f1307d32a233[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Mon Mar 4 15:28:42 2024 +0000
+
+    Updated the Report.
+
+[33mcommit 23b2efb84e33a5ac0b452e4ee33e948b43558749[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Mon Mar 4 02:35:52 2024 +0000
+
+    Removed temporary files.
+
+[33mcommit 725de3ac5fe0845f3b1b6c4cb43e05a4d8f76353[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Mon Mar 4 02:28:19 2024 +0000
+
+    Updated the Test Guider.
+
+[33mcommit 01f387e4899ee9d1e53190626b75b8063044f455[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Sun Mar 3 05:02:56 2024 +0000
+
+    Added the TestGuider.
+
+[33mcommit a50e66009b6708f54468de77ae27d39136fb3c74[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Sun Mar 3 04:52:40 2024 +0000
+
+    Added the Production Plan.
+
+[33mcommit d222a1118934d218b37f0c58bff8497830eef015[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Fri Feb 23 16:40:07 2024 +0000
+
+    Update README.md
+
+[33mcommit d5851ac42d8b87a9c72b095429846b431f619fb8[m
+Merge: 6e945b0 638cfc5
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Fri Feb 23 16:36:51 2024 +0000
+
+    Merge branch 'joaquim-claudio-20220631' of github.com:Joaquim-Claudio/MyPastry_PROJETO-WEB-2023-2024 into joaquim-claudio-20220631
+
+[33mcommit 6e945b09638f66b4b689edaffa98909fd2c80ee0[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Fri Feb 23 16:33:33 2024 +0000
+
+    Yes
+
+[33mcommit 55c5d1ab86af97e8f2139f94bf0caf80446c3697[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Fri Feb 23 16:32:18 2024 +0000
+
+    Updated the report.
+
+[33mcommit 4de237bd78fcab88773d82694665b6833bd931ff[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Fri Feb 23 16:34:17 2024 +0000
+
+    Update README.md
+
+[33mcommit 638cfc55405e3fd529332ffe66e45c6f1052c195[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Fri Feb 23 16:33:33 2024 +0000
+
+    Yes
+
+[33mcommit e6faa571ab6239d811589e7c97035ba96882bb7a[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Fri Feb 23 16:32:18 2024 +0000
+
+    Updated the report.
+
+[33mcommit 3c52e62158641d3b50a1e3a34a90d997e9d82dc5[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Fri Feb 23 16:17:23 2024 +0000
+
+    Added the initial report.
+
+[33mcommit a8caeddf1d84a69d808dc129a27f46c857314ce0[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Sun Feb 18 02:22:25 2024 +0000
+
+    Update README.md
+
+[33mcommit 7309874bbd465d47e27301d9faba2d67885b9339[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Sun Feb 18 01:51:07 2024 +0000
+
+    Update README.md
+
+[33mcommit e54266787c4dfd9e9c414528026748dc1e2891c1[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Sun Feb 18 01:31:35 2024 +0000
+
+    Update README.md
+
+[33mcommit cd0ca2997e958351aee8abb27951c42ac9bdbefa[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Fri Feb 16 18:09:12 2024 +0000
+
+    Update README.md
+
+[33mcommit 8c257ebd12acd43123c3ca2836bcaa5b7f5e1042[m
+Author: Joaquim-Claudio <116195116+Joaquim-Claudio@users.noreply.github.com>
+Date:   Fri Feb 16 17:41:23 2024 +0000
+
+    Initial commit

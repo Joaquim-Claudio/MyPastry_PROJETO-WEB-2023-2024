@@ -34,6 +34,7 @@ inherits("user");
 
 create table "order"(
 id serial primary key not null,
+cli_id int,
 status ord_status not null,
 total real,
 created_at timestamp default current_timestamp,

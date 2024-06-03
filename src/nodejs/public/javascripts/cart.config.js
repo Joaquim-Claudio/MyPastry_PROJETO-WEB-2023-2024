@@ -1,4 +1,4 @@
-const base_url = 'http://localhost:5300'
+const base_url = 'https://mypastry.onrender.com/'
 
 window.addEventListener('DOMContentLoaded', event => {
 
