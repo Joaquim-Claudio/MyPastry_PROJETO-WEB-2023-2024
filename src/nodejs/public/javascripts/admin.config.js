@@ -1,4 +1,4 @@
-const url_base = 'https://mypastry.onrender.com/'
+const url_base = 'https://mypastry.onrender.com'
 
 window.addEventListener('DOMContentLoaded', event => {
 

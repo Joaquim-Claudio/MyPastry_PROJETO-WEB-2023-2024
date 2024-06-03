@@ -1,4 +1,4 @@
-const url_base = 'https://mypastry.onrender.com/';
+const url_base = 'https://mypastry.onrender.com';
 
 window.addEventListener('DOMContentLoaded', async(event) => {
   Chart.defaults.global.defaultFontFamily = '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
