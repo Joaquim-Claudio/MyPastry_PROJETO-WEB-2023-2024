@@ -122,9 +122,6 @@ const deleteCartItem = (req, res) => {
     const {pid} = req.body;
     const cartItems = req.session.cart.items;
 
-    const test = []
-    test.splice
-
     for(let i=0; i<cartItems.length; i++) {
         if(cartItems[i].pid == pid) {
             cartItems.splice(i, 1);
