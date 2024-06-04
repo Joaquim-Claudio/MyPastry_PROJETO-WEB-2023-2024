@@ -1,0 +1,88 @@
+
+ body{
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    color: #3D3D3D;
+    background-image: url("../mood.jpg") ;
+    background-size: 40%  100vh;
+    background-repeat: no-repeat;
+}
+.text-gradient {
+    background: linear-gradient(to right,#DB2700, #DBB800);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.text-intro p{
+    color:white;
+    
+}
+
+.text-intro h1{
+    font-weight: bold;
+}
+
+.text-intro {
+    padding-top: 150px;
+}
+
+.footer {
+    color: white;
+}
+
+.btn-default{
+    color: white;
+    background-color: #DBB800;
+    width: 150px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-lg {
+    width: 100%;
+}
+
+.btn-default:active, .btn-default:hover  {
+    color: white !important;
+    background-color: #dcbf33 !important;
+    transform: scale(0.99);
+}
+
+
+.divider-box {
+    margin-top: 26px; /* Espaçamento entre o botão "Entrar com uma conta Google" e a divisória "ou" */
+  }
+  
+  .divider-text {
+    margin: 0 26px; /* Espaçamento à esquerda e à direita do "ou" */
+  }
+
+  .divider-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .left-divider, .right-divider {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right,#DB2700, #DBB800);
+  }
+  
+  .divider-text {
+    padding: 0 10px;
+    font-size: 24px; /* Tamanho da fonte da palavra 'ou' */
+  }
+.col-md-7{
+   
+   padding-left: 10%;
+   padding-right: 10%;
+}
+a{
+    text-decoration: none;
+}
+
+.text{
+    font-size: small;
+}
+
