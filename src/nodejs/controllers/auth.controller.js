@@ -50,12 +50,7 @@ const ResponseHandler = async (req, res) => {
         const {tokens} = await oauth2Client.getToken(q.code);
         oauth2Client.setCredentials(tokens);
 
-        let userInfo = null;
-        oauth2Client.getAccessToken(async token => {
-            userInfo = await fetch(`https://www.googleapis.com/oauth2/v3/userinfo?access_token=${token}`)
-        })
-
-        console.log(JSON.stringify(userInfo, null, 2));
+        console.log(JSON.stringify(tokens, null, 2));
 
         res.end()
     }
