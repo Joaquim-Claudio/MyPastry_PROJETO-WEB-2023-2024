@@ -4,6 +4,9 @@ import url from 'url';
 import dotenv from 'dotenv';
 dotenv.config();
 
+import Client from '../models/client.model.js';
+
+
 const oauth2Client = new google.auth.OAuth2(
     process.env.GAPI_CLIENT_ID,
     process.env.GAPI_CLIENT_SECRET,
@@ -35,6 +38,8 @@ const Authenticate = (req, res) => {
     res.redirect(authorizationUrl);
 }
 
+
+
 const ResponseHandler = async (req, res) => {
     const q = url.parse(req.url, true).query;
 
@@ -45,8 +50,9 @@ const ResponseHandler = async (req, res) => {
         console.log('State mismatch. Possible CSRF attack');
         res.end('State mismatch. Possible CSRF attack');
 
+
     } else{
-        const {tokens} = await oauth2Client.getToken(q.code);
+        const {tokens} = oauth2Client.getToken(q.code);
         oauth2Client.setCredentials(tokens);
 
         try {
@@ -55,21 +61,30 @@ const ResponseHandler = async (req, res) => {
               audience: process.env.GAPI_CLIENT_ID,
             });
 
-            const payload = ticket.getPayload();
-            const userId = payload['sub'];
+            const userData = ticket.getPayload();
+            const google_id = userData['sub'];
 
-            console.log(JSON.stringify(payload, null, 2));
+            const client = await Client.findOne({where: {google_id}});
+
+            if(client === null) {
+                client = await Client.create({
+                    name: userData.name,
+                    email: userData.email,
+                    google_id
+                })
+            }
+
+
+            console.log(JSON.stringify(client, null, 2));
+            
+            res.json({
+                message: 'User signed in successfully!'
+            })
 
         } catch (error) {
             res.status(401).json({ error: 'Invalid token' });
-          }
-
-        res.end()
+        }
     }
-}
-
-const SignIn = (req, res) => {
-
 }
 
 export {Authenticate, ResponseHandler};
