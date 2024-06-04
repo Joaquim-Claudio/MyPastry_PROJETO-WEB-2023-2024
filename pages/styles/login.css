@@ -174,16 +174,16 @@ header .banner {
 }
 
 .banner img {
-    width: 92.63vh;
-    height: 97.63vh;
-  }
+  width: 92.63vh;
+  height: 97.63vh;
+}
 
 .overlay-img {
-    position: absolute; /* Posicionamento absoluto */
-    top: 0; /* Alinha a parte superior da imagem adicional ao topo da div pai */
-    right: 0; /* Alinha a parte direita da imagem adicional à direita da div pai */
-    z-index: 1; /* Garante que a imagem adicional esteja acima da imagem principal */
-  }
+  position: absolute; /* Posicionamento absoluto */
+  top: 0; /* Alinha a parte superior da imagem adicional ao topo da div pai */
+  right: 0; /* Alinha a parte direita da imagem adicional à direita da div pai */
+  z-index: 1; /* Garante que a imagem adicional esteja acima da imagem principal */
+}
   
 .overlay {
   position: absolute;
@@ -214,47 +214,31 @@ header .banner {
     right: 20px; /* Adjust this value as needed */
 }
 
-.copyright-message {
-  font-size: 16px;
-  color: white;
-  position: absolute;
-  bottom: 50px; /* Distância do fundo */
-  left: 20px; /* Distância da esquerda */
-}
-
 .gradient-text {
     background: linear-gradient(to right, #DB2700, #DBB800);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
-  /* Adicionando animações */
+/* Adicionando animações */
 @keyframes fade-in {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  
-  .first-message,
-  .second-message {
-    opacity: 0; /* Começa invisível */
-    animation: fade-in 1s ease forwards; /* Aplica a animação */
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  /* Adicionando atraso para a segunda mensagem */
-  .second-message {
-    animation-delay: 0.5s; /* Atraso de 0.5s */
-  }
-  
+}
 
+.first-message,
+.second-message {
+  opacity: 0; /* Começa invisível */
+  animation: fade-in 1s ease forwards; /* Aplica a animação */
+}
 
-
-
-
-
-
+/* Adicionando atraso para a segunda mensagem */
+.second-message {
+  animation-delay: 0.5s; /* Atraso de 0.5s */
+}
