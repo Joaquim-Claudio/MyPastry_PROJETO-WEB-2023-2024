@@ -65,7 +65,7 @@ const ResponseHandler = async (req, res) => {
             const google_id = userData.sub;
 
             let client = await Client.findOne({where: {google_id}});
-
+/*
             if(client === null) {
                 client = await Client.create({
                     name: userData.name,
@@ -74,7 +74,7 @@ const ResponseHandler = async (req, res) => {
                 })
             }
 
-
+*/
             console.log(JSON.stringify(client, null, 2));
 
             res.json({
