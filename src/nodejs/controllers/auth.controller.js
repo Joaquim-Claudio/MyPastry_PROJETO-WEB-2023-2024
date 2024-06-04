@@ -5,7 +5,6 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 import Client from '../models/client.model.js';
-Client.sync();
 
 
 const oauth2Client = new google.auth.OAuth2(
@@ -64,7 +63,7 @@ const ResponseHandler = async (req, res) => {
 
             const userData = ticket.getPayload();
             const google_id = userData['sub'];
-/*
+
             let client = await Client.findOne({where: {google_id}});
 
             if(client === null) {
@@ -74,7 +73,7 @@ const ResponseHandler = async (req, res) => {
                     google_id: google_id
                 })
             }
-*/
+
             console.log(JSON.stringify(userData, null, 2));
 
             res.json({
