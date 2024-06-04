@@ -37,7 +37,7 @@ const Authenticate = (req, res) => {
 }
 
 const ResponseHandler = async (req, res) => {
-    const q = url.parse(req.url, true);
+    const q = url.parse(req.url, true).query;
 
     if(q.error) {
         console.log(q.error);
