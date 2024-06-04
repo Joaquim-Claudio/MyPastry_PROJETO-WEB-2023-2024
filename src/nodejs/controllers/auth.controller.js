@@ -64,7 +64,7 @@ const ResponseHandler = async (req, res) => {
 
             const userData = ticket.getPayload();
             const google_id = userData['sub'];
-
+/*
             let client = await Client.findOne({where: {google_id}});
 
             if(client === null) {
@@ -74,8 +74,8 @@ const ResponseHandler = async (req, res) => {
                     google_id: google_id
                 })
             }
-
-            console.log(JSON.stringify(client, null, 2));
+*/
+            console.log(JSON.stringify(userData, null, 2));
 
             res.json({
                 message: 'User signed in successfully!'
