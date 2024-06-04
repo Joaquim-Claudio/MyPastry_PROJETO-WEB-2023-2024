@@ -81,7 +81,7 @@ const ResponseHandler = async (req, res) => {
             })
 
         } catch (error) {
-            res.status(401).json(error);
+            res.status(401).json('Failed to sign in.');
         }
     }
 }
