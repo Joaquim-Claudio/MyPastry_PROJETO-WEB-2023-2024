@@ -42,7 +42,7 @@ const ResponseHandler = async (req, res) => {
     if(q.error) {
         console.log(q.error);
 
-    } else if (q.state !== req.sessio.state) {
+    } else if (q.state !== req.session.state) {
         console.log('State mismatch. Possible CSRF attack');
         res.end('State mismatch. Possible CSRF attack');
 
