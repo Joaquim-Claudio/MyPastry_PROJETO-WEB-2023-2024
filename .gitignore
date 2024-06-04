@@ -1,2 +1,3 @@
 /src/nodejs/node_modules/
 *.bkp
+/src/nodejs/*.env
