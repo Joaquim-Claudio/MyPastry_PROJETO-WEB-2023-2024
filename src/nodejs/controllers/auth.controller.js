@@ -64,7 +64,7 @@ const ResponseHandler = async (req, res) => {
             const userData = ticket.getPayload();
             const google_id = userData.sub;
 
-            const client = await Client.findOne({where: {google_id}});
+            let client = await Client.findOne({where: {google_id}});
 
             if(client === null) {
                 client = await Client.create({
