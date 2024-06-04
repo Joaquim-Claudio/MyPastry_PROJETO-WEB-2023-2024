@@ -24,13 +24,13 @@ body, h1, h2, h3, h4, h5, h6, p, a, ul, li, input, button {
   text-align:right; /* Alinhamento dos elementos à direita */
   max-width: calc(50% - 46px); /* Largura máxima igual à metade do espaço disponível menos o espaçamento */
 }
-
+/*
 .left img {
-  width: 100%; /* Define a largura da imagem como 100% */
+  width: 100%;
   max-height: 18%;
   height: auto;
-  object-fit: cover; /* Mantém a proporção e corta a imagem para preencher a área */
-}
+  object-fit: cover; 
+}*/
 
 .right {
   display: flex;
