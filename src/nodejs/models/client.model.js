@@ -1,7 +1,5 @@
 import sequelize from '../config/db_connect.js';
 import {DataTypes} from 'sequelize';
-import MobileOrder from './mobile_order.model.js';
-import ActiveClient from './active_client.model.js';
 
 const Client = sequelize.define('client', {
         id: {type: DataTypes.INTEGER, primaryKey:true, autoIncrement:true},

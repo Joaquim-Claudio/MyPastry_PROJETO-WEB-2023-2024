@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 import Client from '../models/client.model.js';
+Client.sync();
 
 
 const oauth2Client = new google.auth.OAuth2(
