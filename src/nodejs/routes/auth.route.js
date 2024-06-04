@@ -1,11 +1,10 @@
 import express from 'express';
-import { Authenticate } from '../controllers/auth.controller.js';
+import { Authenticate, ResponseHandler } from '../controllers/auth.controller.js';
 
 const router = express.Router()
 
 router.get('/google', Authenticate);
-router.get('/redirect', function(req, res) {
-    res.end();
-})
+router.get('/redirect', ResponseHandler);
+
 
 export default router;

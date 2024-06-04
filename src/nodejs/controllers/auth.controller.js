@@ -1,5 +1,6 @@
 import crypto from 'crypto';
 import {google} from 'googleapis'
+import url from 'url';
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -35,4 +36,33 @@ const Authenticate = (req, res) => {
     res.redirect(authorizationUrl);
 }
 
-export {Authenticate};
+const ResponseHandler = async (req, res) => {
+    const q = url.parse(req.url, true);
+
+    if(q.error) {
+        console.log(q.error);
+
+    } else if (q.state !== req.sessio.state) {
+        console.log('State mismatch. Possible CSRF attack');
+        res.end('State mismatch. Possible CSRF attack');
+
+    } else{
+        const {tokens} = await oauth2Client.getToken(q.code);
+        oauth2Client.setCredentials(tokens);
+
+        let userInfo = null;
+        oauth2Client.getAccessToken(async token => {
+            userInfo = await fetch(`https://www.googleapis.com/oauth2/v3/userinfo?access_token=${token}`)
+        })
+
+        console.log(JSON.stringify(userInfo, null, 2));
+
+        res.end()
+    }
+}
+
+const SignIn = (req, res) => {
+
+}
+
+export {Authenticate, ResponseHandler};

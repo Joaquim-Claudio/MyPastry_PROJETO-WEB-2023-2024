@@ -138,7 +138,7 @@ a {
 }
 
 .google-login {
-    width: 100%; /* Definindo a largura do botão como 100% do contêiner pai */
+    width: 100% !important;/* Definindo a largura do botão como 100% do contêiner pai */
     max-width: none; /* Garantindo que a largura máxima não seja limitada */
   }
 
