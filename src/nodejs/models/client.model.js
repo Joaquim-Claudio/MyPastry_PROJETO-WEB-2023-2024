@@ -11,6 +11,7 @@ const Client = sequelize.define('client', {
         gender: {type: DataTypes.CHAR},
         b_date: {type: DataTypes.DATEONLY},
         admin: {type:DataTypes.BOOLEAN, defaultValue:false},
+        google_id: {type: DataTypes.TEXT, defaultValue:null}
     },
     {
         tableName:'client',
