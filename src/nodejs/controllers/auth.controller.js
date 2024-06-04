@@ -53,7 +53,7 @@ const ResponseHandler = async (req, res) => {
 
 
     } else{
-        const {tokens} = oauth2Client.getToken(q.code);
+        const {tokens} = await oauth2Client.getToken(q.code);
         oauth2Client.setCredentials(tokens);
 
         try {
