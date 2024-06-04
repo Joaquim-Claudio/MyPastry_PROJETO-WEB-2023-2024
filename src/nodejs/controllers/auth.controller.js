@@ -15,7 +15,6 @@ const oauth2Client = new google.auth.OAuth2(
   ];
   
 
-
 const Authenticate = (req, res) => {
 
     const state = crypto.randomBytes(32).toString('hex');
@@ -50,7 +49,20 @@ const ResponseHandler = async (req, res) => {
         const {tokens} = await oauth2Client.getToken(q.code);
         oauth2Client.setCredentials(tokens);
 
-        console.log(JSON.stringify(tokens, null, 2));
+        try {
+            const ticket = await oauth2Client.verifyIdToken({
+              idToken: tokens.access_token,
+              audience: process.env.GAPI_CLIENT_ID,
+            });
+
+            const payload = ticket.getPayload();
+            const userId = payload['sub'];
+
+            console.log(JSON.stringify(payload, null, 2));
+
+        } catch (error) {
+            res.status(401).json({ error: 'Invalid token' });
+          }
 
         res.end()
     }
