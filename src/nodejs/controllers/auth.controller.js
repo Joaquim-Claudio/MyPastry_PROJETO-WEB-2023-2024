@@ -62,9 +62,9 @@ const ResponseHandler = async (req, res) => {
             });
 
             const userData = ticket.getPayload();
-            const google_id = userData.sub;
+            const google_id = userData['sub'];
 
-            let client = await Client.findOne({where: {google_id}});
+            let client = await Client.findOne({where: {google_id: google_id}});
 /*
             if(client === null) {
                 client = await Client.create({
@@ -73,7 +73,6 @@ const ResponseHandler = async (req, res) => {
                     google_id: google_id
                 })
             }
-
 */
             console.log(JSON.stringify(client, null, 2));
 
