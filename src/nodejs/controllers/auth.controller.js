@@ -51,7 +51,7 @@ const ResponseHandler = async (req, res) => {
 
         try {
             const ticket = await oauth2Client.verifyIdToken({
-              idToken: tokens.access_token,
+              idToken: tokens.id_token,
               audience: process.env.GAPI_CLIENT_ID,
             });
 
