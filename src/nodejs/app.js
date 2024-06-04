@@ -62,6 +62,9 @@ import mapRouter from './routes/admin/map.route.js'
 
 import pingRouter from './routes/ping.route.js'
 
+import loginRouter from './routes/login.route.js'
+import registerRouter from './routes/register.route.js'
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/clients', clientsRouter);
@@ -74,6 +77,9 @@ app.use('/admin', adminRouter);
 app.use('/data/statistics', statisticsRouter);
 
 app.use('/admin/map', mapRouter);
+
+app.use('/login', loginRouter);
+app.use('/register', registerRouter);
 
 app.use('/ping', pingRouter);
 

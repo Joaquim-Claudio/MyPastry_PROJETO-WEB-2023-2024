@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="icon" type="img/svg" href="/images/logo-mark-sm.svg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+  <meta name="google-signin-client_id" content="628742861226-ul89fiklsps4amtml44koa8ta8ifjms8.apps.googleusercontent.com">
+
+  <link rel="stylesheet" href="/stylesheets/register.css">
+
+  <title>Criar conta | MyPastry</title>
+</head>
+<body>
+  <header>
+    <div class="container-fluid p-0">
+      <div class="row">
+        <!-- Div para os elementos à esquerda da imagem -->
+        <div class="col-md-6 right"> <!-- Modificação da classe para 'right' -->
+          <div class="register-message text-end">
+            <p>Já tem uma conta? <a href="Login.html" class="register-link">Efetue login.</a></p>
+          </div>
+          <div class="form">
+            <h2>Criar uma conta <span class="gradient-text">MyPastry</span></h2>
+            
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+            <div class="divider-box">
+              <div class="left-divider"></div>
+              <div class="divider-text"><span class="gradient-text">Ou</span></div>
+              <div class="right-divider"></div>
+            </div>
+
+            <div class="login-box">
+              <h3>Nome de Utilizador ou Email</h3>
+              <input type="text" placeholder="">
+              <h3>Senha</h3>
+              <input type="password" placeholder="">
+              <h3>Confirmar senha</h3>
+              <input type="password" placeholder="">
+              <button class="btn-default">Registar</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Div para a imagem -->
+        <div class="col-md-6 left"> <!-- Modificação da classe para 'left' -->
+          <div class="banner">
+            <img class="img-fluid" src="./img/thumbs/moodboard2.jpg" alt="Imagem de login">
+            <div class="overlay">
+              <h2 class="first-message gradient-text">Bem vindo de volta.</h2>
+              <h3 class="second-message">Sentimo-nos felizes por tê-lo aqui connosco!</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+  <script src="/javascripts/signin.js"></script>
+</body>
+</html>

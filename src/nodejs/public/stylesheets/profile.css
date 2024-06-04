@@ -1,0 +1,137 @@
+body, p, a, ul, li {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  body, p, a, ul, li {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 900px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    position: relative;
+    margin-top: 180px;
+}
+
+.column-a {
+    display: flex;
+    flex-direction: column;
+}
+
+.column-b {
+    margin-left: 160px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info {
+    font-size: 30px;
+    max-width: 750px; /* Exemplo de limite personalizado */
+    color: #2D2D2D;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.logout {
+    text-decoration: none; /* Remove underline */
+    color: blue;
+    font-size: 19px; /* Decrease font size */
+}
+
+
+.username {
+    margin: 10px 0;
+}
+
+.profile-options {
+    list-style-type: none;
+    padding: 5px;
+    margin: 20px 0;
+}
+
+.profile-option {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+}
+
+.profile-option:last-child {
+    border-bottom: none;
+}
+
+.profile-option a {
+    text-decoration: none;
+    color: #2D2D2D;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.profile-option .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.big-box {
+    width: 400px;
+    height: 450px;
+    background-color: #DBB800;
+    border-radius: 20px;
+}
+
+.back {
+    position: absolute;
+    top: 130px;
+    left: 230px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 15px;
+    color: #2D2D2D;
+  
+}
+.back .icon {
+    margin-right: 20px; /* Adiciona espaço entre o ícone e o texto */
+}
+
+.back::before {
+    content: ""; /* Adiciona um conteúdo vazio */
+    display: inline-block; /* Permite aplicar largura e altura */
+    width: 20px; /* Largura da imagem */
+    height: 20px; /* Altura da imagem */
+    background-image: url('seta.png'); /* Define a imagem como plano de fundo */
+    background-size: cover; /* Garante que a imagem cubra todo o espaço */
+    margin-right: 5px; /* Espaçamento entre a imagem e a palavra "voltar" */
+}
