@@ -62,7 +62,7 @@ const ResponseHandler = async (req, res) => {
             });
 
             const userData = ticket.getPayload();
-            const google_id = userData['sub'];
+            const google_id = userData.sub;
 
             const client = await Client.findOne({where: {google_id}});
 
@@ -70,19 +70,19 @@ const ResponseHandler = async (req, res) => {
                 client = await Client.create({
                     name: userData.name,
                     email: userData.email,
-                    google_id
+                    google_id: google_id
                 })
             }
 
 
             console.log(JSON.stringify(client, null, 2));
-            
+
             res.json({
                 message: 'User signed in successfully!'
             })
 
         } catch (error) {
-            res.status(401).json({ error: 'Invalid token' });
+            res.status(401).json(error);
         }
     }
 }
