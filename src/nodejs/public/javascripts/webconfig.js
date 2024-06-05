@@ -98,7 +98,8 @@ window.addEventListener('DOMContentLoaded', event => {
                         showCancelButton: true,
                         confirmButtonColor: "#3085d6",
                         cancelButtonColor: "#d33",
-                        confirmButtonText: "Sim, continuar!"
+                        confirmButtonText: "Sim, continuar!",
+                        cancelButtonText: "Cancelar",
                         }).then((result) => {
                         if (result.isConfirmed) {
                             Swal.fire({
