@@ -125,7 +125,7 @@ const ResponseHandler = async (req, res) => {
 }
 
 const Redirect = (req, res) => {
-    return req.redirect('/');
+    return res.redirect('/');
 }
 
 export {Authenticate, ResponseHandler, AuthenticateNew, Redirect};
