@@ -70,7 +70,7 @@ const AuthenticateNew = async (req, res) => {
             console.log(JSON.stringify(req.session.client, null, 2));
 
             const url = 'https://mypastry.onrender.com/';
-            res.redirect(url);
+            res.end();
 
     } catch (error) {
         res.status(401).json('Failed to sign in.');

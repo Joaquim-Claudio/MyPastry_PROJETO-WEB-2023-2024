@@ -27,7 +27,7 @@
         <div class="row d-flex align-content-center flex-wrap ">
             <div class="col-md-5  login ">
                 <div>
-                    <a href=""> <img class="img-fluid logo mt-3" src="/images/logo-mark.svg" width="30%" alt=""></a>
+                    <a href="https://mypastry.onrender.com/"> <img class="img-fluid logo mt-3" src="/images/logo-mark.svg" width="30%" alt=""></a>
                 </div>
 
                 <div class="text-intro ">
@@ -109,17 +109,24 @@
     </div>
 
     <script>
-        function handleCredentialResponse(response) {
+        async function handleCredentialResponse(response) {
             // Enviar o token para o servidor
-            fetch('https://mypastry.onrender.com/auth/google/new', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ token: response.credential })
-            }).then(response => response.json())
+            await fetch('https://mypastry.onrender.com/auth/google/new', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ token: response.credential })
+            }).then(response => {
+                if(response.ok) await response.json()
+            })
             .then(data => {
                 // Processar a resposta do servidor
                 console.log(data);
-            });
+                location.href('https://mypastry.onrender.com')
+            })
+
+            .catch(err) {
+                throw new Error(err);
+            }
         }
     </script>
 
