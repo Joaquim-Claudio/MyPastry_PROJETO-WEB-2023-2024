@@ -147,4 +147,9 @@ const getNumItems = (req, res) => {
     return res.send({quant: numItems});
 }
 
-export {getCart, addItemToCart, updateCartItem, deleteCartItem, getNumItems};
+const confirmOrder = (req, res) => {
+    req.session.cart = undefined;
+    res.end();
+}
+
+export {getCart, addItemToCart, updateCartItem, deleteCartItem, getNumItems, confirmOrder};
