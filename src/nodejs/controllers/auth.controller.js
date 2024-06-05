@@ -69,7 +69,6 @@ const AuthenticateNew = async (req, res) => {
             
             console.log(JSON.stringify(req.session.client, null, 2));
 
-            const url = 'https://mypastry.onrender.com/';
             res.end();
 
     } catch (error) {
@@ -125,4 +124,8 @@ const ResponseHandler = async (req, res) => {
     }
 }
 
-export {Authenticate, ResponseHandler, AuthenticateNew};
+const Redirect = (req, res) => {
+    return req.redirect('/');
+}
+
+export {Authenticate, ResponseHandler, AuthenticateNew, Redirect};
