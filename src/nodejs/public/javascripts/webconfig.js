@@ -1,5 +1,3 @@
-import { response } from "express";
-
 window.addEventListener('DOMContentLoaded', event => {
     
     const btnOpenMenu = document.getElementById("ic-menu");
