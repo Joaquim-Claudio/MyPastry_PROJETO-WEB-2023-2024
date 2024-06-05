@@ -1,3 +1,5 @@
+import { response } from "express";
+
 window.addEventListener('DOMContentLoaded', event => {
     
     const btnOpenMenu = document.getElementById("ic-menu");
@@ -120,6 +122,49 @@ window.addEventListener('DOMContentLoaded', event => {
         }
 
     })();
+
+    const accBtn = document.getElementById('accBtn')
+    if (accBtn !== null) {
+        accBtn.addEventListener('click', e => {
+            e.preventDefault()
+
+            Swal.fire({
+                title: "<strong>Conta MyPastry</strong>",
+                icon: "info",
+                html: `
+                    Ainda há muitos <b>pastéis</b> para experimentar!
+                `,
+                showCloseButton: true,
+                showCancelButton: true,
+                focusConfirm: false,
+                confirmButtonText: `
+                    Continuar <i class="fa fa-thumbs-up"></i>!
+                `,
+                confirmButtonAriaLabel: "They stay, great!",
+                cancelButtonText: `
+                    <span id="logout">Terminar sessão <i class="fa-solid fa-arrow-right-from-bracket"></i></span>
+                `,
+                cancelButtonAriaLabel: "Log out"
+            });
+
+            const logout = document.getElementById('logout');
+            if(logout !== null) {
+                logout.addEventListener('click', () => {
+                    fetch(`${base_url}/auth/logout`, {
+                        headers: {"Content-Type": "application/json"},
+                        method: 'POST',
+                        body: JSON.stringify({action: 'logout'})
+                    })
+
+                        .then(response => {
+                            if(response.ok) {
+                                location.href = base_url;
+                            }
+                        })
+                })
+            }
+        })
+    }
 
 });
 

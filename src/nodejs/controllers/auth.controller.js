@@ -30,7 +30,6 @@ const Authenticate = async (req, res) => {
             }
 
             req.session.client = client;
-            req.session.client.isLogged = true;
             
             console.log(JSON.stringify(req.session.client, null, 2));
 
@@ -46,4 +45,18 @@ const Redirect = (req, res) => {
     return res.status(200).send();
 }
 
-export {Authenticate, Redirect};
+const Logout = (req, res) => {
+    const {action} = req.body;
+
+    if(action == 'logout') {
+        req.session.destroy( function(err) {
+            if(err) {
+                return res.status(404).json({error: err});
+            }
+
+            return res.status(200).send();
+        });
+    }
+}
+
+export {Authenticate, Redirect, Logout};
