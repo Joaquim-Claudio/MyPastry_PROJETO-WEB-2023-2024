@@ -1,67 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <link rel="icon" type="img/svg" href="/images/logo-mark-sm.svg">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  
-  <meta name="google-signin-client_id" content="628742861226-ul89fiklsps4amtml44koa8ta8ifjms8.apps.googleusercontent.com">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="/stylesheets/register.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
-  <title>Criar conta | MyPastry</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/login.css">
+
+    <title>Criar conta | MyPastry</title>
 </head>
+
 <body>
-  <header>
-    <div class="container-fluid p-0">
-      <div class="row">
-        <!-- Div para os elementos à esquerda da imagem -->
-        <div class="col-md-6 right"> <!-- Modificação da classe para 'right' -->
-          <div class="register-message text-end">
-            <p>Já tem uma conta? <a href="https://mypastry.onrender.com/login" class="register-link">Efetue login.</a></p>
-          </div>
-          <div class="form">
-            <h2>Criar uma conta <span class="gradient-text">MyPastry</span></h2>
+    <div class="container-fluid register ">        
+
+        <div class="row d-flex align-content-center flex-wrap   ">
+
+
+            <div class="col-md-7  my-5 ">
+                <div class=" text-end mb-3 text "> Já tem uma conta? <a href="https://mypastry.onrender.com/login">Efetue login.</a></div>
+                <div class=" pt-4 ">
+                    <div class="fs-4 fw-bold my-3">Criar uma conta <span class="text-gradient "> MyPastry</span>
+                    </div>
+
+                    <a class="btn btn-default btn-lg py-2 px-5 rounded-3 text" href="https://mypastry.onrender.com/auth/google">Entrar com uma conta Google</a>
+
+                    <div class="divider-box mb-4">
+                        <div class="left-divider"></div>
+                        <div class="divider-text"><span class="text-gradient fs-5">Ou</span></div>
+                        <div class="right-divider"></div>
+                    </div>
+
+
+                    <div class="text"> Nome de utilizador ou email</div>
+                    <input type="text" class="form-control mb-3 text" placeholder="" aria-describedby=" button-addon1">
+
+                    <div class="text"> Senha</div>
+                    <input type="text" class="form-control mb-3 text" placeholder="" aria-describedby=" button-addon1">
+
+                    <div class="text"> Confirmar senha</div>
+                    <input type="text" class="form-control mb-3 text" placeholder="" aria-describedby=" button-addon1">
+
+                    <a class="btn btn-default py-2 px-4 rounded-3 text" href="">Registar</a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="col-md-5  ">
+                <div>
+                    <a href=""> <img class="img-fluid logo ml-5 mt-3 " src="/images/logo-mark.svg" width="30%" alt=""></a>
+                </div>
+
+                <div class="text-intro ">
+                    <h2 class="text-gradient text-center fw-bold ">Bem vindo ao MyPastry.</h2>
+                    <p class="text-center fs-5 fw-light"> Sentimo-nos felizes por tê-lo aqui connosco!</p>
+                </div>
+                <footer class=" footer-account">
+                    <div class="container-md align-item-end">
+                        <div class="row">
             
-            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                            <div class="col-md-6">
+                                <span class="copyright">
+                                    Copyright &copy; MyPastry 2024.<br>
+                                    Todos os direitos reservados.
+                                </span>
+                            </div>
+                
+                            <div class="col-md-6">
+                                <!--Ícones com links para as redes sociais-->
+                                <ul class="list-inline social-buttons text-center float-end">
+                                        <li class="list-inline-item">
+                                            <a href="#"><i class="fab fa-instagram"></i></a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                                        </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+            
+                </footer>
+                
+            
 
-            <div class="divider-box">
-              <div class="left-divider"></div>
-              <div class="divider-text"><span class="gradient-text">Ou</span></div>
-              <div class="right-divider"></div>
+
+
             </div>
 
-            <div class="login-box">
-              <h3>Nome de Utilizador ou Email</h3>
-              <input type="text" placeholder="">
-              <h3>Senha</h3>
-              <input type="password" placeholder="">
-              <h3>Confirmar senha</h3>
-              <input type="password" placeholder="">
-              <button class="btn-default">Registar</button>
-            </div>
-          </div>
+ 
         </div>
-
-        <!-- Div para a imagem -->
-        <div class="col-md-6 left"> <!-- Modificação da classe para 'left' -->
-          <div class="banner">
-            <img class="img-fluid" src="/images/thumbs/moodboard2.jpg" alt="Imagem de login">
-            <div class="overlay">
-              <h2 class="first-message gradient-text">Bem vindo de volta.</h2>
-              <h3 class="second-message">Sentimo-nos felizes por tê-lo aqui connosco!</h3>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-  </header>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 
-  <script src="/javascripts/signin.js"></script>
 </body>
+
 </html>
