@@ -1,7 +1,7 @@
 const check = {
 
     clientSession: (req, res, next) => {
-        if (!req.session.client.isLogged) {
+        if (!req.session.client) {
             next();
         }
         const url = 'https://mypastry.onrender.com/'
