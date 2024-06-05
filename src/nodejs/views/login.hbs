@@ -111,7 +111,7 @@
     <script>
         function handleCredentialResponse(response) {
         // Enviar o token para o servidor
-        fetch('https://mypastry.onrender.com/auth/google/new', {
+        fetch('https://mypastry.onrender.com/auth/google/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ token: response.credential })
