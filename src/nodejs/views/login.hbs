@@ -118,8 +118,8 @@
 
         }).then(response => {
             if(response.ok) {
-                
-                location.href('https://mypastry.onrender.com');
+
+                location.href = 'https://mypastry.onrender.com';
             }
             else {
                 throw new Error(err);
