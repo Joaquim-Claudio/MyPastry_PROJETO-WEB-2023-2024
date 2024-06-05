@@ -65,7 +65,6 @@ import authRouter from './routes/auth.route.js';
 import pingRouter from './routes/ping.route.js';
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/clients', clientsRouter);
 app.use('/app', appRouter);
 app.use('/collections', collectionsRouter);
