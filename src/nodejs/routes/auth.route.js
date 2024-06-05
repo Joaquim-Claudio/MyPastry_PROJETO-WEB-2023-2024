@@ -4,7 +4,7 @@ import { Authenticate, Redirect } from '../controllers/auth.controller.js';
 
 const router = express.Router()
 
-router.get('/google', check.clientSession,  Authenticate);
+router.post('/google', check.clientSession,  Authenticate);
 router.get('/redirect', Redirect);
 
 
