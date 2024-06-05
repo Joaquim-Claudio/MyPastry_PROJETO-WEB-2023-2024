@@ -7,7 +7,7 @@ const router = express.Router()
 router.get('/google', check.clientSession,  Authenticate);
 router.get('/redirect', ResponseHandler);
 
-router.get('/google/new', check.clientSession, AuthenticateNew)
+router.post('/google/new', check.clientSession, AuthenticateNew)
 
 
 export default router;
