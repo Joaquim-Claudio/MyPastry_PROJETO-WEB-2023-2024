@@ -39,7 +39,7 @@ app.use(session({
       httpOnly:true,
       maxAge: 604800000,
       sameSite: 'none',
-      secure: false
+      secure: true
     },
     resave: false,
     saveUninitialized: false,
