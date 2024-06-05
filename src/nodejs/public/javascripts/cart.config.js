@@ -23,7 +23,7 @@ window.addEventListener('DOMContentLoaded', event => {
                 })
 
                 if(response.ok) {
-                    Swal.fire({
+                    await Swal.fire({
                         title: "Produto adicionado ao pedido", 
                         showConfirmButton: false,
                         timer: 2000,
