@@ -98,12 +98,12 @@ window.addEventListener('DOMContentLoaded', event => {
                         showCancelButton: true,
                         confirmButtonColor: "#3085d6",
                         cancelButtonColor: "#d33",
-                        confirmButtonText: "Yes, delete it!"
+                        confirmButtonText: "Sim, continuar!"
                         }).then((result) => {
                         if (result.isConfirmed) {
                             Swal.fire({
-                            title: "Deleted!",
-                            text: "Your file has been deleted.",
+                            title: "Pedido confirmado!",
+                            text: "O seu pedido está a ser preparado.",
                             icon: "success"
                             });
                         }
