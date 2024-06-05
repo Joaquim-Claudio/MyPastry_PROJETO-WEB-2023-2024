@@ -1,8 +1,12 @@
 import { Router } from "express";
-import { getPage } from "../controllers/app.controller.js";
 
 const router = Router();
 
-router.get('/', getPage);
+router.get('/', (req, res) => {
+    res.render('app', {
+        title: 'App | MyPastry',
+        client: req.session.client
+    });
+});
 
 export default router;
