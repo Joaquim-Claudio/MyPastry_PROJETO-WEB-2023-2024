@@ -69,7 +69,7 @@ const AuthenticateNew = async (req, res) => {
             
             console.log(JSON.stringify(req.session.client, null, 2));
 
-            res.end();
+            res.redirect('/auth/redirect');
 
     } catch (error) {
         res.status(401).json('Failed to sign in.');
