@@ -116,10 +116,9 @@
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ token: response.credential })
 
-        }).then(async response => {
+        }).then(response => {
             if(response.ok) {
-                const data = await response.json()
-                console.log(data);
+                
                 location.href('https://mypastry.onrender.com');
             }
             else {
