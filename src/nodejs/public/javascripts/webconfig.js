@@ -1,3 +1,5 @@
+import { response } from "express";
+
 window.addEventListener('DOMContentLoaded', event => {
     
     const btnOpenMenu = document.getElementById("ic-menu");
@@ -84,10 +86,32 @@ window.addEventListener('DOMContentLoaded', event => {
     const finishBtn = document.getElementById("finish");
     if (finishBtn !== null) {
         finishBtn.addEventListener('click', async () => {
-            await Swal.fire({
-                icon: "warning",
-                title: "Página em manutenção"
-            });
+
+            fetch(`${base_url}/cart/confirm-order`, {
+                headers: {"Content-Type": "application/json"},
+                method: "GET"
+            })
+            .then(response => {
+                if(response.ok) {
+                    Swal.fire({
+                        title: "Pagamentos apenas no balcão!",
+                        text: "Deseja continuar?",
+                        icon: "warning",
+                        showCancelButton: true,
+                        confirmButtonColor: "#3085d6",
+                        cancelButtonColor: "#d33",
+                        confirmButtonText: "Yes, delete it!"
+                        }).then((result) => {
+                        if (result.isConfirmed) {
+                            Swal.fire({
+                            title: "Deleted!",
+                            text: "Your file has been deleted.",
+                            icon: "success"
+                            });
+                        }
+                    });
+                }
+            })
         })
     }
 
@@ -136,11 +160,11 @@ window.addEventListener('DOMContentLoaded', event => {
                 showCancelButton: true,
                 focusConfirm: false,
                 confirmButtonText: `
-                    Continuar <i class="bi bi-fire"></i>
+                    Continuar <i class="bi bi-fire text-danger"></i>
                 `,
                 confirmButtonAriaLabel: "They stay, great!",
                 cancelButtonText: `
-                    <span id="logout">Terminar sessão <i class="bi bi-box-arrow-right text-danger"></i></span>
+                    <span id="logout">Terminar sessão <i class="bi bi-box-arrow-right"></i></span>
                 `,
                 cancelButtonAriaLabel: "Log out",
                 confirmButtonColor: "#3085d6",
