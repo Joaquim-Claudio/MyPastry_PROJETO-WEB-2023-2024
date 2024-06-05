@@ -136,11 +136,11 @@ window.addEventListener('DOMContentLoaded', event => {
                 showCancelButton: true,
                 focusConfirm: false,
                 confirmButtonText: `
-                    Continuar <i class="fa-solid fa-fire"></i>!
+                    Continuar <i class="bi bi-fire"></i>
                 `,
                 confirmButtonAriaLabel: "They stay, great!",
                 cancelButtonText: `
-                    <span id="logout">Terminar sessão <i class="fa-solid fa-arrow-right-from-bracket"></i></span>
+                    <span id="logout">Terminar sessão <i class="bi bi-box-arrow-right text-danger"></i></span>
                 `,
                 cancelButtonAriaLabel: "Log out",
                 confirmButtonColor: "#3085d6",
