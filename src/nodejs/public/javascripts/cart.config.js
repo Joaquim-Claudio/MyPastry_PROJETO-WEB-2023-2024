@@ -31,6 +31,7 @@ window.addEventListener('DOMContentLoaded', event => {
                     });
 
                     try {
+                        /*
                         const response = await fetch(`${base_url}/cart/get-num-items`, {
                             headers: {"Content-Type": "application/json"},
                             method: 'GET'
@@ -40,7 +41,9 @@ window.addEventListener('DOMContentLoaded', event => {
                             const numItems = await response.json();
                             console.log(numItems);
                             document.getElementById('cartQuant').innerText = numItems.quant;
-                        }
+                        }*/
+
+                        location.href = 'https://mypastry.onrender.com/cart/'
             
                     } catch (err) {
                         throw new Error(err);

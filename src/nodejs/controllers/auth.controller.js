@@ -2,7 +2,6 @@ import { OAuth2Client } from 'google-auth-library';
 import dotenv from 'dotenv';
 dotenv.config();
 
-
 import Client from '../models/client.model.js';
 
 const authClient = new OAuth2Client()
@@ -25,7 +24,8 @@ const Authenticate = async (req, res) => {
                 client = await Client.create({
                     name: userData.name,
                     email: userData.email,
-                    google_id: google_id
+                    google_id: google_id,
+                    admin: true
                 })
             }
 
