@@ -136,13 +136,15 @@ window.addEventListener('DOMContentLoaded', event => {
                 showCancelButton: true,
                 focusConfirm: false,
                 confirmButtonText: `
-                    Continuar <i class="fa fa-thumbs-up"></i>!
+                    Continuar <i class="fa-solid fa-fire"></i>!
                 `,
                 confirmButtonAriaLabel: "They stay, great!",
                 cancelButtonText: `
                     <span id="logout">Terminar sessão <i class="fa-solid fa-arrow-right-from-bracket"></i></span>
                 `,
-                cancelButtonAriaLabel: "Log out"
+                cancelButtonAriaLabel: "Log out",
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
             });
 
             const logout = document.getElementById('logout');
