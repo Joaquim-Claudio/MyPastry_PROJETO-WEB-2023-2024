@@ -100,14 +100,16 @@ window.addEventListener('DOMContentLoaded', event => {
                         cancelButtonColor: "#d33",
                         confirmButtonText: "Sim, continuar!",
                         cancelButtonText: "Cancelar",
-                        }).then((result) => {
-                        if (result.isConfirmed) {
-                            Swal.fire({
-                            title: "Pedido confirmado!",
-                            text: "O seu pedido está a ser preparado.",
-                            icon: "success"
-                            });
-                        }
+                        }).then(async (result) => {
+                            if (result.isConfirmed) {
+                                await Swal.fire({
+                                    title: "Pedido confirmado!",
+                                    text: "O seu pedido está a ser preparado.",
+                                    icon: "success"
+                                });
+
+                                location.reload();
+                            }
                     });
                 }
             })
