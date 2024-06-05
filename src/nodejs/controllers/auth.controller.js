@@ -74,11 +74,14 @@ const ResponseHandler = async (req, res) => {
                 })
             }
 
-            console.log(JSON.stringify(userData, null, 2));
+            console.log(JSON.stringify(client, null, 2));
 
-            res.json({
-                message: 'User signed in successfully!'
-            })
+            req.session.client = client;
+            req.session.firstName = client.name.split(" ");
+            req.session.isLogged = true;
+
+            const url = 'https://mypastry.onrender.com/';
+            res.redirect(url);
 
         } catch (error) {
             res.status(401).json('Failed to sign in.');

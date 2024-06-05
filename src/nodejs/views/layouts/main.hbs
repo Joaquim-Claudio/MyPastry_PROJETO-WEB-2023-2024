@@ -51,7 +51,11 @@
 
                 <ul class="navbar-nav">
                     <li class="nav-item">
+                        {{#if client}}
+                        <a href="https://mypastry.onrender.com/login" class="nav-link"><i class="bi bi-person-circle me-2"></i>{{client.firstName}}</a>
+                        {{else}}
                         <a href="https://mypastry.onrender.com/login" class="nav-link"><i class="bi bi-person-circle me-2"></i>Conta <span class="text-gradient">MyPastry</span></a>
+                        {{/if}}
                     </li>
     
                     <li class="nav-item">

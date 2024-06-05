@@ -53,18 +53,17 @@ import clientsRouter from './routes/clients.route.js';
 import appRouter from './routes/app.route.js';
 import collectionsRouter from './routes/collections.route.js';
 import productsRouter from './routes/products.route.js';
-import cartRouter from './routes/cart.route.js'
+import cartRouter from './routes/cart.route.js';
 
 import adminRouter from './routes/admin/dashboard.route.js'
 import statisticsRouter from './routes/admin/statistics.route.js';
+import mapRouter from './routes/admin/map.route.js';
 
-import mapRouter from './routes/admin/map.route.js'
-
-import pingRouter from './routes/ping.route.js'
-
-import loginRouter from './routes/login.route.js'
-import registerRouter from './routes/register.route.js'
+import loginRouter from './routes/login.route.js';
+import registerRouter from './routes/register.route.js';
 import authRouter from './routes/auth.route.js';
+
+import pingRouter from './routes/ping.route.js';
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -76,7 +75,6 @@ app.use('/cart', cartRouter);
 
 app.use('/admin', adminRouter);
 app.use('/data/statistics', statisticsRouter);
-
 app.use('/admin/map', mapRouter);
 
 app.use('/login', loginRouter);

@@ -30,6 +30,7 @@ const getAllByCategory = async(req, res) => {
                 category: translateCategory(category),
                 showCard: showCard,
                 products: result,
+                client: req.session.client
             });
 
         })
@@ -40,6 +41,7 @@ const getAllByCategory = async(req, res) => {
                 title: 'Produtos | MyPastry',
                 category: translateCategory(category),
                 showCard: showCard,
+                client: req.session.client
             })
         });
 };
@@ -54,6 +56,7 @@ const getById = async(req, res) => {
             res.render('product-details', {
                 title: product.name + ' | MyPastry',
                 product: product,
+                client: req.session.client
             })
         })
 
@@ -61,6 +64,7 @@ const getById = async(req, res) => {
             console.log(error);
             res.render('product-details', {
                 title: 'Detalhes do produto | MyPastry',
+                client: req.session.client,
                 id: id
             });
         })

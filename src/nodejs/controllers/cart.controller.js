@@ -43,13 +43,15 @@ const getCart = async (req, res) => {
         return res.render('cart', {
             layout: 'layouts/main',
             title: 'O Meu Pedido | MyPastry',
-            cart: extendedCart
+            cart: extendedCart,
+            client: req.session.client
         })
     }
     
     return res.render('cart', {
         layout: 'layouts/main',
         title: 'O Meu Pedido | MyPastry',
+        client: req.session.client
     })
 
 }
