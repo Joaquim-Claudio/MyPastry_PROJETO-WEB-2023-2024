@@ -77,7 +77,7 @@ const ResponseHandler = async (req, res) => {
             console.log(JSON.stringify(client, null, 2));
 
             req.session.client = client;
-            req.session.client.firstname = client.name.split(" ");
+            req.session.client.firstName = client.name.split(" ");
             req.session.client.isLogged = true;
 
             const url = 'https://mypastry.onrender.com/';
