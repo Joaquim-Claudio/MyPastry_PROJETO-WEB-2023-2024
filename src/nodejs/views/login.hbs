@@ -115,7 +115,7 @@
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ token: response.credential })
-            }).then(response => {
+            }).then(async response => {
                 if(response.ok) await response.json()
             })
             .then(data => {
