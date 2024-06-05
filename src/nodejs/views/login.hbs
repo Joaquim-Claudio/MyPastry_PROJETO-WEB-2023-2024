@@ -109,7 +109,23 @@
     </div>
 
     <script>
-        
+        function handleCredentialResponse(response) {
+        // Enviar o token para o servidor
+        fetch('https://mypastry.onrender.com/auth/google/new', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ token: response.credential })
+        }).then(async response => {
+            if(response.ok) {
+                const data = await response.json()
+                console.log(data);
+                location.href('https://mypastry.onrender.com');
+            }
+        })
+        .catch(err => {
+            throw new Error(err);
+        });
+    }
     </script>
 
 
@@ -117,7 +133,6 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     
-    <script type="module" src="/javascripts/signin.google.js"></script>
 
 </body>
 
