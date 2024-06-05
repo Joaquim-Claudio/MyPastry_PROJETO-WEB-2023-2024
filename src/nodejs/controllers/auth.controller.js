@@ -4,6 +4,9 @@ import url from 'url';
 import dotenv from 'dotenv';
 dotenv.config();
 
+
+import { OAuth2Client } from 'google-auth-library';
+
 import Client from '../models/client.model.js';
 
 
@@ -38,6 +41,41 @@ const Authenticate = (req, res) => {
     res.redirect(authorizationUrl);
 }
 
+const authClient = new OAuth2Client()
+
+const AuthenticateNew = async (req, res) => {
+    const {token} = req.body;
+    
+    try {
+        const ticket = await authClient.verifyIdToken({
+          idToken: token,
+          audience: '628742861226-ul89fiklsps4amtml44koa8ta8ifjms8.apps.googleusercontent.com',
+        });
+
+        const userData = ticket.getPayload();
+        const google_id = userData['sub'];
+
+        let client = await Client.findOne({where: {google_id}});
+
+            if(client === null) {
+                client = await Client.create({
+                    name: userData.name,
+                    email: userData.email,
+                    google_id: google_id
+                })
+            }
+
+            req.session.client = client;
+            
+            console.log(JSON.stringify(req.session.client, null, 2));
+
+            const url = 'https://mypastry.onrender.com/';
+            res.redirect(url);
+
+    } catch (error) {
+        res.status(401).json('Failed to sign in.');
+    }
+}
 
 
 const ResponseHandler = async (req, res) => {
@@ -87,4 +125,4 @@ const ResponseHandler = async (req, res) => {
     }
 }
 
-export {Authenticate, ResponseHandler};
+export {Authenticate, ResponseHandler, AuthenticateNew};
