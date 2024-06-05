@@ -116,7 +116,7 @@ const ResponseHandler = async (req, res) => {
             req.session.client = client;
 
             const url = 'https://mypastry.onrender.com/';
-            res.redirect(url);
+            res.redirect('/auth/redirect');
 
         } catch (error) {
             res.status(401).json('Failed to sign in.');
