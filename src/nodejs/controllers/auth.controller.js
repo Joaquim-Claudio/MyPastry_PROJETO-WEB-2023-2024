@@ -20,20 +20,20 @@ const Authenticate = async (req, res) => {
 
         let client = await Client.findOne({where: {google_id}});
 
-            if(client === null) {
-                client = await Client.create({
-                    name: userData.name,
-                    email: userData.email,
-                    google_id: google_id,
-                    admin: true
-                })
-            }
+        if(client === null) {
+            client = await Client.create({
+                name: userData.name,
+                email: userData.email,
+                passhash: google_id,
+                google_id: google_id,
+            })
+        }
 
-            req.session.client = client;
-            
-            console.log(JSON.stringify(req.session.client, null, 2));
+        req.session.client = client;
+        
+        console.log(JSON.stringify(req.session.client, null, 2));
 
-            res.redirect('/auth/redirect');
+        res.redirect('/auth/redirect');
 
     } catch (error) {
         res.status(401).json('Failed to sign in.');

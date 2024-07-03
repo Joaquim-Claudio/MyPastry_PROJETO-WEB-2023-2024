@@ -7,6 +7,21 @@ INSERT INTO product(id, name, category, delicacy, available, price, price_in_poi
 INSERT INTO product(id, name, category, delicacy, available, price, price_in_points, img_url, description) VALUES (6, 'Pastel de Carne', 'pastel', true, true, 5, 5, '/images/products/pastel-carne.jpeg', 'Deliciosos pastéis de vento, iguarias brasileiras.');
 INSERT INTO product(id, name, category, delicacy, available, price, price_in_points, img_url, description) VALUES (7, 'Pastel de Camarão', 'pastel', true, true, 7, 5, '/images/products/pastel-camarao.jpg', 'Deliciosos pastéis de vento, iguarias brasileiras.');
 
+-- Ingredient inserts
+INSERT INTO ingredient(img_url, name, available) VALUES ('/images/ingredients/massa-pastel.png', 'Massa de pastel', true);
+INSERT INTO ingredient(img_url, name, available) VALUES ('/images/ingredients/queijo.jpg', 'Queijo emmental', true);
+INSERT INTO ingredient(img_url, name, available) VALUES ('/images/ingredients/requeijao.png', 'Requeijão', true);
+INSERT INTO ingredient(img_url, name, available) VALUES ('/images/ingredients/fiambre.jpeg', 'Fiambre de porco', true);
+
+-- ProductIngredient inserts
+INSERT INTO prod_ing (pro_id, ing_id) VALUES (2, 1);
+INSERT INTO prod_ing (pro_id, ing_id) VALUES (2, 2);
+INSERT INTO prod_ing (pro_id, ing_id) VALUES (2, 3);
+INSERT INTO prod_ing (pro_id, ing_id) VALUES (3, 1);
+INSERT INTO prod_ing (pro_id, ing_id) VALUES (3, 2);
+INSERT INTO prod_ing (pro_id, ing_id) VALUES (3, 3);
+INSERT INTO prod_ing (pro_id, ing_id) VALUES (3, 4);
+
 -- Client inserts
 INSERT INTO client("name","email","passhash","gender","b_date","admin","points") VALUES ('Valerie Botsford','Sammy27@gmail.com','-246b9fc8','Neither','1996-01-04',FALSE,275);
 INSERT INTO client("name","email","passhash","gender","b_date","admin","points") VALUES ('Lula Mohr','Bradley_Jacobson-Boyer@yahoo.com','79772692','Gender questioning','1973-11-29',FALSE,143);
@@ -72,4 +87,4 @@ INSERT INTO active_client (cli_id, ord_id, loc_id) VALUES (6, 6, 6);
 
 
 
-INSERT INTO mobile_order ("status","total","created_at","finished_at","display_id") VALUES ('completed',55.69, current_timestamp, current_timestamp);
+INSERT INTO mobile_order ("status","total","created_at","finished_at","display_id") VALUES ('completed',55.69, current_timestamp, current_timestamp, '005');

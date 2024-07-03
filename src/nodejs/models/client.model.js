@@ -5,7 +5,7 @@ const Client = sequelize.define('client', {
         id: {type: DataTypes.INTEGER, primaryKey:true, autoIncrement:true},
         name: {type: DataTypes.TEXT, allowNull:false},
         email: {type: DataTypes.TEXT, allowNull:false},
-        passhash: {type: DataTypes.TEXT},
+        passhash: {type: DataTypes.TEXT, allowNull:false},
         gender: {type: DataTypes.CHAR},
         b_date: {type: DataTypes.DATEONLY},
         admin: {type:DataTypes.BOOLEAN, defaultValue:false},

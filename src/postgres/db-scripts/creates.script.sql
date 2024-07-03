@@ -24,6 +24,7 @@ cep text,
 municipality text);
 
 create table client(
+google_id text, 
 points int not null,
 add_id int references address(id) on delete set null)
 inherits("user");
