@@ -30,8 +30,6 @@ const Authenticate = async (req, res) => {
         }
 
         req.session.client = client;
-        
-        console.log(JSON.stringify(req.session.client, null, 2));
 
         res.redirect('/auth/redirect');
 

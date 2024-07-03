@@ -9,8 +9,6 @@ window.addEventListener('DOMContentLoaded', event => {
             body: JSON.stringify({ token: response.credential })
         }).then(async response => {
             if(response.ok) {
-                const data = await response.json()
-                console.log(data);
                 location.href('https://mypastry.onrender.com');
             }
         })
