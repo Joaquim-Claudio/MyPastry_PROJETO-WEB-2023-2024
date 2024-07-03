@@ -33,6 +33,8 @@ const sessionStore = new (session_store(session.Store))({
   tableName: 'session',
 })
 
+sessionStore.sync();
+
 app.use(session({
     secret: process.env.SS_SECRETS,
     cookie: {

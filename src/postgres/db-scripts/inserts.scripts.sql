@@ -68,3 +68,8 @@ INSERT INTO active_client (cli_id, ord_id, loc_id) VALUES (3, 3, 3);
 INSERT INTO active_client (cli_id, ord_id, loc_id) VALUES (4, 4, 4);
 INSERT INTO active_client (cli_id, ord_id, loc_id) VALUES (5, 5, 5);
 INSERT INTO active_client (cli_id, ord_id, loc_id) VALUES (6, 6, 6);
+
+
+
+
+INSERT INTO mobile_order ("status","total","created_at","finished_at","display_id") VALUES ('completed',55.69, current_timestamp, current_timestamp);
